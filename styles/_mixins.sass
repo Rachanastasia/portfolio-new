@@ -1,4 +1,4 @@
-/* Quick Flexbox Mixins */
+/* Spacing/Flexbox Mixins */
 
 @mixin row-between 
     display: flex
@@ -16,6 +16,11 @@
     flex-direcion: column
     justify-content: center
     align-items: center
+
+@mixin viewport-padding
+    padding: $spacer-2
+    @media all and (min-width: 600px)
+        padding: $spacer-3
 
 
 /* Font Mixins */
@@ -52,7 +57,10 @@
     font-size: $text-1
     letter-spacing: 0.6px
     margin-top: $spacer-2
-    
+    &:hover
+        border-color: $color-accent-dark
+        >*
+        color: $color-accent-dark
     .arrow
         transform: scale(1.3)
 
