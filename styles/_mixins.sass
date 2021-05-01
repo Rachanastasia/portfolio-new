@@ -1,0 +1,33 @@
+/* Quick Flexbox Mixins */
+
+@mixin row-between 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+@mixin column-center
+    display: flex
+    flex-direcion: column
+    justify-content: center
+    align-items: center
+
+
+/* Font Mixins */
+@mixin p-text
+    font-size: $text-2
+    line-height: 1.5
+
+
+/* UI Element Mixins */
+
+@mixin border 
+    border-radius: $border-radius
+    border: $border-width solid $color-accent
+
+@mixin button
+    @include border
+    @include row-between
+    padding: $spacer-2
+    width: $button-width
+    color: $color-accent
+    
