@@ -4,7 +4,7 @@ import BaseButton from './BaseButton'
 export default function About(){
     return (
         <section className='about-wrapper'>        
-            <h1>Rachel Reilly</h1>
+            <h1 className='section-title'>Rachel Reilly</h1>
             <span className='about-subtitle'>Full Stack Developer</span>
             <div className='about-content-wrapper'>
                 {/* <img className='about-img' src={require('../assets/rachel.jpg')} /> */}

@@ -3,6 +3,11 @@
     padding: 0
     box-sizing: border-box
 
+a
+    text-decoration: none
+    color: inherit
+    cursor: pointer
+
 .container
     min-height: 100vh
     dispay: flex
@@ -22,6 +27,8 @@ main
     font-family: $font
     section
         padding: $spacer-2
+        .section-title
+            margin-bottom: $spacer-1
 
 
 header
@@ -37,15 +44,26 @@ header
 .base-button-wrapper
     @include button
 
-
+h1, h2, h3
+    font-family: $title-font
+    letter-spacing: 2px
 
 footer
     @include row-between
-    width: 100%
+    color: white
+    background-color: black
+    border: 1px solid black
+    width: inherit
     padding: $spacer-2
-    font-size: $text-3
     align-items: flex-end
+    p
+        font-size: $text-2
+        font-family: $title-font
+        letter-spacing: 0.8px
     a
         display: flex
         justify-content: flex-end
         align-items: flex-end
+        font-size: $text-3
+
+
