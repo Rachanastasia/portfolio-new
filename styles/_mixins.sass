@@ -19,8 +19,11 @@
 
 @mixin viewport-padding
     padding: $spacer-2
-    @media all and (min-width: 600px)
+    @media all and (min-width: 500px)
         padding: $spacer-3
+    @media all and (min-width: 800px)
+        padding: $spacer-5
+
 
 
 /* Font Mixins */
@@ -34,7 +37,7 @@
 
 @mixin border 
     border-radius: $border-radius
-    border: $border-width solid $color-accent
+    border: $border-width solid $color-accent-dark
 
 @mixin button-size
     padding: $spacer-2 $spacer-1
@@ -54,14 +57,14 @@
     @include border
     @include row-between
     @include button-size
-    color: $color-accent
+    color: $color-accent-dark
     font-size: $text-1
     letter-spacing: $letter-spacing-2
     margin-top: $spacer-2
     &:hover
-        border-color: $color-accent-dark
+        border-color: $color-accent
         > *
-        color: $color-accent-dark
+        color: $color-accent
     .arrow
         transform: scale(1.3)
 

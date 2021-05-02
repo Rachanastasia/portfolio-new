@@ -2,19 +2,23 @@
     margin-bottom: $spacer-4
     display: flex
     flex-direction: column
-    .title-desc-wrapper
-        @include row
-        margin-bottom: $spacer-1
-        h3
-            padding-right: $spacer-3
-        p
+    p
             @include p-text
             margin-top: $spacer-1
             color: $text-gray
+    .title-desc-wrapper
+        @include row-between
+        flex-wrap: wrap
+        margin-bottom: $spacer-1
+        h3
+            padding-right: $spacer-5
     .link-wrapper
         @include row-between
         flex-wrap: wrap
     .stack-wrapper
         @include p-text
         @include row-between
-        max-width: 500px
+        max-width: 800px
+        flex: 2
+        .stack-item
+            padding-right: $spacer-2

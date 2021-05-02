@@ -6,10 +6,10 @@ export default function Project({title, stack, description, images, links}){
         <div className='project-wrapper'>
             <div className='title-desc-wrapper'>
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <ProjectStack stack={stack}/>
             </div>
+            <p>{description}</p>
             
-            <ProjectStack stack={stack}/>
             <ProjectImages images={images}/>
             <ProjectLinks links={links}/>
         </div>
