@@ -1,4 +1,4 @@
-# Rachel Reilly ◇  Full Stack Developer
+# Rachel Reilly |  Full Stack Developer
 
 This is the repository for Rachel Reilly's portfolio site.
 

@@ -4,7 +4,7 @@ import BaseButton from './BaseButton'
 export default function About(){
     return (
         <section className='about-wrapper'>        
-            <h1 className='section-title'>Rachel Reilly</h1>
+            <h1 className='section-title main-title'>Rachel Reilly</h1>
             <span className='about-subtitle'>Full Stack Developer</span>
             <div className='about-content-wrapper'>
                 {/* <img className='about-img' src={require('../assets/rachel.jpg')} /> */}
@@ -17,9 +17,9 @@ export default function About(){
                     </p>
                     <p>In art school, I took classes in drawing, ceramics, and color theory to push my skills as an artist beyond my preferred discipline. I try to adapt this mindset when growing my abilities as a developer, practicing data structures and algorithms in Python, doing SQL drills, and diving into computer architecture, in addition to the daily work I do as a Full Stack JavaScript Developer.</p>
                     <div className='about-links-wrapper'>
-                        <BaseButton content='Projects' onClick={null}/>
-                        <BaseButton content='Blog' href='https://rachanastasia.medium.com/'/>
-                        <BaseButton content='Resume'/>
+                        <BaseButton content='PROJECTS' onClick={null}/>
+                        <BaseButton content='BLOG' href='https://rachanastasia.medium.com/'/>
+                        <BaseButton content='RESUME'/>
                     </div>
                 </div>
             </div>

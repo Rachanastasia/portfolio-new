@@ -27,6 +27,7 @@
 @mixin p-text
     font-size: $text-2
     line-height: 1.5
+    letter-spacing: $letter-spacing-1
 
 
 /* UI Element Mixins */
@@ -55,11 +56,11 @@
     @include button-size
     color: $color-accent
     font-size: $text-1
-    letter-spacing: 0.6px
+    letter-spacing: $letter-spacing-2
     margin-top: $spacer-2
     &:hover
         border-color: $color-accent-dark
-        >*
+        > *
         color: $color-accent-dark
     .arrow
         transform: scale(1.3)

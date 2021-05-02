@@ -32,7 +32,7 @@ function ProjectImages({images}){
 function ProjectLinks({links}){
     return (
         <div className='link-wrapper'>
-            {links.map(({title, link}) => <BaseButton content={title} href={link} />)}
+            {links.map(({title, link}) => <BaseButton content={title.toUpperCase()} href={link} />)}
         </div>
     )
 }
