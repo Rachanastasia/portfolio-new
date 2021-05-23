@@ -10,7 +10,7 @@ export default function About(){
                 {/* <img className='about-img' src={require('../assets/rachel.jpg')} /> */}
                 <div className="about-paragraph-wrapper">
                     <p>
-                        Hi, I’m Rachel. I’m a Full Stack Developer from Chicago with experience working with React, React Native, GraphQL, Node.js, and SQL.
+                        Hi, I’m Rachel. I’m a Full Stack Developer from Chicago.
                     </p>
                     <p>
                         My background as an artist informs my programming beyond the UI. I learned how to take concepts -- classes and context, hue and negative space -- and apply them for different effects. I practiced listening to feedback during critiques, realizing that other people often saw things in my work that I had overlooked. 
