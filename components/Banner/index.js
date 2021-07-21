@@ -1,29 +1,36 @@
-import LineOfText from "./LineOfText"
+import LineOfText, {Line19, Line20, Line21, Line22, Line24, Line23, Line26, Line25, Line28, Line29, LineClosingBracket} from "./LineOfText"
 
 export default function Banner(){
 
     return (
-        <div>
+        <div className='animated-container'>
             <div className='animated-codeblock'>
-                <LineOfText tabs={1} color='red' />
-                <LineOfText tabs={5} color='green'/>
-                <LineOfText tabs={1} color='pink'/>
-                <LineOfText tabs={2} color='black'/>
-                <LineOfText tabs={1} color='#fff'/>
+                <Line19 tabs={1} />
+                <Line20 tabs={2}  />
+                <Line21 tabs={2} />
+
+                
+                <Line22 tabs={3} />
+                <Line23 tabs={3} />
+                <Line24 tabs={3} />
+                <Line25 tabs={2} />
+                <Line26 tabs={3} />
+                <LineClosingBracket tabs={2} />
+                <LineClosingBracket tabs={1} />
             </div>
             <div className='animated-codeblock'>
-                <LineOfText tabs={1} color='red' />
-                <LineOfText tabs={5} color='green'/>
-                <LineOfText tabs={1} color='pink'/>
-                <LineOfText tabs={2} color='black'/>
-                <LineOfText tabs={1} color='#fff'/>
+                <LineOfText tabs={1}  />
+                <LineOfText tabs={5} />
+                <LineOfText tabs={1} />
+                <LineOfText tabs={2} />
+                <LineOfText tabs={1} />
             </div>
             <div className='animated-codeblock'>
-                <LineOfText tabs={1} color='red' />
-                <LineOfText tabs={5} color='green'/>
-                <LineOfText tabs={1} color='pink'/>
-                <LineOfText tabs={2} color='black'/>
-                <LineOfText tabs={1} color='#fff'/>
+                <LineOfText tabs={1}  />
+                <LineOfText tabs={5} />
+                <LineOfText tabs={1} />
+                <LineOfText tabs={2} />
+                <LineOfText tabs={1} />
             </div>
         </div>
     )
