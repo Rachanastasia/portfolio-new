@@ -1,8 +1,8 @@
 
 
-export default function Line19({text, delay, indentation, containerStyle}){
+export default function Line19({tabs=1, delay, indentation, containerStyle}){
     return (
-        <div className={`animation-line animation-tabs-${1}`}>
+        <div className={`animation-line animated-tabs-${tabs}`}>
             <Word word='for' color='one' />
             <Punctuation char='(' />
             <Word word='let' color='two' />

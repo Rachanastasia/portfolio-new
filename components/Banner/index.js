@@ -4,11 +4,27 @@ export default function Banner(){
 
     return (
         <div>
-            <LineOfText text='import React from "react"' color='red' />
-            <LineOfText text='import React from "react"' color='green'/>
-            <LineOfText text='import React from "react"' color='pink'/>
-            <LineOfText text='import React from "react"' color='black'/>
-            <LineOfText text='import React from "react"' color='#fff'/>
+            <div className='animated-codeblock'>
+                <LineOfText tabs={1} color='red' />
+                <LineOfText tabs={5} color='green'/>
+                <LineOfText tabs={1} color='pink'/>
+                <LineOfText tabs={2} color='black'/>
+                <LineOfText tabs={1} color='#fff'/>
+            </div>
+            <div className='animated-codeblock'>
+                <LineOfText tabs={1} color='red' />
+                <LineOfText tabs={5} color='green'/>
+                <LineOfText tabs={1} color='pink'/>
+                <LineOfText tabs={2} color='black'/>
+                <LineOfText tabs={1} color='#fff'/>
+            </div>
+            <div className='animated-codeblock'>
+                <LineOfText tabs={1} color='red' />
+                <LineOfText tabs={5} color='green'/>
+                <LineOfText tabs={1} color='pink'/>
+                <LineOfText tabs={2} color='black'/>
+                <LineOfText tabs={1} color='#fff'/>
+            </div>
         </div>
     )
 }
