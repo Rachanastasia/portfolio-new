@@ -1,4 +1,4 @@
-import LineOfText, {Line19, Line20, Line21, Line22, Line24, Line23, Line26, Line25, Line28, Line29, LineClosingBracket} from "./LineOfText"
+import {Line19, Line20, Line21, Line22, Line24, Line23, Line26, Line25, Line28, Line29, LineClosingBracket} from "./LinesOfCode"
 
 export default function Banner(){
 
