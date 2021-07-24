@@ -1,4 +1,5 @@
 import BaseButton from './BaseButton'
+import Image from 'next/image'
 
 export default function Project({title, stack, description, images, links}){
 
@@ -26,7 +27,7 @@ function ProjectStack({stack}){
 }
 
 function ProjectImages({images}){
-    return null
+    return <div>{images && images.map((image, index) => <Image layout='fill' src={image} key={index}/>)}</div>
 }
 
 function ProjectLinks({links}){
