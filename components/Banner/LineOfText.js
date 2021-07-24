@@ -17,7 +17,7 @@ export default function LineOfText({tabs=1}){
     )
 }
 
-function Line({tabs, children}){
+function FullLine({tabs, children}){
     return (
         <div className={`animation-line animated-tabs-${tabs}`}>{children}</div>
     )
@@ -25,7 +25,7 @@ function Line({tabs, children}){
 
 export function Line19({tabs=1}){
     return (
-       <Line tabs={tabs}>
+       <FullLine tabs={tabs}>
             <Word word='for' color='one' />
             <Word word='( ' color='one' />
             <Word word='let' color='two'  />
@@ -42,13 +42,13 @@ export function Line19({tabs=1}){
             <Word word='++' color='one' hasSpace={false}/>
             <Character char=')' hasSpace={false}/>
             <Character char='{'/>
-        </Line>
+        </FullLine>
     )
 }
 
 export function Line20({tabs=1}){
     return (
-       <Line tabs={tabs}>
+       <FullLine tabs={tabs}>
             <Word word='for' color='one' />
             <Character char='(' />
             <Word word='let' color='two' />
@@ -59,13 +59,13 @@ export function Line20({tabs=1}){
 
             <Word word='from' color='one' />
             <Word word='"react"' color='three' />
-        </Line>
+        </FullLine>
     )
 }
 
 export function Line21({tabs=1}){
     return (
-       <Line tabs={tabs}>
+       <FullLine tabs={tabs}>
             <Word word='for' color='one' />
             <Character char='(' />
             <Word word='let' color='two' />
@@ -76,61 +76,61 @@ export function Line21({tabs=1}){
 
             <Word word='from' color='one' />
             <Word word='"react"' color='three' />
-        </Line>
+        </FullLine>
     )
 }
 export function Line22({tabs}){
     return (
-        <Line tabs={tabs}>
+        <FullLine tabs={tabs}>
             <Word word='validateIngredientAndAddToDataIngredients' color='two' />
             <Word word='( )' color='two' hasSpace={false} />
-        </Line>
+        </FullLine>
     )
 }
 export function Line23({tabs}){
     return (
-        <Line tabs={tabs}>
+        <FullLine tabs={tabs}>
             <Word word='sortCurrentWord' color='two' />
             <Word word='( )' color='two' hasSpace={false} />
-        </Line>
+        </FullLine>
     )
 }
 export function Line24({tabs}){
     return (
-        <Line tabs={tabs}>
+        <FullLine tabs={tabs}>
             <Word word='currentWord' color='two' />
             <Character char='=' />
             <Character char="''" />
-        </Line>
+        </FullLine>
     )
 }
 
 export function Line25({tabs}){
     return (
-        <Line tabs={tabs}>
+        <FullLine tabs={tabs}>
             <Character char='}' />
             <Word word='else' color='two' />
             <Character char='{' />
-        </Line>
+        </FullLine>
     )
 }
 
 export function Line26({tabs=1}){
     return (
-       <Line tabs={tabs}>
+       <FullLine tabs={tabs}>
             <Word word='currentWord' color='one' />
             <Character char='=' />
             <Word word='currentWord' color='two' />
             <Character char='+' />
             <Word word='currentChar' color='one' />
-        </Line>
+        </FullLine>
     )
 }
 
 export function LineClosingBracket({tabs}){
-    return <Line tabs={tabs}>
+    return <FullLine tabs={tabs}>
         <Character char={`}`}/>
-    </Line>
+    </FullLine>
 }
 
 

@@ -18,20 +18,6 @@ export default function Banner(){
                 <LineClosingBracket tabs={2} />
                 <LineClosingBracket tabs={1} />
             </div>
-            <div className='animated-codeblock'>
-                <LineOfText tabs={1}  />
-                <LineOfText tabs={5} />
-                <LineOfText tabs={1} />
-                <LineOfText tabs={2} />
-                <LineOfText tabs={1} />
-            </div>
-            <div className='animated-codeblock'>
-                <LineOfText tabs={1}  />
-                <LineOfText tabs={5} />
-                <LineOfText tabs={1} />
-                <LineOfText tabs={2} />
-                <LineOfText tabs={1} />
-            </div>
         </div>
     )
 }
