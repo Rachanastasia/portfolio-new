@@ -1,11 +1,27 @@
 import React from 'react'
+import Banner from './Banner/index'
+import Link from 'next/link'
 
 export default function Header(){
-//This component contains the typing animation
-//in the previous portfolio version
     return (
         <header>
-            <h1>This is my header</h1>
+            <Banner />
+            <HeaderTitle />
         </header>
     )
+}
+
+
+function HeaderTitle(){
+    return (
+        <div className='header-title-wrapper'>
+            <h1 className='section-title main-title'>Rachel Reilly</h1>
+            <div className='header-title-link-wrapper'>
+                <Link href={''}><span>Projects</span></Link>
+                <Link href={''}><span>About</span></Link>
+                <Link href={''}><span>Contact</span></Link>
+
+                <Link href={''}><span>Blog</span></Link>
+            </div>
+        </div>)
 }
