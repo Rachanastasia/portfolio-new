@@ -11,9 +11,9 @@ const projects = [
         images: [sliceUpImage, sliceDownImage],
         links: [
             {title: 'View App', href: 'https://sliced.rachanastasia.vercel.app/'},
-            {title: 'Client Code', href: 'https://github.com/Rachanastasia/sliced-client'},
-            {title: 'Server Code', href: 'https://github.com/Rachanastasia/sliced-API'},
-            {title: 'Blog Post', href: 'https://rachanastasia.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
+            {title: 'Client Code', href: 'https://github.com/rachelrly/sliced-client'},
+            {title: 'Server Code', href: 'https://github.com/rachelrly/sliced-API'},
+            {title: 'Blog Post', href: 'https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
         ]
     },
     {
@@ -23,8 +23,8 @@ const projects = [
         images: [],
         links: [
             {title: 'View App', href: 'https://spaced-repetition-dun.vercel.app/'},
-            {title: 'Client Code', href: 'https://github.com/Rachanastasia/spaced-repetition-client'},
-            {title: 'Server Code', href: 'https://github.com/Rachanastasia/spaced-repetition-server'}
+            {title: 'Client Code', href: 'https://github.com/rachelrly/spaced-repetition-client'},
+            {title: 'Server Code', href: 'https://github.com/rachelrly/spaced-repetition-server'}
         ]
     },
     {
@@ -33,8 +33,8 @@ const projects = [
         stack: ['React', 'GraphQL', 'Apollo Client', 'Node.js', 'Express', 'CSS3'],
         links: [
             {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},
-            {title: 'Client Code', href: 'https://github.com/Rachanastasia/graphql-bookshelf-client'},
-            {title: 'Server Code', href: 'https://github.com/Rachanastasia/graphql-bookshelf-api'}
+            {title: 'Client Code', href: 'https://github.com/rachelrly/graphql-bookshelf-client'},
+            {title: 'Server Code', href: 'https://github.com/rachelrly/graphql-bookshelf-api'}
         ]
     },
     {
@@ -43,7 +43,7 @@ const projects = [
         stack: ['React', 'CSS3'],
         links: [
             {title: 'View App', href: 'https://one-d-chess.vercel.app/'},
-            {title: 'Game Code', href: 'https://github.com/Rachanastasia/one-dimensional-chess'},
+            {title: 'Game Code', href: 'https://github.com/rachelrly/one-dimensional-chess'},
         ]
     },
     {
@@ -52,8 +52,8 @@ const projects = [
         stack: ['React', 'CSS3'],
         links: [
             {title: 'View App', href: 'https://loan-calculator-two.vercel.app/'},
-            {title: 'App Code', href: 'https://github.com/Rachanastasia/loan-calculator'},
-            {title: 'Blog Post', href: 'https://rachanastasia.medium.com/usestate-vs-usereducer-9bbfca768f51'}
+            {title: 'App Code', href: 'https://github.com/rachelrly/loan-calculator'},
+            {title: 'Blog Post', href: 'https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51'}
         ]
     },
     {
@@ -62,8 +62,8 @@ const projects = [
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         links: [
             {title: 'View App', href: 'https://init-rachel.vercel.app/'},
-            {title: 'Client Code', href: 'https://github.com/Rachanastasia/init'},
-            {title: 'Server Code', href: 'https://github.com/Rachanastasia/init-api'}
+            {title: 'Client Code', href: 'https://github.com/rachelrly/init'},
+            {title: 'Server Code', href: 'https://github.com/rachelrly/init-api'}
         ]
     }
 ]
