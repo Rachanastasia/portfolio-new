@@ -6,10 +6,8 @@ export default function Banner(){
         <div className='animated-container'>
             <div className='animated-codeblock'>
                 <Line19 tabs={1} />
-                <Line20 tabs={2}  />
+                <Line20 tabs={2} />
                 <Line21 tabs={2} />
-
-                
                 <Line22 tabs={3} />
                 <Line23 tabs={3} />
                 <Line24 tabs={3} />
