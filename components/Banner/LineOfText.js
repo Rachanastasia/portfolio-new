@@ -49,16 +49,12 @@ export function Line19({tabs=1}){
 export function Line20({tabs=1}){
     return (
        <FullLine tabs={tabs}>
-            <Word word='for' color='one' />
-            <Character char='(' />
-            <Word word='let' color='two' />
-            <Character char='i' />
-            <Character char='=' />
-            <Character char='0' />
-            <Character char=';' hasSpace={false}/>
-
-            <Word word='from' color='one' />
-            <Word word='"react"' color='three' />
+            <Word word='const' color='one' />
+            <Word word='currentChar' color='two' />
+            <Word word='=' color='two' />
+            <Word word='input[i]?.' color='two' />
+            <Word word='toLowerCase' color='two' hasSpace={false} />
+            <Word word='( )' color='two' hasSpace={false}/>
         </FullLine>
     )
 }
@@ -66,16 +62,18 @@ export function Line20({tabs=1}){
 export function Line21({tabs=1}){
     return (
        <FullLine tabs={tabs}>
-            <Word word='for' color='one' />
+            <Word word='if' color='one' />
             <Character char='(' />
-            <Word word='let' color='two' />
-            <Character char='i' />
-            <Character char='=' />
-            <Character char='0' />
-            <Character char=';' hasSpace={false}/>
+            <Word word='currentChar' color='two' />
+            <Word word='===' color='two' />
+            <Word word="' '" color='two' />
+            <Word word='||' color='two' />
+            <Word word='currentChar' color='two' />
 
-            <Word word='from' color='one' />
-            <Word word='"react"' color='three' />
+            <Word word='===' color='two' />
+            <Word word="'\n'" color='two' />
+            <Character char=')' hasSpace={false}/>
+            <Character char='{' />
         </FullLine>
     )
 }
@@ -83,7 +81,7 @@ export function Line22({tabs}){
     return (
         <FullLine tabs={tabs}>
             <Word word='validateIngredientAndAddToDataIngredients' color='two' />
-            <Word word='( )' color='two' hasSpace={false} />
+            <Word word=' ( )' color='two' hasSpace={false} />
         </FullLine>
     )
 }
@@ -91,7 +89,7 @@ export function Line23({tabs}){
     return (
         <FullLine tabs={tabs}>
             <Word word='sortCurrentWord' color='two' />
-            <Word word='( )' color='two' hasSpace={false} />
+            <Word word=' ( )' color='two' hasSpace={false} />
         </FullLine>
     )
 }
@@ -100,7 +98,7 @@ export function Line24({tabs}){
         <FullLine tabs={tabs}>
             <Word word='currentWord' color='two' />
             <Character char='=' />
-            <Character char="''" />
+            <Character char="' '"/>
         </FullLine>
     )
 }
