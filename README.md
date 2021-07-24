@@ -14,6 +14,8 @@ This is the repository for Rachel Reilly's portfolio site.
 
 A recipe app that scales up and down ingredients.
 
+![](/assets/slice-down.png)
+
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
 [View client repository](https://github.com/Rachanastasia/sliced-client) ◇ 
 [View server repository](https://github.com/Rachanastasia/sliced-API) ◇ 

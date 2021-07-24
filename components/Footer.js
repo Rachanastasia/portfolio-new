@@ -1,5 +1,4 @@
 import React from 'react'
-import {GrLinkedinOption} from 'react-icons/gr'
 import {RiLinkedinLine, RiGithubLine} from 'react-icons/ri'
 import {AiOutlineMedium} from 'react-icons/ai'
 export default function Footer(){
@@ -10,10 +9,10 @@ export default function Footer(){
             <a className='footer-button' href='https://www.linkedin.com/in/rachel-a-reilly/'>
               <RiLinkedinLine />
             </a>
-            <a className="footer-button" href='https://rachanastasia.medium.com/'>
+            <a className="footer-button" href='https://rachelrly.medium.com/'>
                <AiOutlineMedium/>
             </a>
-            <a className='footer-button' href='https://github.com/Rachanastasia'>
+            <a className='footer-button' href='https://github.com/rachelrly'>
                 <RiGithubLine />
             </a>
         </footer>
