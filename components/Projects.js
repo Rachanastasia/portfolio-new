@@ -1,14 +1,12 @@
 import React from 'react'
 import Project from './Project'
-import sliceUpImage from '../assets/slice-up.png'
-import sliceDownImage from '../assets/slice-down.png'
 
 const projects = [
     {
         title: 'Sliced',
         description: 'A recipe app that scales up and down ingredients',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
-        images: [sliceUpImage, sliceDownImage],
+        images: [],
         links: [
             {title: 'View App', href: 'https://sliced.rachanastasia.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/sliced-client'},
