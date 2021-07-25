@@ -12,7 +12,7 @@ export default function Header(){
 }
 
 
-function HeaderTitle(){
+export function HeaderTitle(){
     return (
         <div className='header-title-wrapper'>
             <h1 className='section-title main-title'>Rachel Reilly</h1>
