@@ -1,10 +1,11 @@
 import Screen from '../../components/Screen'
+import Projects from '../../components/Projects'
 
 
 export default function ProjectsPage(){
     return (
         <Screen>
-            <h1>Projects</h1>
+            <Projects />
         </Screen>
     )
 }
