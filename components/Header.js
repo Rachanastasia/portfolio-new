@@ -12,16 +12,15 @@ export default function Header(){
 }
 
 
-function HeaderTitle(){
+export function HeaderTitle(){
     return (
         <div className='header-title-wrapper'>
             <h1 className='section-title main-title'>Rachel Reilly</h1>
             <div className='header-title-link-wrapper'>
-                <Link href={''}><span>Projects</span></Link>
-                <Link href={''}><span>About</span></Link>
-                <Link href={''}><span>Contact</span></Link>
-
-                <Link href={''}><span>Blog</span></Link>
+                <Link href={'/projects'}><span>Projects</span></Link>
+                <Link href={'/about'}><span>About</span></Link>
+                <Link href={'/about#contact'}><span>Contact</span></Link>
+                <Link href={'/blog'}><span>Blog</span></Link>
             </div>
         </div>)
 }
