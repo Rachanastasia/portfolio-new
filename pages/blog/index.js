@@ -1,10 +1,10 @@
-import Screen from '../../components/Screen'
+import Layout from '../../components/layout'
 import Link from 'next/link'
 import {HeaderTitle} from '../../components/Header'
 
 export default function BlogPage(){
     return (
-        <Screen>
+        <Layout>
             <div className='blog-temp-wrapper'>
             <div className='blog-temp-content-wrapper'>
                 <h2>Coming soon...</h2>
@@ -12,6 +12,6 @@ export default function BlogPage(){
             </div>
             <HeaderTitle />
             </div>
-        </Screen>
+        </Layout>
     )
 }

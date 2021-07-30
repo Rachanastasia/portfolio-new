@@ -1,14 +1,14 @@
-import Screen from '../../components/Screen'
+import Layout from '../../components/layout'
 import About from '../../components/About'
 
 
 export default function AboutPage(){
     return (
-        <Screen>
+        <Layout>
             <About />
             <div id='contact'>
                 <h1>Contact</h1>
             </div>
-        </Screen>
+        </Layout>
     )
 }

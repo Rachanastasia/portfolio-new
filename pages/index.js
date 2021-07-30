@@ -1,11 +1,10 @@
-import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Screen from '../components/Screen'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
-    <Screen>
+    <Layout>
         <Header />
-    </Screen>
+    </Layout>
   )
 }

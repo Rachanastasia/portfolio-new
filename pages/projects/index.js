@@ -1,11 +1,11 @@
-import Screen from '../../components/Screen'
+import Layout from '../../components/layout'
 import Projects from '../../components/Projects'
 
 
 export default function ProjectsPage(){
     return (
-        <Screen>
+        <Layout>
             <Projects />
-        </Screen>
+        </Layout>
     )
 }
