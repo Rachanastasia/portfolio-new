@@ -6,7 +6,7 @@ export function Word({word, color, hasSpace=true}){
 }
 
 export function Character({char, color='two', hasSpace=true}){
-    return <span className={`animation-${color} animated-letter ${hasSpace && 'animated-word'}`}>{char}</span>
+    return <span className={`animation-${color} animated-letter ${hasSpace ? 'animated-word' : null}`}>{char}</span>
 }
 
 export function FullLine({tabs, children}){
