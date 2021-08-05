@@ -2,8 +2,8 @@ require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
-const fetch = require('node-fetch')
 const { PORT } = require('./config')
+const {getMediumArticles} = require('./getMediumArticles.js')
 
 const app = express()
 app.use(express.json())
@@ -20,12 +20,6 @@ app.get('/', async (req, res) => {
 
 })
 
-async function getMediumArticles(){
-    const url = "https://medium.com/@rachelrly/latest?format=json"
-    const test = await fetch(url, { method: 'get', headers: { 'Content-Type': 'application/json' }}).then(r => console.log(JSON.parse(r.body)))
- 
-    return test
-}
 
 app.listen(PORT, () => {
     console.log(`server listening at http://localhost:${PORT}`)
