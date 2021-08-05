@@ -14,7 +14,7 @@ This is the repository for Software Engineer Rachel Reilly's portfolio site.
 
 ### /api
 
-This folder contains a simple Express.js API with one endpoint that returns the blog posts from [https://rachelrly.medium.com/](https://rachelrly.medium.com)
+This folder contains a simple Express.js API with one endpoint that returns the Blog posts from [https://rachelrly.medium.com/](https://rachelrly.medium.com)
 
 #### index.js
 
@@ -22,7 +22,7 @@ Sets up Express.js app
 
 #### getMediumArticles.js
 
-Fetches and parses the RSS feed, preparing the blog posts for the client
+Fetches and parses the RSS feed, preparing the Blog posts for the client
 
 ### /client
 
@@ -78,9 +78,9 @@ Contains the styles for their respective sections
 
 Scale your recipes with Sliced
 
-[View project](https://sliced.rachanastasia.vercel.app/) ◇ 
-[View repository](https://github.com/rachelrly/sliced) ◇ 
-[View blog post](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
+[Project](https://sliced.rachanastasia.vercel.app/) ◇ 
+[Repository](https://github.com/rachelrly/sliced) ◇ 
+[Blog post](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
 
 ![](client/assets/scale-down.jpg)
 
@@ -88,32 +88,32 @@ Scale your recipes with Sliced
 
 A fullstack language learning app that uses the spaced repetition technique
 
-[View project](https://spaced-repetition-dun.vercel.app/) ◇ 
-[View repository](https://github.com/rachelrly/spaced-repetition-server)
+[Project](https://spaced-repetition-dun.vercel.app/) ◇ 
+[Repository](https://github.com/rachelrly/spaced-repetition-server)
 
 ### One Dimensional Chess
 
 A static two-player One Dimensional Chess game
 
-[View project](https://one-d-chess.vercel.app/) ◇ 
-[View repository](https://github.com/Rachanastasia/one-dimensional-chess)
+[Project](https://one-d-chess.vercel.app/) ◇ 
+[Repository](https://github.com/Rachanastasia/one-dimensional-chess)
 
 
 ### GraphQL Bookshelf
 
 A fullstack GraphQL project that allows users to view my virtual bookshelf and filter books by author, rating, or genre
 
-[View project](https://bookshelf.rachanastasia.vercel.app/) ◇ 
-[View repository](https://github.com/rachelrly/graphql-bookshelf-api)
+[Project](https://bookshelf.rachanastasia.vercel.app/) ◇ 
+[Repository](https://github.com/rachelrly/graphql-bookshelf-api)
 
 
 ### Loan Calculator
 
 A simple loan calculator that utilizes the `useReducer()` hook to calculate the new value on change rather than on submit
 
-[View project](https://loan-calculator-two.vercel.app/) ◇ 
-[View repository](https://github.com/rachelrly/loan-calculator) ◇ 
-[View blog post](https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51)
+[Project](https://loan-calculator-two.vercel.app/) ◇ 
+[Repository](https://github.com/rachelrly/loan-calculator) ◇ 
+[Blog post](https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51)
 
 
 
@@ -121,5 +121,5 @@ A simple loan calculator that utilizes the `useReducer()` hook to calculate the 
 
 A social media platform for developers to share their work. Created for the team capstone at Thinkful's Software Engineering Immersion program
 
-[View project](https://init-rachel.vercel.app/) ◇ 
-[View repository](https://github.com/Rachanastasia/init) 
+[Project](https://init-rachel.vercel.app/) ◇ 
+[Repository](https://github.com/Rachanastasia/init) 
