@@ -12,7 +12,8 @@ const projects = [
             {title: 'Client Code', href: 'https://github.com/rachelrly/sliced-client'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/sliced-API'},
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
-        ]
+        ],
+        date: 'October 2020 - Present'
     },
     {
         title: 'Spaced Repetition',
@@ -23,7 +24,8 @@ const projects = [
             {title: 'View App', href: 'https://spaced-repetition-dun.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/spaced-repetition-client'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/spaced-repetition-server'}
-        ]
+        ],
+        date: 'October 2020 - November 2020'
     },
     {
         title: 'GraphQL Bookshelf',
@@ -33,7 +35,8 @@ const projects = [
             {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/graphql-bookshelf-client'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/graphql-bookshelf-api'}
-        ]
+        ],
+        date: 'January 2021'
     },
     {
         title: 'One Dimensional Chess',
@@ -42,7 +45,8 @@ const projects = [
         links: [
             {title: 'View App', href: 'https://one-d-chess.vercel.app/'},
             {title: 'Game Code', href: 'https://github.com/rachelrly/one-dimensional-chess'},
-        ]
+        ],
+        date: 'October 2020 - January 2021'
     },
     {
         title: 'Loan Calculator',
@@ -52,7 +56,8 @@ const projects = [
             {title: 'View App', href: 'https://loan-calculator-two.vercel.app/'},
             {title: 'App Code', href: 'https://github.com/rachelrly/loan-calculator'},
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51'}
-        ]
+        ],
+        date: 'February 2021'
     },
     {
         title: 'Init',
@@ -62,7 +67,8 @@ const projects = [
             {title: 'View App', href: 'https://init-rachel.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/init'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/init-api'}
-        ]
+        ],
+        date: 'November 2020 - December 2020'
     }
 ]
 
@@ -71,7 +77,7 @@ export default function Projects(){
     return (
         <section>
             <h2 className='section-title'>Projects</h2>
-            {projects.map(p => <Project {...p} />)}
+            {projects.map(project => <Project {...project} />)}
         </section>
     )
 }

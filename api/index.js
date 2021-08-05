@@ -16,7 +16,7 @@ app.get('/', async (req, res) => {
       return res.status(200).json(articles)
     } catch (error) {
         const errorMessage = 'Error fetching Medium articles: ' + (error?.message || error)
-        console.error(errorMessage)
+        if (process.env.NODE_ENV === 'development') console.error(errorMessage)
         return res.status(400).json({message: errorMessage})
     }
 })
