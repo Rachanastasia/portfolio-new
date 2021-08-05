@@ -78,7 +78,7 @@ Contains the styles for their respective sections
 
 A recipe app that scales up and down ingredients.
 
-![](client/assets/scale-down.png)
+![](client/assets/scale-down.jpg)
 
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
 [View client repository](https://github.com/Rachanastasia/sliced-client) ◇ 
