@@ -18,12 +18,13 @@ function parseArticle(article){
         day: 'numeric',
     }
     const datePosted = new Intl.DateTimeFormat('en-US', dateFormatOptions).format(date)
-    const parsedContent = articleBody.replace(/<[^>]+>/g , '');
-    const replaced = parsedContent.replace(/http+href/g, r => r + 'YOYOYO  ')
+    const parsedContent = articleBody.replace(/<[^>]+>/g, '');
+    const content = parsedContent.replace(/http.*[href|com]/g, '');
+
     return {
         title: article.title,
         link: {href: article.link, title: 'View on Medium'},
-        content: replaced,
+        content,
         datePosted
     }
 }
