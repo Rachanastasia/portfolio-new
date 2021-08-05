@@ -14,7 +14,7 @@ This is the repository for Rachel Reilly's portfolio site.
 
 ### /api
 
-This folder contains a simple Express.js API with one endpoint that returns the blog posts from [rachelrly.medium.com](https://rachelrly.medium.com)
+This folder contains a simple Express.js API with one endpoint that returns the blog posts from [https://rachelrly.medium.com/](https://rachelrly.medium.com)
 
 #### index.js
 
@@ -78,7 +78,7 @@ Contains the styles for their respective sections
 
 A recipe app that scales up and down ingredients.
 
-![](client/assets/slice-down.png)
+![](./assets/slice-down.png)
 
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
 [View client repository](https://github.com/Rachanastasia/sliced-client) ◇ 
