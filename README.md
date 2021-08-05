@@ -30,6 +30,16 @@ Fetches and parses the RSS feed, preparing the Blog posts for the client
 
 Contains the layout for the routes on the app: `/`, `/blog`, `/projects`
 
+##### index.js
+
+Contains the main page and fetches Medium articles, setting them in Session Storage for preloading
+
+#### /hooks
+
+##### useArticles.js
+
+Contains two hooks, `useGetArticlesFromStorage()` and `useSetArticlesInStorag()`
+
 #### /components
 
 Contains the components that are used in `/pages` and elsewhere. In each folder, the default of the `index.js` is a stand-alone component, and the child components are not to be used outside their folder. 
