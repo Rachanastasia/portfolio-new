@@ -1,10 +1,10 @@
 import BlogPost from './BlogPost'
 
-export default function BlogPosts({blogPosts}){
+export default function BlogPosts({articles=[]}){
     return (
         <section>
             <h2 className='section-title'>Blog</h2>
-            {blogPosts.map(post => <BlogPost {...post} />)}
+            {[].map(post => <BlogPost {...post} />)}
         </section>
     )
 }
