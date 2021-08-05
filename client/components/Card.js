@@ -13,8 +13,8 @@ export default function Card({children, title, links, date}){
 }
 
 function Links({links}){
-    const linksJsx = links.map(({title, href}) => (
-        <Link href={href}>
+    const linksJsx = links.map(({title, href}, index) => (
+        <Link href={href} key={index}>
         <li>{title}</li>
         </Link>
         ))

@@ -12,11 +12,18 @@ module.exports = {
 function parseArticle(article){
     const articleBody = article['content:encoded']
     const date = new Date(article.isoDate)
-    const datePosted = date.toDateString()
+    const dateFormatOptions = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+    }
+    const datePosted = new Intl.DateTimeFormat('en-US', dateFormatOptions).format(date)
+    const parsedContent = articleBody.replace(/<[^>]+>/g , '');
+    const replaced = parsedContent.replace(/http+href/g, r => r + 'YOYOYO  ')
     return {
         title: article.title,
-        link: article.link,
-        content: articleBody,
+        link: {href: article.link, title: 'View on Medium'},
+        content: replaced,
         datePosted
     }
 }

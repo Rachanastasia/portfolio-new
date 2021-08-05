@@ -4,7 +4,11 @@ export default function BlogPost({content, title, link, datePosted}){
     const posted = 'Posted ' + datePosted
     return (
         <Card date={posted} title={title} links={[link]}>
-            {content}
+            <BlogContent content={content}/>
         </Card>
     )
+}
+
+function BlogContent({content}){
+    return <p>{content}</p>
 }
