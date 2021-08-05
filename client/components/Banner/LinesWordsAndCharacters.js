@@ -11,6 +11,6 @@ export function Character({char, color='two', hasSpace=true}){
 
 export function FullLine({tabs, children}){
     return (
-        <div className={`animation-line animated-tabs-${tabs}`}>{children}</div>
+        <div className={`animated-line animated-tabs-${tabs}`}>{children}</div>
     )
 }
