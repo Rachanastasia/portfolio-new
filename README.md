@@ -4,9 +4,10 @@ This is the repository for Rachel Reilly's portfolio site.
 
 ## Tech Stack
 
-- React
+- React.js
 - Next.js
 - SASS
+- Express.js
 
 ## Projects
 
