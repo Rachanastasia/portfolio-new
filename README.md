@@ -1,6 +1,6 @@
-# Rachel Reilly |  Software Engineer
+# Portfolio
 
-This is the repository for Rachel Reilly's portfolio site.
+This is the repository for Software Engineer Rachel Reilly's portfolio site.
 
 ## Tech Stack
 
@@ -76,25 +76,24 @@ Contains the styles for their respective sections
 
 ### Sliced
 
-A recipe app that scales up and down ingredients.
-
-![](client/assets/scale-down.jpg)
+Scale your recipes with Sliced
 
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
 [View repository](https://github.com/rachelrly/sliced) ◇ 
 [View blog post](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
 
+![](client/assets/scale-down.jpg)
+
 ### Spaced Repetition
 
-A language learning app that uses the spaced repetition technique
+A fullstack language learning app that uses the spaced repetition technique
 
 [View project](https://spaced-repetition-dun.vercel.app/) ◇ 
-[View client repository](https://github.com/Rachanastasia/spaced-repetition-client) ◇ 
-[View server repository](https://github.com/Rachanastasia/spaced-repetition-server)
+[View repository](https://github.com/rachelrly/spaced-repetition-server)
 
 ### One Dimensional Chess
 
-A two-player One Dimensional Chess game
+A static two-player One Dimensional Chess game
 
 [View project](https://one-d-chess.vercel.app/) ◇ 
 [View repository](https://github.com/Rachanastasia/one-dimensional-chess)
@@ -102,25 +101,25 @@ A two-player One Dimensional Chess game
 
 ### GraphQL Bookshelf
 
-A full stack GraphQL project that allows users to filter books by author, rating, or genre
+A fullstack GraphQL project that allows users to view my virtual bookshelf and filter books by author, rating, or genre
 
 [View project](https://bookshelf.rachanastasia.vercel.app/) ◇ 
-[View client repository](https://github.com/Rachanastasia/graphql-bookshelf-client) ◇ 
-[View server repository](https://github.com/Rachanastasia/graphql-bookshelf-api)
+[View repository](https://github.com/rachelrly/graphql-bookshelf-api)
 
 
 ### Loan Calculator
 
+A simple loan calculator that utilizes the `useReducer()` hook to calculate the new value on change rather than on submit
+
 [View project](https://loan-calculator-two.vercel.app/) ◇ 
-[View repository](https://github.com/Rachanastasia/loan-calculator) ◇ 
+[View repository](https://github.com/rachelrly/loan-calculator) ◇ 
 [View blog post](https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51)
 
 
 
 ### Init
 
-A social media platform for developers to share their work
+A social media platform for developers to share their work. Created for the team capstone at Thinkful's Software Engineering Immersion program
 
 [View project](https://init-rachel.vercel.app/) ◇ 
-[View client repository](https://github.com/Rachanastasia/init) ◇ 
-[View server repository](https://github.com/Rachanastasia/init-api)
+[View repository](https://github.com/Rachanastasia/init) 
