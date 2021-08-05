@@ -4,9 +4,28 @@ This is the repository for Rachel Reilly's portfolio site.
 
 ## Tech Stack
 
-- React
+- React.js
 - Next.js
 - SASS
+- Express.js
+- [rss-parser](https://www.npmjs.com/package/rss-parser)
+
+## Codebase 
+
+### /api
+
+This folder contains a simple Express.js API with one endpoint
+
+#### index.js
+
+Sets up Express.js app
+
+#### getMediumArticles.js
+
+Gets and parses the RSS feed, preparing the data for the response 
+
+### /client
+
 
 ## Projects
 
