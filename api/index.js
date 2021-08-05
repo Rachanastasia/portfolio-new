@@ -12,12 +12,13 @@ app.use(cors())
 
 app.get('/', async (req, res) => {
     try {
-        const t = await getMediumArticles()
-        res.send(t)
+      const articles = await getMediumArticles()
+      return res.status(200).json(articles)
     } catch (error) {
-        console.error('Error fetching Medium articles: ', error?.message || error)
+        const errorMessage = 'Error fetching Medium articles: ' + (error?.message || error)
+        console.error(errorMessage)
+        return res.status(400).json({message: errorMessage})
     }
-
 })
 
 
