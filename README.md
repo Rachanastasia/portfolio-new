@@ -81,8 +81,7 @@ A recipe app that scales up and down ingredients.
 ![](client/assets/scale-down.jpg)
 
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
-[View client repository](https://github.com/Rachanastasia/sliced-client) ◇ 
-[View server repository](https://github.com/Rachanastasia/sliced-API) ◇ 
+[View repository](https://github.com/rachelrly/sliced) ◇ 
 [View Medium article](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
 
 ### Spaced Repetition
