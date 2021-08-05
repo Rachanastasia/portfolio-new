@@ -82,7 +82,7 @@ A recipe app that scales up and down ingredients.
 
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
 [View repository](https://github.com/rachelrly/sliced) ◇ 
-[View Medium article](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
+[View blog post](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
 
 ### Spaced Repetition
 
@@ -113,7 +113,7 @@ A full stack GraphQL project that allows users to filter books by author, rating
 
 [View project](https://loan-calculator-two.vercel.app/) ◇ 
 [View repository](https://github.com/Rachanastasia/loan-calculator) ◇ 
-[View Medium article](https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51)
+[View blog post](https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51)
 
 
 
