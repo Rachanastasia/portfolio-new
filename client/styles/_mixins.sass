@@ -54,17 +54,28 @@
 
 
 @mixin button
-    @include border
-    @include row-between
     @include button-size
     color: $color-accent-dark
     font-size: $text-1
     letter-spacing: $letter-spacing-2
     margin-top: $spacer-2
-    &:hover
-        border-color: $color-accent
+    position: absolute
+    text-decoration: none
+    &::after
+        width: 90%
+        transition: 0.3s ease all
+    &::first-child
+        position: relative
+        text-align: center
+        &::after
+            content: ""
+            position: absolute
+            top: 65%
+            height: 2px
+            left: 5%
+            background-color: red
+            transition: 0.5s ease all .3s
 
-    .arrow
-        transform: scale(1.3)
+
 
     

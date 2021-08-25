@@ -1,15 +1,16 @@
 import React from 'react'
-import Link from 'next/link'
+import { BaseButtonLink } from './BaseButton'
 
 export default function Header(){
     return (
         <header>
             <h1 className='section-title main-title'>Rachel Reilly</h1>
             <div className='header-title-link-wrapper'>
-                <Link href={'/projects'}><span>Projects</span></Link>
-                <Link href={'/about'}><span>About</span></Link>
-                <Link href={'/about#contact'}><span>Contact</span></Link>
-                <Link href={'/blog'}><span>Blog</span></Link>
+            <BaseButtonLink url='/projects' content='Projects'/>
+<BaseButtonLink url='/about' content='About'/>
+<BaseButtonLink url='/contact' content='Contact'/>
+<BaseButtonLink url='/blog' content='Blog'/>
+<BaseButtonLink url='/hire-me' content='Hire Me'/> 
             </div>
         </header>
     )
