@@ -1,16 +1,14 @@
 import { useEffect } from 'react'
 import Header from '../components/Header'
+import Banner from '../components/Banner/index'
 import Layout from '../components/layout'
 import { getMediumArticles } from '../services/getMediumArticles'
 
 export default function Home() {
-  useEffect(()=>{
-    const articles = getMediumArticles().then(r => console.log('FROM THE MAIN COMPONENT', r))
-
-  },[])
+//TODO: fetch articles from API, sanitize, set in state
   return (
     <Layout>
-        <Header />
+      <Banner />
     </Layout>
   )
 }

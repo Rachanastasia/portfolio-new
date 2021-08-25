@@ -1,0 +1,17 @@
+header
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: $spacer-1 
+    width: 100%
+    @media all and (min-width: 525px)
+        @include row-between
+        min-height: 10vh
+        padding: 0 $spacer-3
+    @media all and (min-width: 640px)
+        padding: 0 $spacer-4
+    @media all and (min-width: 1600px)
+        padding: $spacer-2 $spacer-6
+
+
+        
