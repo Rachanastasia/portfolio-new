@@ -77,6 +77,7 @@ export default function Projects(){
     return (
         <section>
             <h2 className='section-title'>Projects</h2>
+        
             {projects.map(project => <Project {...project} />)}
         </section>
     )
