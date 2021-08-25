@@ -1,10 +1,10 @@
 import React from 'react'
 import BaseButton from './BaseButton'
 
-export default function About(){
+export default function Contact(){
     return (
         <section className='about-wrapper'> 
-            <h2>About</h2>
+            <h2>Contact</h2>
             <div className='about-content-wrapper'>
                 {/* <img className='about-img' src={require('../assets/rachel.jpg')} /> */}
                 <div className="about-paragraph-wrapper">

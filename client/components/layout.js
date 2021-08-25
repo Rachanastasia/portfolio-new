@@ -1,16 +1,24 @@
 import Head from 'next/head'
-const defaultDescription = "Rachel Reilly's portfolio website"
+import Header from './Header'
 
-export default function Layout({description=defaultDescription, children}) {
+const DEFAULT_DESCRIPTION = "Rachel Reilly's portfolio website"
+const DEFAULT_TITLE = "Rachel Reilly | Software Engineer"
+
+export default function Layout({
+  description=DEFAULT_DESCRIPTION, 
+  title=DEFAULT_TITLE, 
+  children
+}) {
   return (
     <div className='container'>
       <Head>
-        <title>Rachel Reilly | Software Engineer</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         {children}
+        <Header />
       </main>
     </div>
   )
