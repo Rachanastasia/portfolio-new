@@ -1,12 +1,14 @@
 import BlogPost from './BlogPost'
+import BlogError from './BlogError'
 
-export default function BlogPosts({articles=[]}){
-    console.log('THESE ARE MY ARTICLES', articles)
-    const hasArticles = !!articles?.length
+export default function BlogPosts({blogPosts}){
+    const hasBlogPosts = blogPosts?.length
     return (
         <section>
             <h2 className='section-title'>Blog</h2>
-            {hasArticles && articles.map(post => <BlogPost key={post.title} {...post} />)}
+            {hasBlogPosts ? 
+            blogPosts.map(post => <BlogPost key={post.title} {...post} />) : 
+            <BlogError />}
         </section>
     )
 }
