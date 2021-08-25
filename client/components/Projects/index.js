@@ -78,7 +78,18 @@ export default function Projects(){
         <section>
             <h2 className='section-title'>Projects</h2>
         
-            {projects.map(project => <Project {...project} />)}
+            <div className='project1 project'>
+
+            </div>
+            <div className='project2 project'>
+
+            </div>
+            <div className='project3 project'>
+
+            </div>
+            <div className='project4 project'>
+
+            </div>
         </section>
     )
 }

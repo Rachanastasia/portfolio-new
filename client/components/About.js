@@ -1,12 +1,16 @@
 import React from 'react'
 import BaseButton from './BaseButton'
+import Me from '../assets/main-page.jpg'
+import Image from 'next/image'
 
 export default function About(){
     return (
-        <section className='about-wrapper'> 
+        <section > 
             <h2>About</h2>
             <div className='about-content-wrapper'>
-                {/* <img className='about-img' src={require('../assets/rachel.jpg')} /> */}
+                <div className='image-wrapper'>
+                    <Image className='about-img' width={300} height={300} src={Me} />
+                </div>
                 <div className="about-paragraph-wrapper">
                     <p>
                         Hi, I’m Rachel. I’m a Full Stack Developer from Chicago.
