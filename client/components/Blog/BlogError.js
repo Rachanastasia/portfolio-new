@@ -9,8 +9,8 @@ export default function BlogError(){
             <div className='blog-error-section-wrapper'>
                 <h3>Oops! The blog posts can't be displayed!</h3>
                 <span>These articles were originally posted Medium. View them at 
-                    <Link href='rachelrly.medium.com'>
-                        <span>rachelrly.medium.com</span>
+                    <Link href='https://rachelrly.medium.com'>
+                        <span> rachelrly.medium.com</span>
                     </Link>
                 </span>
             </div>
