@@ -1,26 +1,28 @@
 import React from 'react'
-import Banner from './Banner/index'
-import Link from 'next/link'
+import {PAGES} from '../utils/constants'
+import { BaseButtonLink } from './BaseButton'
 
-export default function Header(){
+export default function Header({path}){
+    console.log('CURRENT PATH', path)
+    //TODO: switch to use Object.entries
+    const validateAgainstPath = (pagePath) => pagePath === path ? 'active' : null
+    const projectsClass = validateAgainstPath(PAGES.PROJECTS.PATH)
+    const aboutClass = validateAgainstPath(PAGES.ABOUT.PATH)
+    const blogClass = validateAgainstPath(PAGES.BLOG.PATH)
+    const contactClass = validateAgainstPath(PAGES.CONTACT.PATH)
+    const hireClass = validateAgainstPath(PAGES.HIRE_ME.PATH)
     return (
         <header>
-            <Banner />
-            <HeaderTitle />
+            <h1 className='section-title main-title'>Rachel Reilly</h1>
+            <div className='header-title-link-wrapper'>
+                <BaseButtonLink url='/projects' className={projectsClass} content='Projects'/>
+                <BaseButtonLink url='/about' className={aboutClass} content='About'/>
+                <BaseButtonLink url='/contact' className={contactClass} content='Contact'/>
+                <BaseButtonLink url='/blog' className={blogClass} content='Blog'/>
+                <BaseButtonLink url='/hire-me' className={hireClass} content='Hire Me'/> 
+            </div>
         </header>
     )
 }
 
 
-export function HeaderTitle(){
-    return (
-        <div className='header-title-wrapper'>
-            <h1 className='section-title main-title'>Rachel Reilly</h1>
-            <div className='header-title-link-wrapper'>
-                <Link href={'/projects'}><span>Projects</span></Link>
-                <Link href={'/about'}><span>About</span></Link>
-                <Link href={'/about#contact'}><span>Contact</span></Link>
-                <Link href={'/blog'}><span>Blog</span></Link>
-            </div>
-        </div>)
-}

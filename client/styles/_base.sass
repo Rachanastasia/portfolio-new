@@ -10,10 +10,13 @@ a
 
 .container
     min-height: 100vh
+    max-width: 100vw
+    overflow-x: hidden
     dispay: flex
-    height: 100vh
+    height: 100%
     margin: 0
     padding: 0
+    background-color: $colors-dark-background
 
 
 
@@ -23,47 +26,34 @@ main
     margin: 0
     display: flex
     flex-direction: column
-    justify-content: space-between
     font-family: $font
     section
-        .section-title
+        margin: $spacer-2
+        padding: $spacer-3
+        align-self: center
+        max-width: $max-content-width
+        background-color: $colors-accent-2-dark-muted
+        @include text-body
+        @media all and (min-width: 425px)
+            margin: $spacer-2 $spacer-3
+        @media all and (min-width: 825px)
+            margin: $spacer-3 $spacer-4
+        @media all and (min-width: 900px)
+            padding: $spacer-3 $spacer-4
+        .section-title, h2
             margin-bottom: $spacer-1
-            font-size: $text-5
-            letter-spacing: $letter-spacing-5
-            font-weight: 300
+            @include text-title
         .main-title
             font-size: $text-6
-        h3
-            font-size: $text-4
-            font-weight: 400
-            
-
-
-header
-    min-height: 100vh
-    width: 100vw
-    overflow: hidden
-    margin: 0
-    
-.header-title-wrapper
-        @include row-between
-        min-height: 10vh
-        padding: 0 $spacer-3
-        span
-            padding-left: $spacer-2
-            cursor: pointer
-            &:hover, &:focus
-                color: $colors-animation-orange
        
 
 
+    
 
 
 
-.base-button-wrapper
-    @include button
 
-h1, h2, h3
+h1, h3
     font-family: $title-font
     letter-spacing: 2px
 

@@ -1,0 +1,59 @@
+
+@keyframes button-underline-color
+    0%
+        background-color: $colors-white
+    100%
+        background-color: $colors-accent-2
+
+@keyframes button-underline-color
+    0%
+        background-color: $colors-accent-2
+    100%
+        background-color: $colors-white
+
+@mixin underline
+    
+
+
+.base-button-wrapper
+    padding: $spacer-1
+    width: 100px
+    text-align: center
+    .base-button-content:after
+        content: ""
+        top: 65%
+        height: 2px
+        width: 0%
+        left: 0
+        animation: button-underline-color-out 0.3s ease-in
+        transition: 0.3s ease-in all .01s
+    &:hover .base-button-content:after
+        background-color: $colors-accent-2
+        content: ""
+        width: 100%
+        position: absolute
+        left: 300
+        top: -30
+        transition: 0.3s ease-in all
+    .base-button-content
+        color: $colors-white
+        cursor: pointer
+        line-height: 80px
+        position: relative
+        display: inline-block
+        text-align: center
+        font-size: 20px
+        text-decoration: none 
+        &:after
+            content: ""
+            position: absolute
+    .active
+        color: red
+    #active:after
+        background-color: $colors-accent-2
+        content: ""
+        width: 100%
+        position: absolute
+        left: 300
+        top: -30
+        transition: 0.3s ease-in all

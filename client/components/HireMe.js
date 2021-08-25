@@ -1,10 +1,12 @@
 import React from 'react'
 import BaseButton from './BaseButton'
 
-export default function About(){
+export default function HireMe(){
+    //TODO: have link to resume and LinkedIn and gmail
+    //TODO: write breif description of looking for a job
     return (
         <section className='about-wrapper'> 
-            <h2>About</h2>
+            <h2>Hire Me</h2>
             <div className='about-content-wrapper'>
                 {/* <img className='about-img' src={require('../assets/rachel.jpg')} /> */}
                 <div className="about-paragraph-wrapper">
