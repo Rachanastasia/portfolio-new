@@ -4,8 +4,10 @@ header
     flex-direction: column
     padding: $spacer-1 
     width: 100%
+    background-color: $colors-accent-2-dark
     h1
         display: hidden
+        color: $colors-white
     @media all and (min-width: 525px)
         @include row-between
         min-height: 10vh
@@ -14,6 +16,10 @@ header
         padding: 0 $spacer-4
     @media all and (min-width: 1600px)
         padding: $spacer-2 $spacer-6
+    .header-title-link-wrapper
+        display: flex
+        justify-content: space-between
+        color: $colors-white
 
 
         

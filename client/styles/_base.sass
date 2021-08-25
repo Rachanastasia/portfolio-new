@@ -14,6 +14,7 @@ a
     height: 100vh
     margin: 0
     padding: 0
+    background-color: $colors-dark-background
 
 
 
@@ -23,9 +24,12 @@ main
     margin: 0
     display: flex
     flex-direction: column
-    justify-content: space-between
     font-family: $font
     section
+        margin: $spacer-4
+        padding: $spacer-2
+        background-color: $colors-accent-2-dark-muted
+        color: $colors-off-white-text
         .section-title
             margin-bottom: $spacer-1
             font-size: $text-5
@@ -33,9 +37,10 @@ main
             font-weight: 300
         .main-title
             font-size: $text-6
-        h3
+        h3, h2
             font-size: $text-4
             font-weight: 400
+            color: $colors-accent-2
             
 
 
@@ -45,7 +50,7 @@ main
 
 
 
-h1, h2, h3
+h1, h3
     font-family: $title-font
     letter-spacing: 2px
 
