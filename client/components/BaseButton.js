@@ -11,7 +11,6 @@ export default function BaseButton({content, onClick=null, className}){
 }
 
 export function BaseButtonLink({content, url='/', className}){
-    console.log('THIS IS THE CLASS', className)
     const concatClassName = className + ' ' + 'base-button-wrapper'
     return (
         <div className={concatClassName}>

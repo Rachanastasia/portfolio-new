@@ -78,4 +78,17 @@
 
 
 
-    
+@mixin text-body
+    font-size: $text-1
+    line-spacing: calc($text-1 * 1.4)
+    font-family: $font
+    color: $colors-off-white-text
+
+@mixin text-title
+    letter-spacing: $letter-spacing-5
+    font-weight: 300
+    font-size: $text-5
+    line-spacing: calc($text-5 * 1.4)
+    @media all and (min-width: 620px)
+        font-size: $text-6
+        line-spacing: calc($text-6 * 1.4)
