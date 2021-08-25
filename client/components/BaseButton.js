@@ -1,19 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
 
-export default function BaseButton({content, onClick=null}){
+export default function BaseButton({content, onClick=null, className}){
+    const concatClassName = className + ' ' + 'base-button-wrapper'
     return (
-        <div className='base-button-wrapper' onClick={onClick}>
+        <div className={concatClassName} onClick={onClick}>
             <span className='base-button-content'>{content}</span>
         </div>
     )
 }
 
-export function BaseButtonLink({content, url='/'}){
+export function BaseButtonLink({content, url='/', className}){
+    console.log('THIS IS THE CLASS', className)
+    const concatClassName = className + ' ' + 'base-button-wrapper'
     return (
-        <div className='base-button-wrapper'>
+        <div className={concatClassName}>
             <Link href={url}>
-                <span className='base-button-content'>{content}</span>
+                <span className='base-button-content' id={className}>{content}</span>
             </Link>
         </div>
     )

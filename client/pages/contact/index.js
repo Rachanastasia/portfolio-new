@@ -1,12 +1,12 @@
+import {PAGES} from '../../utils/constants'
 import Layout from '../../components/layout'
 import Contact from '../../components/Contact'
 
 
 export default function ContactPage(){
-    const pageTitle = 'Contact Rachel Reilly, Chicago Based Software Engineer'
-    const pageDescription = "Contact Rachel Reilly, Chicago based software engineer"
+    const {CONTACT: {TITLE, DESCRIPTION, PATH}} = PAGES
     return (
-        <Layout title={pageTitle} description={pageDescription}>
+        <Layout title={TITLE} description={DESCRIPTION} path={PATH}>
             <Contact />
         </Layout>
     )

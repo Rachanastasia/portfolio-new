@@ -1,16 +1,25 @@
 import React from 'react'
+import {PAGES} from '../utils/constants'
 import { BaseButtonLink } from './BaseButton'
 
-export default function Header(){
+export default function Header({path}){
+    console.log('CURRENT PATH', path)
+    //TODO: switch to use Object.entries
+    const validateAgainstPath = (pagePath) => pagePath === path ? 'active' : null
+    const projectsClass = validateAgainstPath(PAGES.PROJECTS.PATH)
+    const aboutClass = validateAgainstPath(PAGES.ABOUT.PATH)
+    const blogClass = validateAgainstPath(PAGES.BLOG.PATH)
+    const contactClass = validateAgainstPath(PAGES.CONTACT.PATH)
+    const hireClass = validateAgainstPath(PAGES.HIRE_ME.PATH)
     return (
         <header>
             <h1 className='section-title main-title'>Rachel Reilly</h1>
             <div className='header-title-link-wrapper'>
-                <BaseButtonLink url='/projects' content='Projects'/>
-                <BaseButtonLink url='/about' content='About'/>
-                <BaseButtonLink url='/contact' content='Contact'/>
-                <BaseButtonLink url='/blog' content='Blog'/>
-                <BaseButtonLink url='/hire-me' content='Hire Me'/> 
+                <BaseButtonLink url='/projects' className={projectsClass} content='Projects'/>
+                <BaseButtonLink url='/about' className={aboutClass} content='About'/>
+                <BaseButtonLink url='/contact' className={contactClass} content='Contact'/>
+                <BaseButtonLink url='/blog' className={blogClass} content='Blog'/>
+                <BaseButtonLink url='/hire-me' className={hireClass} content='Hire Me'/> 
             </div>
         </header>
     )

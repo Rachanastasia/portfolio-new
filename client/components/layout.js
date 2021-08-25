@@ -1,12 +1,13 @@
 import Head from 'next/head'
+import {PAGES} from '../utils/constants'
 import Header from './Header'
 
-const DEFAULT_DESCRIPTION = "Rachel Reilly's portfolio website"
-const DEFAULT_TITLE = "Rachel Reilly | Software Engineer"
+const {DESCRIPTION, PATH, TITLE} = PAGES.DEFAULT
 
 export default function Layout({
-  description=DEFAULT_DESCRIPTION, 
-  title=DEFAULT_TITLE, 
+  description=DESCRIPTION, 
+  title=TITLE, 
+  path=PATH,
   children
 }) {
   return (
@@ -17,7 +18,7 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
+        <Header path={path}/>
         {children}
       </main>
     </div>
