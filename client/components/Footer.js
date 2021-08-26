@@ -1,6 +1,7 @@
 import React from 'react'
 import {RiLinkedinLine, RiGithubLine} from 'react-icons/ri'
 import {AiOutlineMedium} from 'react-icons/ai'
+//DELETE IF NOT USED
 export default function Footer(){
     return (
         <footer>
