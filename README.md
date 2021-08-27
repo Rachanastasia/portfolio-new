@@ -7,6 +7,7 @@ This is the repository for Software Engineer Rachel Reilly's portfolio site.
 - React.js
 - Next.js
 - SASS
+- Node.js
 - Express.js
 - [rss-parser](https://www.npmjs.com/package/rss-parser)
 

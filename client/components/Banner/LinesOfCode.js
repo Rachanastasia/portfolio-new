@@ -1,5 +1,5 @@
 import { FullLine, Word, Character } from "./LinesWordsAndCharacters"
-
+//DELETE IF NOT USED
 export default function LineOfText({tabs=1}){
     return (
         <div className={`animation-line animated-tabs-${tabs}`}>

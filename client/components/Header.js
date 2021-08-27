@@ -12,7 +12,7 @@ export default function Header({path}){
     const hireClass = validateAgainstPath(PAGES.HIRE_ME.PATH)
     return (
         <header>
-            <h1 className='section-title main-title'>Rachel Reilly</h1>
+            <h1 className='section-title main-title'>RR</h1>
             <div className='header-title-link-wrapper'>
                 <BaseButtonLink url='/projects' className={projectsClass} content='Projects'/>
                 <BaseButtonLink url='/about' className={aboutClass} content='About'/>

@@ -7,3 +7,28 @@
     height: 50vh
     padding: $spacer-2
    
+.blog-wrapper
+    article
+        display: flex
+        flex-direction: column
+        h3
+            font-size: $text-4
+            line-height: calc(1.4 * $text-4)
+        h4
+            font-size: $text-3
+            line-height: calc(1.4 * $text-3)
+        ul
+            list-style: none
+        .date-posted
+            font-size: $text-1
+            line-height: calc(1.4 * $text-1)
+            font-weight: bold
+            padding: 0 0 $spacer-3
+        .link-text
+            font-size: $text-1
+            line-height: calc(1.4 * $text-1)
+            margin-bottom: 50px
+        a
+            font-weight: bold
+            &:hover, &:focus, &:active
+                color: $colors-accent-2

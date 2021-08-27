@@ -11,6 +11,9 @@ module.exports = {
 
 function parseArticle(article){
     const articleBody = article['content:encoded']
+    //to preserve semantic html of client
+    //TODO: use regex to just target html tag not h3 in plain text
+    const semanticArticleBody = articleBody.replace(/h3/g, 'h4')
     const date = new Date(article.isoDate)
     const dateFormatOptions = {
         year: 'numeric',
@@ -18,11 +21,12 @@ function parseArticle(article){
         day: 'numeric',
     }
     const datePosted = new Intl.DateTimeFormat('en-US', dateFormatOptions).format(date)
-    
+    console.log('ARTICLE CONTENT---------------')
+    console.log(semanticArticleBody)
     return {
         title: article.title,
         link: {href: article.link, title: 'View on Medium'},
-        content: articleBody,
+        content: semanticArticleBody,
         datePosted
     }
 }
