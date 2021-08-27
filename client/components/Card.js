@@ -1,26 +1,16 @@
 import Link from 'next/link'
 
-export default function Card({children, title, links, date}){
+export default function Card({children, title, link, date}){
 
     return (
         <article>
             <h3>{title}</h3>
-            <span>{date}</span>
+            <span className='date-posted'>{date}</span>
             {children}
-            <Links links={links} />
+            <a href={link.href}>
+                <span className='link-text'>{link.title}</span>
+            </a>
         </article>
     )
 }
-
-function Links({links}){
-    const linksJsx = links.map(({title, href}) => (
-        <Link href={href}>
-        <li>{title}</li>
-        </Link>
-        ))
-    return (
-        <ul>
-            {linksJsx}
-        </ul>
-    )
-}
+/* <p> <h4> <image> format lists*/

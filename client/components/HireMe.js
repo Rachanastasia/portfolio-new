@@ -9,9 +9,7 @@ export default function HireMe(){
             <h2>Hire Me</h2>
             <div className='about-content-wrapper'>
                 <div className="about-paragraph-wrapper">
-                    <p>
-                        I'm looking for a new position as a Software Engineer. Please check out my resume below. I am also open to doing contract and consultant work. Specialize in front-end implementation.
-                    </p>
+                    <p>I'm looking for a new position as a Software Engineer. Please check out my resume below. I am also open to doing contract and consultant work. Specialize in front-end implementation.</p>
                     <div className='about-links-wrapper'>
                         <BaseButton content='PROJECTS' onClick={null}/>
                         <BaseButton content='BLOG' href='https://rachanastasia.medium.com/'/>
