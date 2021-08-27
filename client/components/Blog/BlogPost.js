@@ -8,7 +8,7 @@ export default function BlogPost({content, title, link, datePosted}){
     })
     return (
         <Card date={posted} title={title} link={link}>
-            <div dangerouslySetInnerHTML={sanitizedData()}/>
+            <div className='post-body-wrapper' dangerouslySetInnerHTML={sanitizedData()}/>
         </Card>
     )
 }
