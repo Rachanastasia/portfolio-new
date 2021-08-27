@@ -1,5 +1,6 @@
 import React from 'react'
-import Project from './Project'
+import Image from 'next/image'
+import Sliced from '../../assets/scale-down.jpg'
 
 const projects = [
     {
@@ -79,7 +80,7 @@ export default function Projects(){
             <h2 className='section-title'>Projects</h2>
         
             <div className='project1 project'>
-
+                <Image  src={Sliced}/>
             </div>
             <div className='project2 project'>
 
