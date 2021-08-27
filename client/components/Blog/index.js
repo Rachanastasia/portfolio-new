@@ -7,8 +7,8 @@ export default function BlogPosts({blogPosts}){
         <section>
             <h2 className='section-title'>Blog</h2>
             {hasBlogPosts ? 
-            blogPosts.map(post => <BlogPost {...post} />) : 
-            <BlogError />}
+                blogPosts.map(post => <BlogPost {...post} key={post.datePosted}/>) : 
+                <BlogError />}
         </section>
     )
 }

@@ -3,8 +3,7 @@ import {PAGES} from '../utils/constants'
 import { BaseButtonLink } from './BaseButton'
 
 export default function Header({path}){
-    console.log('CURRENT PATH', path)
-    //TODO: switch to use Object.entries
+    //TODO: switch to use Object.entries syntax
     const validateAgainstPath = (pagePath) => pagePath === path ? 'active' : null
     const projectsClass = validateAgainstPath(PAGES.PROJECTS.PATH)
     const aboutClass = validateAgainstPath(PAGES.ABOUT.PATH)
