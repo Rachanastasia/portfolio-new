@@ -1,13 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
+import ProjectCardLandscape from './ProjectCardLandscape'
+import ProjectCardPortrait from './ProjectCardPortrait'
+
 import Sliced from '../../assets/scale-down.jpg'
 
-const projects = [
+
+const PROJECTS = [
     {
         title: 'Sliced',
         description: 'A recipe app that scales up and down ingredients',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
-        images: [],
+        images: [Sliced],
         links: [
             {title: 'View App', href: 'https://sliced.rachanastasia.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/sliced-client'},
@@ -76,7 +80,7 @@ const projects = [
 export default function Projects(){
 
     return (
-        <section>
+        <div>
             <h2 className='section-title'>Projects</h2>
         
             <div className='project1 project'>
@@ -91,7 +95,7 @@ export default function Projects(){
             <div className='project4 project'>
 
             </div>
-        </section>
+        </div>
     )
 }
 
