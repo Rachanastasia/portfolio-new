@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Card({children, title, link, date}){
 
     return (
@@ -13,4 +11,3 @@ export default function Card({children, title, link, date}){
         </article>
     )
 }
-/* <p> <h4> <image> format lists*/
