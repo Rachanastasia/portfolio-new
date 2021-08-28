@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Links from './Links'
 import Stack from './Stack'
 
-export default function ProjectCardPortrait({title, photo, description, stack, links}){
+export default function ProjectCardPortrait({title, image, description, stack, links}){
     return (
         <section>
             <div>
@@ -16,7 +16,7 @@ export default function ProjectCardPortrait({title, photo, description, stack, l
                     <Stack stack={stack} className='lg-vertical'/>
                 </div>
             </div>
-            <Image src={photo}/>
+            <Image src={image}/>
         </section>
     )
 }

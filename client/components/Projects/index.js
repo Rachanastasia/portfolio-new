@@ -94,7 +94,7 @@ export default function Projects(){
 
     return (
         <div>
-            <h2 className='section-title'>Projects</h2>
+            {/* <h2 className='section-title'>Projects</h2> */}
             <ProjectCardLandscape {...PROJECTS.SLICED_NEW}/>
             <ProjectCardPortrait {...PROJECTS.SLICED_OLD}/>
         </div>

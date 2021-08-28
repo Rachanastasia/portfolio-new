@@ -3,14 +3,14 @@ import Image from 'next/image'
 import Links from './Links'
 import Stack from './Stack'
 
-export default function ProjectCardLandscape({title, photo, description, stack, links}){
+export default function ProjectCardLandscape({title, image, description, stack, links}){
 
     return (
         <section>
             <div>
                 <div>
                     <h3>{title}</h3>
-                    <Image src={photo}/>
+                    <Image src={image}/>
                 </div>
                 <Stack stack={stack} className='lg-vertical' />
             </div>

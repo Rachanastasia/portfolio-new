@@ -1,7 +1,7 @@
 import React from 'react'
 import {RiLinkedinLine, RiGithubLine} from 'react-icons/ri'
 import {AiOutlineMedium} from 'react-icons/ai'
-import Me from '../assets/main-page.jpg'
+import Me from '../assets/sliced-new.jpg'
 import Image from 'next/image'
 
 export default function About(){
