@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Links from './Links'
 import Stack from './Stack'
 
-export default function ProjectCardPortrait({title, image, description, stack, links}){
+export default function ProjectCardPortrait({title, images, description, stack, links}){
+    const image = images[0]
     return (
         <section>
             <div>

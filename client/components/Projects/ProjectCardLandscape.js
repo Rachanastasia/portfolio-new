@@ -3,19 +3,20 @@ import Image from 'next/image'
 import Links from './Links'
 import Stack from './Stack'
 
-export default function ProjectCardLandscape({title, image, description, stack, links}){
-
+export default function ProjectCardLandscape({title, images, description, stack, links}){
+    console.log('THIS IS FROM CARD',images, title)
+    const image = images[0]
     return (
         <section>
-            <div>
-                <div>
+            <div className='landscape-top-wrapper'>
+                <div className='landscape-title-image-wraper'>
                     <h3>{title}</h3>
                     <Image src={image}/>
                 </div>
                 <Stack stack={stack} className='lg-vertical' />
             </div>
-            <div>
-                <Links  links={links} className='lg-horizontal'/>
+            <div className='landscape-bottom-wrapper'>
+                <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>
                 <p>{description}</p>
             </div>
         </section>
