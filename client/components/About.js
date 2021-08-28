@@ -10,7 +10,7 @@ export default function About(){
             <h2>About</h2>
             <div className='about-content-wrapper'>
                 <div className='image-wrapper'>
-                    <Image className='about-img' width={300} height={300} src={Me} />
+                    <Image className='about-img' src={Me} priority={true} />
                 </div>
                 <div className='paragraph-links-wrapper'>
                     <div className="about-paragraph-wrapper">

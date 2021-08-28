@@ -4,6 +4,8 @@ import ProjectCardPortrait from './ProjectCardPortrait'
 
 import SlicedNewImage from '../../assets/sliced-new.jpg'
 import SlicedOldImage from '../../assets/sliced-old-input-view.png'
+import Init from '../../assets/init.jpg'
+import SpacedRepetition from '../../assets/spaced-repetition.jpg'
 
 
 const PROJECTS = [
@@ -37,7 +39,7 @@ const PROJECTS = [
         title: 'Spaced Repetition',
         description: 'Created with Test Driven Development with Mocha and Chia on the backend and Cypress on the front end, Spaced Repetition is a language learning app that uses the Linked List data structure to immitate the spaced repetition technique for learning.',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
-        images: [SlicedNewImage],
+        images: [SpacedRepetition],
         links: [
             {title: 'View App', href: 'https://spaced-repetition-dun.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/spaced-repetition-client'},
@@ -76,7 +78,7 @@ const PROJECTS = [
         title: 'Init',
         description: "Init is a social media platform for developers to connect over their work by sharing images and ideas. Created as the final capstone for Thinkful's Sofware Engineering Immersion, this project uses stores base-64 encoded images in a Postgres database. It was created by Rachel Reilly, Adyceum Magna Ccarri, Trevor J Alt, and Steven Henderson.",
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
-        images: [SlicedNewImage],
+        images: [Init],
         links: [
             {title: 'View App', href: 'https://init-rachel.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/init'},
@@ -109,14 +111,16 @@ export default function Projects(){
         date, 
         images, 
         Component
-    }) => <Component 
+    }, index) => <Component 
     key={title} 
     title={title} 
     description={description} 
     stack={stack} 
     links={links} 
     date={date} 
-    images={images}/>)
+    images={images}
+    priority={index == 0 ? true : false}/>
+    )
     return (
         <div className='projects-wrapper'>
             {projectJsx}
