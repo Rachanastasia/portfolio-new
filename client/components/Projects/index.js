@@ -9,7 +9,7 @@ import SlicedOldImage from '../../assets/sliced-old-input-view.png'
 const PROJECTS = [
     {
         title: 'Sliced (2.0)',
-        description: 'A cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients',
+        description: 'Sliced is a cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients. Sliced 2.0 focuses on perfecting the recipe slicing algorithm and allows users to scale and input recipes on the same screen.',
         stack: ['JavaScript', 'React.js', 'Next.js', 'CSS3'],
         images: [SlicedNewImage],
         links: [
@@ -21,7 +21,7 @@ const PROJECTS = [
     },
     {
         title: 'Sliced (1.0)',
-        description: 'A recipe app that scales up and down ingredients',
+        description: 'Sliced is a recipe app that allows users to save their recipes and scale the ingredients up and down. Sliced 1.0 has an account system that allows users to store their recipes. This was dropped in Sliced 2.0 to limit the scope of the project to what makes Sliced most special.',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         images: [SlicedOldImage],
         links: [
@@ -35,7 +35,7 @@ const PROJECTS = [
     },
     {
         title: 'Spaced Repetition',
-        description: 'A language learning app that uses the spaced repetition technique',
+        description: 'Created with Test Driven Development with Mocha and Chia on the backend and Cypress on the front end, Spaced Repetition is a language learning app that uses the Linked List data structure to immitate the spaced repetition technique for learning.',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         images: [SlicedNewImage],
         links: [
@@ -46,19 +46,7 @@ const PROJECTS = [
         date: 'October 2020 - November 2020',
         Component: ProjectCardLandscape
     },
-    {
-        title: 'GraphQL Bookshelf',
-        description: "This full-stack project explores types and the connections between data in GraphQL",
-        stack: ['React', 'GraphQL', 'Apollo Client', 'Node.js', 'Express', 'CSS3'],
-        images: [SlicedOldImage],
-        links: [
-            {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},
-            {title: 'Client Code', href: 'https://github.com/rachelrly/graphql-bookshelf-client'},
-            {title: 'Server Code', href: 'https://github.com/rachelrly/graphql-bookshelf-api'}
-        ],
-        date: 'January 2021',
-        Component: ProjectCardPortrait
-    },
+  
     {
         title: 'One Dimensional Chess',
         description: "One Dimensional Chess is a static two-player game that follows Glimne's rules for the game",
@@ -73,7 +61,7 @@ const PROJECTS = [
     },
     {
         title: 'Loan Calculator',
-        description: 'A loan calculator that uses a reducer for state management',
+        description: 'This loan calculator uses the useReducer() React Hook to process the changes in input and update the result immediately.',
         stack: ['React', 'CSS3'],
         images: [SlicedOldImage],
         links: [
@@ -86,7 +74,7 @@ const PROJECTS = [
     },
     {
         title: 'Init',
-        description: "Init is a social media platform for developers to connect over their work. Init was created by Rachel Reilly, Adyceum Magna Ccarri, Trevor J Alt, and Steven Henderson for the final capstone at Thinkful's Engineering Immersion program.",
+        description: "Init is a social media platform for developers to connect over their work by sharing images and ideas. Created as the final capstone for Thinkful's Sofware Engineering Immersion, this project uses stores base-64 encoded images in a Postgres database. It was created by Rachel Reilly, Adyceum Magna Ccarri, Trevor J Alt, and Steven Henderson.",
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         images: [SlicedNewImage],
         links: [
@@ -96,7 +84,20 @@ const PROJECTS = [
         ],
         date: 'November 2020 - December 2020',
         Component: ProjectCardLandscape
-    }
+    },
+    {
+        title: 'GraphQL Bookshelf',
+        description: "This full stack project explores types and the connections between data in GraphQL",
+        stack: ['React', 'GraphQL', 'Apollo Client', 'Node.js', 'Express', 'CSS3'],
+        images: [SlicedOldImage],
+        links: [
+            {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},
+            {title: 'Client Code', href: 'https://github.com/rachelrly/graphql-bookshelf-client'},
+            {title: 'Server Code', href: 'https://github.com/rachelrly/graphql-bookshelf-api'}
+        ],
+        date: 'January 2021',
+        Component: ProjectCardPortrait
+    },
 ]
 
 export default function Projects(){
