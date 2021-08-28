@@ -8,20 +8,18 @@ import SlicedOldImage from '../../assets/sliced-old-input-view.png'
 
 const PROJECTS = {
     SLICED_NEW: {
-        title: 'Sliced',
-        description: 'A recipe app that scales up and down ingredients',
-        stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
+        title: 'Sliced (2.0)',
+        description: 'A cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients',
+        stack: ['JavaScript', 'React.js', 'Next.js', 'CSS3'],
         image: SlicedNewImage,
         links: [
-            {title: 'View App', href: 'https://sliced.rachanastasia.vercel.app/'},
-            {title: 'Client Code', href: 'https://github.com/rachelrly/sliced-client'},
-            {title: 'Server Code', href: 'https://github.com/rachelrly/sliced-API'},
-            {title: 'Blog Post', href: 'https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
+            {title: 'View App', href: 'https://sliced.vercel.app/'},
+            {title: 'Code', href: 'https://github.com/rachelrly/sliced-client'},
         ],
         date: 'October 2020 - Present'
     },
     SLICED_OLD: {
-        title: 'Sliced',
+        title: 'Sliced (1.0)',
         description: 'A recipe app that scales up and down ingredients',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         image: SlicedOldImage,
@@ -31,7 +29,7 @@ const PROJECTS = {
             {title: 'Server Code', href: 'https://github.com/rachelrly/sliced-API'},
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
         ],
-        date: 'October 2020 - Present'
+        date: 'October 2020 - January 2021'
     },
     SPACED_REPETITION: {
         title: 'Spaced Repetition',
@@ -93,7 +91,7 @@ const PROJECTS = {
 export default function Projects(){
 
     return (
-        <div>
+        <div className='projects-wrapper'>
             {/* <h2 className='section-title'>Projects</h2> */}
             <ProjectCardLandscape {...PROJECTS.SLICED_NEW}/>
             <ProjectCardPortrait {...PROJECTS.SLICED_OLD}/>

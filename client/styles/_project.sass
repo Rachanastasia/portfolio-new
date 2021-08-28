@@ -1,25 +1,18 @@
-.project-wrapper
-    margin-bottom: $spacer-4
-    display: flex
-    flex-direction: column
-    p
-            @include p-text
-            margin-top: $spacer-1
-            color: $text-gray
-    .title-desc-wrapper
-        @include row-between
-        flex-wrap: wrap
-        margin-bottom: $spacer-1
-        h3
-            padding-right: $spacer-5
-    .link-wrapper
-        @include row-between
-        flex-wrap: wrap
-    .stack-wrapper
-        @include p-text
-        @include row-between
-        max-width: 800px
-        flex: 2
-        .stack-item
-            padding-right: $spacer-2
-
+.projects-wrapper
+    section
+        min-height: 0
+        height: 100%
+    ul
+        list-style: none
+    .landscape-top-wrapper
+        display: flex
+        justify-content: space-between
+    .landscape-bottom-wrapper
+        display: flex
+        p
+            flex: 2
+    .project-link
+        min-width: 120px
+    .lg-horizontal
+        display: flex
+        flex-direction: column
