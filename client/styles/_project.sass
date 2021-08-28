@@ -1,7 +1,29 @@
 .projects-wrapper
+    width: inherit
+    height: inherit
     section
         min-height: 0
         height: 100%
+        align-items: center
+        overflow-x: hidden
+        h3
+            font-size: $text-5
+            line-height: calc(1.1 * $text-5)
+            padding: $spacer-2 0 $spacer-3
+        .stack-wrapper
+            display: flex
+            width: 100%
+            flex: 1
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+        .links-wrapper
+            flex: 1
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
     ul
         list-style: none
     .landscape-top-wrapper
@@ -12,7 +34,20 @@
         p
             flex: 2
     .project-link
-        min-width: 120px
+        min-width: 110px
+        padding: 0
+        margin: 0
+        height: 50px
+        span
+            font-size: $text-1
     .lg-horizontal
         display: flex
         flex-direction: column
+   
+.portrait-top-wrapper
+    .links-stack-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        padding: $spacer-3 0 $spacer-1

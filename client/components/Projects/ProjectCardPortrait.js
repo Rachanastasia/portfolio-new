@@ -6,18 +6,19 @@ import Stack from './Stack'
 export default function ProjectCardPortrait({title, images, description, stack, links}){
     const image = images[0]
     return (
-        <section>
-            <div>
+        <section className='projects-wrapper'>
+            <div className='portrait-top-wrapper'>
                 <div>
                     <h3>{title}</h3>
                     <p>{description}</p>
                 </div>
-                <div>
-                    <Links links={links} className='lg-vertical'/>
+                <Image src={image}/>
+                <div className='links-stack-wrapper'>
+                    <Links links={links} className='lg-vertical' buttonClassName='project-link'/>
                     <Stack stack={stack} className='lg-vertical'/>
                 </div>
             </div>
-            <Image src={image}/>
+            
         </section>
     )
 }

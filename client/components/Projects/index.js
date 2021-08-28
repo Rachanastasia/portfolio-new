@@ -7,18 +7,18 @@ import SlicedOldImage from '../../assets/sliced-old-input-view.png'
 
 
 const PROJECTS = [
-    {
-        title: 'Sliced (2.0)',
-        description: 'Sliced is a cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients. Sliced 2.0 focuses on perfecting the recipe slicing algorithm and allows users to scale and input recipes on the same screen.',
-        stack: ['JavaScript', 'React.js', 'Next.js', 'CSS3'],
-        images: [SlicedNewImage],
-        links: [
-            {title: 'View App', href: 'https://sliced.vercel.app/'},
-            {title: 'Code', href: 'https://github.com/rachelrly/sliced-client'},
-        ],
-        date: 'October 2020 - Present',
-        Component: ProjectCardLandscape
-    },
+    // {
+    //     title: 'Sliced (2.0)',
+    //     description: 'Sliced is a cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients. Sliced 2.0 focuses on perfecting the recipe slicing algorithm and allows users to scale and input recipes on the same screen.',
+    //     stack: ['JavaScript', 'React.js', 'Next.js', 'CSS3'],
+    //     images: [SlicedNewImage],
+    //     links: [
+    //         {title: 'View App', href: 'https://sliced.vercel.app/'},
+    //         {title: 'Code', href: 'https://github.com/rachelrly/sliced-client'},
+    //     ],
+    //     date: 'October 2020 - Present',
+    //     Component: ProjectCardLandscape
+    // },
     {
         title: 'Sliced (1.0)',
         description: 'Sliced is a recipe app that allows users to save their recipes and scale the ingredients up and down. Sliced 1.0 has an account system that allows users to store their recipes. This was dropped in Sliced 2.0 to limit the scope of the project to what makes Sliced most special.',
