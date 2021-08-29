@@ -18,8 +18,7 @@ const PROJECTS = [
             {title: 'View App', href: 'https://sliced.vercel.app/'},
             {title: 'App Code', href: 'https://github.com/rachelrly/sliced-client'},
         ],
-        date: 'October 2020 - Present',
-        Component: ProjectCardLandscape
+        date: 'October 2020 - Present'
     },
     {
         title: 'Sliced - Old',
@@ -33,7 +32,6 @@ const PROJECTS = [
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
         ],
         date: 'October 2020 - January 2021',
-        Component: ProjectCardPortrait
     },
     {
         title: 'Spaced Repetition',
@@ -45,8 +43,7 @@ const PROJECTS = [
             {title: 'Client Code', href: 'https://github.com/rachelrly/spaced-repetition-client'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/spaced-repetition-server'}
         ],
-        date: 'October 2020 - November 2020',
-        Component: ProjectCardLandscape
+        date: 'October 2020 - November 2020'
     },
   
     {
@@ -59,7 +56,6 @@ const PROJECTS = [
             {title: 'Game Code', href: 'https://github.com/rachelrly/one-dimensional-chess'},
         ],
         date: 'October 2020 - January 2021',
-        Component: ProjectCardPortrait
     },
     {
         title: 'Loan Calculator',
@@ -72,7 +68,6 @@ const PROJECTS = [
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51'}
         ],
         date: 'February 2021',
-        Component: ProjectCardPortrait
     },
     {
         title: 'Init',
@@ -84,8 +79,7 @@ const PROJECTS = [
             {title: 'Client Code', href: 'https://github.com/rachelrly/init'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/init-api'}
         ],
-        date: 'November 2020 - December 2020',
-        Component: ProjectCardLandscape
+        date: 'November 2020 - December 2020'
     },
     {
         title: 'GraphQL Bookshelf',
@@ -98,7 +92,6 @@ const PROJECTS = [
             {title: 'Server Code', href: 'https://github.com/rachelrly/graphql-bookshelf-api'}
         ],
         date: 'January 2021',
-        Component: ProjectCardPortrait
     },
 ]
 
@@ -110,8 +103,7 @@ export default function Projects(){
         links, 
         date, 
         images, 
-        Component
-    }, index) => <Component 
+    }, index) => <ProjectCardLandscape 
     key={title} 
     title={title} 
     description={description} 
