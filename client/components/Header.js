@@ -14,7 +14,7 @@ export default function Header({path}){
     console.log('THIS IS MY PATH', path === PAGES.DEFAULT.PATH)
     return (
         <header id={mainPageClass}>
-            <h1 className='section-title main-title'>RR</h1>
+            <h1 className='section-title main-title'>Rachel Reilly</h1>
             <div className='header-title-link-wrapper'>
                 <BaseButtonLink url='/projects' className={projectsClass} content='Projects'/>
                 <BaseButtonLink url='/about' className={aboutClass} content='About'/>
