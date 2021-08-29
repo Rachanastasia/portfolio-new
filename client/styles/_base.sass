@@ -67,8 +67,6 @@ main
             max-width: $max-content-width
             background-color: $colors-accent-2-dark-muted
             border-radius: 2px
-            .content-width-wrapper
-                max-width: 1350px
             h2, h3, h4, p, span, image, ul, li, div, article
                 animation: content-animate-in 0.35s ease-out
             @include text-body
@@ -79,8 +77,12 @@ main
                 width: 90vw
             @media all and (min-width: 900px)
                 padding: $spacer-3 $spacer-4
+            @media all and (min-width: 1220px)
+                padding: $spacer-5
+                margin-top: $spacer-6
             .section-title, h2
                 margin-bottom: $spacer-1
+                align-self: flex-start
                 @include text-title
             .main-title
                 font-size: $text-6

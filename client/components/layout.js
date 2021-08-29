@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import {PAGES} from '../utils/constants'
 import Header from './Header'
+import { useWindowDimensions } from '../hooks/useWindowDimensions'
 
 const {DESCRIPTION, PATH, TITLE} = PAGES.DEFAULT
 
@@ -11,6 +12,12 @@ export default function Layout({
   contentWrapperClass='',
   children
 }) {
+  const isLandingPage = path === PATH
+  const {width, height} = useWindowDimensions()
+  const isLargeScreen = width > 1200
+  const showHireMeBanner = isLandingPage && isLargeScreen
+  const largeScreenClass = 'content-with-banner'
+  console.log('THIS IS THE RESULT', {width, height})
   const contentWrapperClassName = contentWrapperClass + ' ' + 'content-wrapper'
   return (
     <div className='container'>

@@ -10,8 +10,10 @@ export default function Header({path}){
     const blogClass = validateAgainstPath(PAGES.BLOG.PATH)
     const contactClass = validateAgainstPath(PAGES.CONTACT.PATH)
     const hireClass = validateAgainstPath(PAGES.HIRE_ME.PATH)
+    const mainPageClass = path === PAGES.DEFAULT.PATH ? 'main-page' : ''
+    console.log('THIS IS MY PATH', path === PAGES.DEFAULT.PATH)
     return (
-        <header>
+        <header id={mainPageClass}>
             <h1 className='section-title main-title'>RR</h1>
             <div className='header-title-link-wrapper'>
                 <BaseButtonLink url='/projects' className={projectsClass} content='Projects'/>
