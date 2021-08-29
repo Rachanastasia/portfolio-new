@@ -24,13 +24,13 @@ export default function About(){
                     </p>
                     </div>
                     <div className='about-links-wrapper'>
-                        <a className='footer-button' href='https://www.linkedin.com/in/rachel-a-reilly/'>
+                        <a className='social-icon' href='https://www.linkedin.com/in/rachel-a-reilly/'>
                             <RiLinkedinLine />
                         </a>
-                        <a className="footer-button" href='https://rachelrly.medium.com/'>
+                        <a className="social-icon" href='https://rachelrly.medium.com/'>
                             <AiOutlineMedium/>
                         </a>
-                        <a className='footer-button' href='https://github.com/rachelrly'>
+                        <a className='social-icon' href='https://github.com/rachelrly'>
                             <RiGithubLine />
                         </a>
                     </div>

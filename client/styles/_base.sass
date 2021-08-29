@@ -66,6 +66,7 @@ main
             align-self: center
             max-width: $max-content-width
             background-color: $colors-accent-2-dark-muted
+            border-radius: 2px
             h2, h3, h4, p, span, image, ul, li, div, article
                 animation: content-animate-in 0.35s ease-out
             @include text-body
@@ -119,3 +120,21 @@ footer
             color: $color-accent
 
 
+.social-icon
+    border: 2px solid $colors-mixed-accent
+    border-radius: 50%
+    padding: 2px
+    width: 35px
+    height: 35px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: $default-transition
+    &:hover, &:focus, &:active
+        border: 2px solid $colors-accent-2
+        transition: $default-transition
+    &:hover svg, &:focus svg, &:active svg
+        fill: $colors-accent-2
+        transition: $default-transition
+    
