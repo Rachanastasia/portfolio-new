@@ -8,8 +8,10 @@ export default function Layout({
   description=DESCRIPTION, 
   title=TITLE, 
   path=PATH,
+  contentWrapperClass='',
   children
 }) {
+  const contentWrapperClassName = contentWrapperClass + ' ' + 'content-wrapper'
   return (
     <div className='container'>
       <Head>
@@ -19,8 +21,12 @@ export default function Layout({
       </Head>
       <main>
         <Header path={path}/>
-        {children}
+        <div className={contentWrapperClassName}>
+          {children}
+        </div>
       </main>
     </div>
   )
 }
+
+//content-wrapper === outer-wrapper

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import ProjectCardLandscape from './ProjectCardLandscape'
 import ProjectCardPortrait from './ProjectCardPortrait'
 
@@ -10,7 +10,7 @@ import SpacedRepetition from '../../assets/spaced-repetition.jpg'
 
 const PROJECTS = [
     {
-        title: 'Sliced (2.0)',
+        title: 'Sliced',
         description: 'Sliced is a cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients. Sliced 2.0 focuses on perfecting the recipe slicing algorithm and allows users to scale and input recipes on the same screen.',
         stack: ['JavaScript', 'React.js', 'Next.js', 'CSS3'],
         images: [SlicedNewImage],
@@ -22,7 +22,7 @@ const PROJECTS = [
         Component: ProjectCardLandscape
     },
     {
-        title: 'Sliced (1.0)',
+        title: 'Sliced - Old',
         description: 'Sliced is a recipe app that allows users to save their recipes and scale the ingredients up and down. Sliced 1.0 has an account system that allows users to store their recipes. This was dropped in Sliced 2.0 to limit the scope of the project to what makes Sliced most special.',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         images: [SlicedOldImage],
@@ -122,9 +122,7 @@ export default function Projects(){
     priority={index == 0 ? true : false}/>
     )
     return (
-        <div className='projects-wrapper outer-wrapper'>
-            {projectJsx}
-        </div>
+        <Fragment>{projectJsx}</Fragment>
     )
 }
 

@@ -46,44 +46,51 @@ main
     align-items: center
     font-family: $font
     animation: content-no-scroll 0.35s ease-out
-    section
-        min-height: 80vh
-        margin: $spacer-4 $spacer-2
+    .content-wrapper
         width: 100%
-        box-sizing: border-box
-        flex: 1
+        height: inherit
         display: flex
         flex-direction: column
-        align-content: center
+        justify-content: center
         padding: $spacer-3
-        align-self: center
-        max-width: $max-content-width
-        background-color: $colors-accent-2-dark-muted
-        h2, h3, h4, p, span, image, ul, li, div, article
-            animation: content-animate-in 0.35s ease-out
-        @include text-body
-        @media all and (min-width: 425px)
-            margin: $spacer-2 $spacer-3
-        @media all and (min-width: 825px)
-            margin: $spacer-3 $spacer-4
-            width: 90vw
-        @media all and (min-width: 900px)
-            padding: $spacer-3 $spacer-4
-        .section-title, h2
-            margin-bottom: $spacer-1
-            @include text-title
-        .main-title
-            font-size: $text-6
-        h2
-            padding-bottom: $spacer-1
-            margin-left: $spacer-1
-            @media all and (min-width: 675px)
-                margin-left: $spacer-2
-            @media all and (min-width: 1300px)
-                margin-left: $spacer-4
+        section
+            min-height: 80vh
+            margin: $spacer-4 $spacer-2
+            width: 100%
+            box-sizing: border-box
+            flex: 1
+            display: flex
+            flex-direction: column
+            align-content: center
+            padding: $spacer-3
+            align-self: center
+            max-width: $max-content-width
+            background-color: $colors-accent-2-dark-muted
+            h2, h3, h4, p, span, image, ul, li, div, article
+                animation: content-animate-in 0.35s ease-out
+            @include text-body
+            @media all and (min-width: 425px)
+                margin: $spacer-2 $spacer-3
+            @media all and (min-width: 825px)
+                margin: $spacer-3 $spacer-4
+                width: 90vw
+            @media all and (min-width: 900px)
+                padding: $spacer-3 $spacer-4
+            .section-title, h2
+                margin-bottom: $spacer-1
+                @include text-title
+            .main-title
+                font-size: $text-6
+            h2
+                padding-bottom: $spacer-1
+                margin-left: $spacer-1
+                @media all and (min-width: 675px)
+                    margin-left: $spacer-2
+                @media all and (min-width: 1300px)
+                    margin-left: $spacer-4
 
 
-    
+        
 
 
 
