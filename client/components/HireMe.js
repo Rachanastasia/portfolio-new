@@ -1,5 +1,6 @@
 import React from 'react'
 import BaseButton from './BaseButton'
+import SocialLinks  from './SocialLinks'
 
 export default function HireMe(){
     //TODO: have link to resume and LinkedIn and gmail
@@ -10,11 +11,7 @@ export default function HireMe(){
             <div className='about-content-wrapper'>
                 <div className="about-paragraph-wrapper">
                     <p>I'm looking for a new position as a Software Engineer. Please check out my resume below. I am also open to doing contract and consultant work. Specialize in front-end implementation.</p>
-                    <div className='about-links-wrapper'>
-                        <BaseButton content='PROJECTS' onClick={null}/>
-                        <BaseButton content='BLOG' href='https://rachanastasia.medium.com/'/>
-                        <BaseButton content='RESUME'/>
-                    </div>
+                    <SocialLinks />
                 </div>
             </div>
         </section>

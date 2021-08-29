@@ -103,22 +103,13 @@ h1, h3
 footer
     @include row-between
     color: white
-    background-color: black
-    border: 1px solid black
-    width: inherit
+    background-color: $colors-accent-2-dark
+    width: 100vw
     padding: $spacer-2
+    display: flex
     align-items: flex-end
-    p
-        font-size: $text-2
-        font-family: $title-font
-        letter-spacing: .15rem
-    a
-        display: flex
-        justify-content: flex-end
-        align-items: flex-end
-        font-size: $text-3
-        &:hover >*
-            color: $color-accent
+    @media all and (min-width: 600px)
+        padding: $spacer-5 $spacer-2
 
 
 .social-icon

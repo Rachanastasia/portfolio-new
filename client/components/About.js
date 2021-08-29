@@ -1,6 +1,5 @@
 import React from 'react'
-import {RiLinkedinLine, RiGithubLine} from 'react-icons/ri'
-import {AiOutlineMedium} from 'react-icons/ai'
+import SocialLinks  from './SocialLinks'
 import Me from '../assets/sliced-new.jpg'
 import Image from 'next/image'
 
@@ -24,17 +23,7 @@ export default function About(){
                         Beyond my obsession with craftsmanship, I see a lot of similarities between my creative work and my programming. I am trained to analyze a problem from different angles and implement solutions, both established and novel. I learned to iterate on my work, which led me to turn a simple string parser into a robust recipe scaling algorithm in my project, Sliced.
                         </p>
                         </div>
-                        <div className='about-links-wrapper'>
-                            <a className='social-icon' href='https://www.linkedin.com/in/rachel-a-reilly/'>
-                                <RiLinkedinLine />
-                            </a>
-                            <a className="social-icon" href='https://rachelrly.medium.com/'>
-                                <AiOutlineMedium/>
-                            </a>
-                            <a className='social-icon' href='https://github.com/rachelrly'>
-                                <RiGithubLine />
-                            </a>
-                        </div>
+                        <SocialLinks />
                     </div>
                 </div>
             </div>

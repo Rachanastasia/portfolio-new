@@ -31,6 +31,7 @@ export default function Layout({
         <div className={contentWrapperClassName}>
           {children}
         </div>
+        <footer><span>Rachel Reilly | 2021</span></footer>
       </main>
     </div>
   )
