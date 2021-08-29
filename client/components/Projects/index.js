@@ -122,7 +122,7 @@ export default function Projects(){
     priority={index == 0 ? true : false}/>
     )
     return (
-        <div className='projects-wrapper'>
+        <div className='projects-wrapper outer-wrapper'>
             {projectJsx}
         </div>
     )
