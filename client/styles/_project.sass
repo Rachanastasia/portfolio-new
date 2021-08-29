@@ -19,8 +19,9 @@
         .stack-wrapper
             display: flex
             width: 100%
-            padding: $spacer-2 0 $spacer-3
+            height: inherit
             justify-content: space-between
+            max-width: 500px
             @media all and (min-width: 850px)
                 justify-content: space-evenly
             span
@@ -53,7 +54,7 @@
             font-size: $text-1
             padding-left: $spacer-2
     .project-link
-        min-width: 80px
+        min-width: 95px
         margin: $spacer-1
         height: 40px
         border: 2px solid $colors-accent-2
@@ -74,3 +75,23 @@
         width: 100%
         padding: $spacer-3 0 $spacer-1
 
+.title-stack-wrapper
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin-bottom: $spacer-2
+    @media all and (min-width: 400px)
+        h3
+            margin-right: $spacer-2
+
+    ul
+        flex: 3
+        height: 100%
+        display: flex
+        align-items: center
+        
+    
+
+.project-wrapper
+    min-height: 0

@@ -84,7 +84,7 @@ const PROJECTS = [
     {
         title: 'GraphQL Bookshelf',
         description: "This full stack project explores types and the connections between data in GraphQL",
-        stack: ['React', 'GraphQL', 'Apollo Client', 'Node.js', 'Express', 'CSS3'],
+        stack: ['React', 'GraphQL', 'Apollo', 'Node.js', 'Express', 'CSS3'],
         images: [SlicedOldImage],
         links: [
             {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},

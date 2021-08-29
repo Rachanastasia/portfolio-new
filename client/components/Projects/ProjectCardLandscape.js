@@ -6,8 +6,8 @@ import Stack from './Stack'
 export default function ProjectCardLandscape({title, images, description, stack, links, imageOptions={}}){
     const image = images[0]
     return (
-        <section>
-            <div>
+        <section className='project-wrapper'>
+            <div className='title-stack-wrapper'>
                 <h3 className='section-title'>{title}</h3>
                 <Stack stack={stack} />
             </div>
