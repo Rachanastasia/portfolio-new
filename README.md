@@ -7,11 +7,10 @@ This is the repository for Software Engineer Rachel Reilly's portfolio site.
 - React.js
 - Next.js
 - SASS
-- [dom-purify](https://github.com/cure53/DOMPurify)
-
 - Node.js
 - Express.js
 - [rss-parser](https://www.npmjs.com/package/rss-parser)
+- [dom-purify](https://github.com/cure53/DOMPurify)
 - [node-mailjet](https://github.com/mailjet/mailjet-apiv3-nodejs)
 
 
@@ -19,11 +18,19 @@ This is the repository for Software Engineer Rachel Reilly's portfolio site.
 
 ### /api
 
-This folder contains a simple Express.js API with one endpoint that returns the Blog posts from [https://rachelrly.medium.com/](https://rachelrly.medium.com)
+This folder contains a simple Express.js REST API with two endpoints, `/api/feed` & `/api/mail`
 
 #### index.js
 
 Sets up Express.js app
+
+#### mailRouter.js
+
+Sets up the `POST` endpoint at `api/mail`. This uses Mailjet to send data from the contact form to my email. 
+
+#### feedRouter.js
+
+Sets up a `GET` endpoint at `api/feed` to deliver the data from [https://rachelrly.medium.com/](https://rachelrly.medium.com)
 
 #### getMediumArticles.js
 
@@ -87,7 +94,7 @@ Scale your recipes with Sliced
 [Repository](https://github.com/rachelrly/sliced) ◇ 
 [Blog post](https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
 
-![](client/assets/scale-down.jpg)
+![](client/assets/sliced-new.jpg)
 
 ### Spaced Repetition
 
