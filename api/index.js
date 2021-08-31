@@ -13,7 +13,6 @@ app.use(helmet())
 app.use(cors())
 
 app.get('/', async (req, res) => {
-   console.log('STARTED SERVER')
    res.send(200).json({message: 'Hello there!'})
 })
 

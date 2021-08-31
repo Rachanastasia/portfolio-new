@@ -57,9 +57,7 @@ export default function ContactForm(){
 }
 
 function validateEmail(email) {
-    console.log('THIS IS THE EMAIL')
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     const isValid = regex.test(email.toLowerCase())
-    console.log('IS THIS VALID???', isValid)
     return isValid;
 }

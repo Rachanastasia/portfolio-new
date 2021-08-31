@@ -41,8 +41,9 @@ mailRouter
                 .status(200)
                 .json({message: 'Email was successfully sent!'})
             })
-            .catch((err) => {
-                console.log(err.statusCode)
+            .catch((error) => {
+                const errorMessage = 'Error sending email: ' + (error?.message || error)
+                if (process.env.NODE_ENV === 'development') console.error(errorMessage)
             })
           } catch (error) {
               const errorMessage = 'Error sending email: ' + (error?.message || error)
@@ -53,6 +54,8 @@ mailRouter
               .json({message: errorMessage})
           }
     })
+
+
 
 function sanitizeData({name, email, message}){
     const window = new JSDOM('').window
