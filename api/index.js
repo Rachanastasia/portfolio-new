@@ -5,7 +5,7 @@ const helmet = require('helmet')
 
 const { PORT, CLIENT_URL } = require('./config')
 const feedRouter = require('./feedRouter')
-const mainRouter = require('./mailRouter')
+const mailRouter = require('./mailRouter')
 
 const app = express()
 app.use(express.json())

@@ -34,10 +34,14 @@ mailRouter
             request
             .then((result) => {
                 console.log(result.body)
+                if (result?.ok){
+                    return res.status(200).end()
+                }
             })
             .catch((err) => {
                 console.log(err.statusCode)
             })
+
           } catch (error) {
               const errorMessage = 'Error fetching Medium articles: ' + (error?.message || error)
               if (process.env.NODE_ENV === 'development') console.error(errorMessage)
