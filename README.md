@@ -7,9 +7,13 @@ This is the repository for Software Engineer Rachel Reilly's portfolio site.
 - React.js
 - Next.js
 - SASS
+- [dom-purify](https://github.com/cure53/DOMPurify)
+
 - Node.js
 - Express.js
 - [rss-parser](https://www.npmjs.com/package/rss-parser)
+- [node-mailjet](https://github.com/mailjet/mailjet-apiv3-nodejs)
+
 
 ## Codebase 
 
