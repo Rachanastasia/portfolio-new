@@ -1,47 +1,43 @@
 const express = require('express')
 const mailjet = require ('node-mailjet').connect(process.env.MAILJET_KEY_1, process.env.MAILJET_KEY_2)
-const { PORT, CLIENT_URL } = require('./config')
+const { CLIENT_URL } = require('./config')
 
 const mailRouter = express.Router()
-
 
 mailRouter
     .post('/',  async (req, res, next) => {
         try {
-            console.log('THIS IS THE REQ BODY', req.body)
-            const {name, email, message} = {name: 'TEST', email: process.env.EMAIL_TEST, message:'testing, testing mofos'}
+            const {name, message, email} = req.body
             const request = mailjet
             .post("send", {'version': 'v3.1'})
             .request({
             "Messages":[
                 {
                 "From": {
-                    "Email": email,
+                    "Email": process.env.EMAIL,
                     "Name": name
                 },
                 "To": [
                     {
-                    "Email": process.env.EMAIL,
+                    "Email": process.env.EMAIL_TEST,
                     "Name": "Rachel Reilly"
                     }
                 ],
-                "Subject":  `Rachel, ${name} Reached Out via Your Contact Form`,
+                "Subject":  `Someone Used Your Contact Form`,
                 "TextPart": message,
-                "CustomID": email
+                "HTMLPart":`
+                <h1>Below is an email from the contact form on rachelrly.com</h1>
+                <p>${message}</p>
+                <p>Respond to ${name} at ${email}.</p>`
                 }
             ]
             })
-            request
-            .then((result) => {
-                console.log(result.body)
-                if (result?.ok){
-                    return res.status(200).end()
-                }
+            request.then((result) => {
+                return res.status(200).json({message: 'Email was successfully sent!'})
             })
             .catch((err) => {
                 console.log(err.statusCode)
             })
-            return res.status(200).json({message: 'added here'})
           } catch (error) {
               const errorMessage = 'Error fetching Medium articles: ' + (error?.message || error)
               if (process.env.NODE_ENV === 'development') console.error(errorMessage)
