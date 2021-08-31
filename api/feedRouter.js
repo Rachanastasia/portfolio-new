@@ -19,7 +19,7 @@ feedRouter
               if (process.env.NODE_ENV === 'development') console.error(errorMessage)
               return res
               .status(400)
-              .set('Access-Control-Allow-Origin', process.env.CLIENT_URL)
+              .set('Access-Control-Allow-Origin', CLIENT_URL)
               .json({message: errorMessage})
           }
     })
