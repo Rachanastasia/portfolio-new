@@ -3,7 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
 
-const { PORT, CLIENT_URL } = require('./config')
+const { PORT } = require('./config')
 const feedRouter = require('./feedRouter')
 const mailRouter = require('./mailRouter')
 
@@ -13,7 +13,8 @@ app.use(helmet())
 app.use(cors())
 
 app.get('/', async (req, res) => {
-   
+   console.log('STARTED SERVER')
+   res.send(200).json({message: 'Hello there!'})
 })
 
 app.use('/api/feed', feedRouter)

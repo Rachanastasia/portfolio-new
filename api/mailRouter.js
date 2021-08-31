@@ -1,12 +1,12 @@
 const express = require('express')
-const mailjet = require ('node-mailjet')
+const mailjet = require ('node-mailjet').connect(process.env.MAILJET_KEY_1, process.env.MAILJET_KEY_2)
+const { PORT, CLIENT_URL } = require('./config')
 
 const mailRouter = express.Router()
-const jsonBodyParser = express.json()
-mailjet.connect(process.env.MAILJET_KEY_1, process.env.MAILJET_KEY_2)
+
 
 mailRouter
-    .post('/', jsonBodyParser, async (req, res, next) => {
+    .post('/',  async (req, res, next) => {
         try {
             console.log('THIS IS THE REQ BODY', req.body)
             const {name, email, message} = {name: 'TEST', email: process.env.EMAIL_TEST, message:'testing, testing mofos'}
@@ -41,7 +41,7 @@ mailRouter
             .catch((err) => {
                 console.log(err.statusCode)
             })
-
+            return res.status(200).json({message: 'added here'})
           } catch (error) {
               const errorMessage = 'Error fetching Medium articles: ' + (error?.message || error)
               if (process.env.NODE_ENV === 'development') console.error(errorMessage)
@@ -52,5 +52,5 @@ mailRouter
           }
     })
 
-module.exports = feedRouter
+module.exports = mailRouter
 
