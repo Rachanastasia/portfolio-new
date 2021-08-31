@@ -11,10 +11,12 @@ export default function ProjectCardLandscape({title, images, description, stack,
                 <h3 className='section-title'>{title}</h3>
                 <Stack stack={stack} />
             </div>
-            <Image src={image} {...imageOptions} className='project-image project-image-landscape'/>
-            <div className='link-p-wrapper'>
-                <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>
-                <p>{description}</p>
+            <div className='link-p-wrapper project-content-wrapper'>
+                <Image src={image} {...imageOptions} className='project-image project-image-landscape'/>
+                <div className='link-p-wrapper '>
+                    <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>
+                    <p>{description}</p>
+                </div>
             </div>
         </section>
     )
