@@ -29,9 +29,10 @@ export default function ContactForm(){
                 message: DOMPurify.sanitize(message.value)
             }
            postContactForm(sanitizedData)
+           //TODO: display message on screen if successful
         } catch (err) {
             console.error('Error sending email from contact form: ', err || err?.message)
-            setError('')
+            setError(null)
         }
     }
 
@@ -50,7 +51,7 @@ export default function ContactForm(){
                 <label>Message</label>
                 <textarea autoComplete="off" name='message' type='text'  />
             </fieldset>
-            <button  type='submit'> TEST</button>
+            <button  type='submit'>submit</button>
         </form>
     )
 }
