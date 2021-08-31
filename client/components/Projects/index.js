@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import ProjectCardLandscape from './ProjectCardLandscape'
 import ProjectCardPortrait from './ProjectCardPortrait'
 
@@ -10,7 +10,7 @@ import SpacedRepetition from '../../assets/spaced-repetition.jpg'
 
 const PROJECTS = [
     {
-        title: 'Sliced (2.0)',
+        title: 'Sliced',
         description: 'Sliced is a cooking aide that uses a custom string parsing algorithm to turn user text input into scalable ingredients. Sliced 2.0 focuses on perfecting the recipe slicing algorithm and allows users to scale and input recipes on the same screen.',
         stack: ['JavaScript', 'React.js', 'Next.js', 'CSS3'],
         images: [SlicedNewImage],
@@ -18,11 +18,10 @@ const PROJECTS = [
             {title: 'View App', href: 'https://sliced.vercel.app/'},
             {title: 'App Code', href: 'https://github.com/rachelrly/sliced-client'},
         ],
-        date: 'October 2020 - Present',
-        Component: ProjectCardLandscape
+        date: 'October 2020 - Present'
     },
     {
-        title: 'Sliced (1.0)',
+        title: 'Sliced - Old',
         description: 'Sliced is a recipe app that allows users to save their recipes and scale the ingredients up and down. Sliced 1.0 has an account system that allows users to store their recipes. This was dropped in Sliced 2.0 to limit the scope of the project to what makes Sliced most special.',
         stack: ['React', 'Node.js', 'Express', 'CSS3', 'PostgreSQL'],
         images: [SlicedOldImage],
@@ -33,7 +32,6 @@ const PROJECTS = [
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'}
         ],
         date: 'October 2020 - January 2021',
-        Component: ProjectCardPortrait
     },
     {
         title: 'Spaced Repetition',
@@ -45,8 +43,7 @@ const PROJECTS = [
             {title: 'Client Code', href: 'https://github.com/rachelrly/spaced-repetition-client'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/spaced-repetition-server'}
         ],
-        date: 'October 2020 - November 2020',
-        Component: ProjectCardLandscape
+        date: 'October 2020 - November 2020'
     },
   
     {
@@ -59,7 +56,6 @@ const PROJECTS = [
             {title: 'Game Code', href: 'https://github.com/rachelrly/one-dimensional-chess'},
         ],
         date: 'October 2020 - January 2021',
-        Component: ProjectCardPortrait
     },
     {
         title: 'Loan Calculator',
@@ -72,7 +68,6 @@ const PROJECTS = [
             {title: 'Blog Post', href: 'https://rachelrly.medium.com/usestate-vs-usereducer-9bbfca768f51'}
         ],
         date: 'February 2021',
-        Component: ProjectCardPortrait
     },
     {
         title: 'Init',
@@ -84,13 +79,12 @@ const PROJECTS = [
             {title: 'Client Code', href: 'https://github.com/rachelrly/init'},
             {title: 'Server Code', href: 'https://github.com/rachelrly/init-api'}
         ],
-        date: 'November 2020 - December 2020',
-        Component: ProjectCardLandscape
+        date: 'November 2020 - December 2020'
     },
     {
         title: 'GraphQL Bookshelf',
         description: "This full stack project explores types and the connections between data in GraphQL",
-        stack: ['React', 'GraphQL', 'Apollo Client', 'Node.js', 'Express', 'CSS3'],
+        stack: ['React', 'GraphQL', 'Apollo', 'Node.js', 'Express', 'CSS3'],
         images: [SlicedOldImage],
         links: [
             {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},
@@ -98,7 +92,6 @@ const PROJECTS = [
             {title: 'Server Code', href: 'https://github.com/rachelrly/graphql-bookshelf-api'}
         ],
         date: 'January 2021',
-        Component: ProjectCardPortrait
     },
 ]
 
@@ -110,8 +103,7 @@ export default function Projects(){
         links, 
         date, 
         images, 
-        Component
-    }, index) => <Component 
+    }, index) => <ProjectCardLandscape 
     key={title} 
     title={title} 
     description={description} 
@@ -122,9 +114,7 @@ export default function Projects(){
     priority={index == 0 ? true : false}/>
     )
     return (
-        <div className='projects-wrapper'>
-            {projectJsx}
-        </div>
+        <Fragment>{projectJsx}</Fragment>
     )
 }
 

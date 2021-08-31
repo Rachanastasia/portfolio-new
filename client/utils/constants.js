@@ -23,7 +23,7 @@ export const PAGES = {
         PATH: '/projects',
     },
     DEFAULT: {
-        PATH: '',
+        PATH: '/',
         TITLE: "Rachel Reilly | Software Engineer",
         DESCRIPTION: "Rachel Reilly's portfolio website" 
 

@@ -16,42 +16,59 @@
         h3
             font-size: $text-5
             line-height: calc(1.1 * $text-5)
-            padding: $spacer-2 0 $spacer-3
         .stack-wrapper
             display: flex
             width: 100%
-            flex: 1
-            flex-direction: column
-            align-items: center
-            justify-content: space-evenly
+            height: inherit
+            justify-content: space-between
+            max-width: 500px
+            @media all and (min-width: 850px)
+                justify-content: space-evenly
+            span
+                color: mix($colors-white, $colors-accent-2-dark, 73%)
+                letter-spacing: 0.2px
         .links-wrapper
             flex: 1
             width: 100%
             display: flex
             flex-direction: column
             align-items: center
-            justify-content: space-evenly
+            justify-content: center
     ul
         list-style: none
     .landscape-top-wrapper
         display: flex
         flex-direction: column
-        .stack-wrapper
-            flex-direction: row
-            padding: $spacer-2 0 $spacer-3
         .link-wrapper
             justify-content: space-evenly
-    .landscape-bottom-wrapper
+    .project-content-wrapper
         display: flex
+        margin-top: $spacer-3
+        background-color: transparentize($colors-accent-2-dark, 0.5)
+        padding: $spacer-3 $spacer-2
+        border-radius: 3px
+        .p-link-wrapper
+            display: flex
+            flex-direction: column
+            @media all and (min-width: 750px)
+                flex-direction: row
         p
-            flex: 2
+            margin-bottom: 0
+            color: mix($colors-white, $colors-accent-2-dark, 73%)
+            font-size: $text-1
+            padding-left: $spacer-2
     .project-link
-        min-width: 110px
-        padding: 0
-        margin: 0
-        height: 50px
+        min-width: 95px
+        margin: $spacer-1
+        height: 40px
+        border: 2px solid $colors-accent-2
+        border-radius: 4px
         span
             font-size: $text-1
+
+        
+    
+            
     .lg-horizontal
         display: flex
         flex-direction: column
@@ -64,3 +81,23 @@
         width: 100%
         padding: $spacer-3 0 $spacer-1
 
+.title-stack-wrapper
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin-bottom: $spacer-2
+    @media all and (min-width: 400px)
+        h3
+            margin-right: $spacer-2
+
+    ul
+        flex: 3
+        height: 100%
+        display: flex
+        align-items: center
+        
+    
+
+.project-wrapper
+    min-height: 0

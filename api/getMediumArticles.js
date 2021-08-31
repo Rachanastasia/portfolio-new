@@ -21,8 +21,6 @@ function parseArticle(article){
         day: 'numeric',
     }
     const datePosted = new Intl.DateTimeFormat('en-US', dateFormatOptions).format(date)
-    console.log('ARTICLE CONTENT---------------')
-    console.log(semanticArticleBody)
     return {
         title: article.title,
         link: {href: article.link, title: 'View on Medium'},

@@ -1,5 +1,5 @@
 import DOMPurify from 'dompurify'
-import Card from '../Card'
+import BlogCard from './BlogCard'
 
 export default function BlogPost({content, title, link, datePosted}){
     const posted = 'Posted ' + datePosted
@@ -7,8 +7,8 @@ export default function BlogPost({content, title, link, datePosted}){
         __html: DOMPurify.sanitize(content)
     })
     return (
-        <Card date={posted} title={title} link={link}>
+        <BlogCard date={posted} title={title} link={link}>
             <div className='post-body-wrapper' dangerouslySetInnerHTML={sanitizedData()}/>
-        </Card>
+        </BlogCard>
     )
 }
