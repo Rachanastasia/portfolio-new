@@ -36,7 +36,10 @@ mailRouter
             ]
             })
             request.then((result) => {
-                return res.status(200).json({message: 'Email was successfully sent!'})
+                return res
+                .set('Access-Control-Allow-Origin', CLIENT_URL)
+                .status(200)
+                .json({message: 'Email was successfully sent!'})
             })
             .catch((err) => {
                 console.log(err.statusCode)

@@ -2,7 +2,9 @@ export async function postContactForm({name, email, message}){
     try {
         const response = await fetch(process.env.API_URL, {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({name, email, message})
         })
         const json  = await response.json()
