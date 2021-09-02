@@ -13,7 +13,7 @@ header
         color: $colors-white
         padding-top: $spacer-2
     div div span
-        font-size: $text-1
+        text-size: $text-0-5
     @media all and (min-width: 525px)
         @include row-between
         min-height: 10vh
@@ -25,6 +25,10 @@ header
     .header-title-link-wrapper
         display: flex
         justify-content: space-between
+        width: inherit
+        padding: 0 $spacer-2
+        @media all and (min-width: 500px)
+            
 
 #main-page
         height: 100vh
