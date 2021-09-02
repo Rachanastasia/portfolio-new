@@ -5,12 +5,49 @@
         width: 100%
         height: 100%
         margin-bottom: $spacer-4
+        .error-wrapper
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: $spacer-1 0
+            span
+                font-size: $text-1
+                line-height: calc($text-1 * 1.4)
+                letter-spacing: 1px
+                color: $colors-accent-1
         fieldset
             outline: none
             border: none
             display: flex
             justify-content: space-between
-            padding-bottom: $spacer-3
+            padding-top: $spacer-3
             align-items: center
+            label
+                width: 65px
+                color: $colors-off-white-text
             input, textarea
                 flex: 3
+                font-size: $text-1
+                line-height: calc($text-1 * 1.4)
+                padding: $spacer-1
+                outline: 0
+                border: 0
+            input:focus, input:active, textarea:focus, textarea:active
+                outline: 2px solid $colors-accent-1
+            textarea
+                height: 200px
+        button
+            background-color: $colors-accent-1
+            border: 0
+            padding: $spacer-2
+            outline: 0
+            border: 2px solid $colors-accent-1
+            border-radius: 4px
+            transition: $default-transition
+            &:focus, &:active
+                background-color: $colors-accent-2-dark
+                color: $colors-accent-1
+                transition: $default-transition
+
+                

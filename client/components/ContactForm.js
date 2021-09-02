@@ -3,7 +3,7 @@ import DOMPurify from 'dompurify'
 import { postContactForm } from '../services/postContactForm'
 
 export default function ContactForm(){
-    const [error, setError] = useState(null)
+    const [error, setError] = useState('testing testing')
 
     const handleSubmit = (e) => {
         try{
@@ -38,7 +38,6 @@ export default function ContactForm(){
 
     return (
         <form onSubmit={handleSubmit} className='contact-form'>
-            {error && <span>{error}</span>}
             <fieldset>
                 <label>Name</label>
                 <input name='name' type='text' />
@@ -51,6 +50,9 @@ export default function ContactForm(){
                 <label>Message</label>
                 <textarea autoComplete="off" name='message' type='text'  />
             </fieldset>
+            <div className='error-wrapper'>
+                <span>{error}</span>
+            </div>
             <button  type='submit'>submit</button>
         </form>
     )
