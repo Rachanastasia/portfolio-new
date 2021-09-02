@@ -11,6 +11,7 @@ mailRouter
     .post('/',  async (req, res, next) => {
         try {
             const {name, email, message} = sanitizeData(req.body)
+            console.log('BEGAN REQUEST')
             const request = mailjet
             .post("send", {'version': 'v3.1'})
             .request({
@@ -26,12 +27,13 @@ mailRouter
                     "Name": "Rachel Reilly"
                     }
                 ],
-                "Subject":  `Someone Used Your Contact Form`,
+                "Subject":  `${name} Used Your Contact Form`,
                 "TextPart": message,
                 "HTMLPart":`
                 <h1>Below is an email from the contact form:</h1>
                 <p>${message}</p>
-                <p>Respond to ${name} at ${email}.</p>`
+                <p>Respond to ${name} at</p> 
+                <h3>__${email}__</h3>`
                 }
             ]
             })

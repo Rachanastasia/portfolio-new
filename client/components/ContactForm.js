@@ -21,10 +21,9 @@ export default function ContactForm(){
             e.preventDefault()
             setLoading(true)
             if (error) setError(null)
+
             const {name, email, message} = e.target
-            console.log('MADE IT AFTER SET ERRORRR', error)
             const hasAllFields = !!name.value?.length && !!email.value?.length && !!message.value?.length
-            console.log('HAS ALL FIELDS', {hasAllFields})
             if (!hasAllFields){
                 setError('Please enter all all fields')
                 return null
@@ -43,8 +42,8 @@ export default function ContactForm(){
             }
 
            const response = await postContactForm(sanitizedData)
-           console.log('THIS WAS THE RESPONSEEEEEE', response)
            if (response?.message === 'Email was successfully sent!') setComplete(true)
+           else setError('Email could not be sent. Please try again!')
         } catch (err) {
             console.error('Error sending email from contact form: ', err || err?.message)
             setError('This form could not be sent. Please try again. ')
@@ -72,7 +71,7 @@ export default function ContactForm(){
             <div className='error-wrapper'>
                 <span>{error}</span>
             </div>
-            <button  type='submit' disabled={loading}>submit</button>
+            <button  type='submit'>submit</button>
             </>
             : <div className='complete-wrapper'>
                 <span className='complete-text'>Your form was submitted.</span>

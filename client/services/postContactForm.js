@@ -10,6 +10,7 @@ export async function postContactForm({name, email, message}){
         const json  = await response.json()
         return json
     } catch (error) {
-        console.error('Error fetching Medium articles: ', error?.message)
+        console.error('Error sending message: ', error?.message)
+        return error
     }
 }
