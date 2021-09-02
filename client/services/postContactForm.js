@@ -1,6 +1,6 @@
 export async function postContactForm({name, email, message}){
     try {
-        const response = await fetch(`${process.env.API_URL}api/mail`, {
+        const response = await fetch(`${process.env.API_URL}/api/mail`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

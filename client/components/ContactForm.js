@@ -37,7 +37,7 @@ export default function ContactForm(){
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='contact-form'>
             {error && <span>{error}</span>}
             <fieldset>
                 <label>Name</label>

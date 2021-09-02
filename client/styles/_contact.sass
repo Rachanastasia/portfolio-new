@@ -1,2 +1,16 @@
-form
-    @include column-center
+.contact-content-wrapper
+    form
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 100%
+        margin-bottom: $spacer-4
+        fieldset
+            outline: none
+            border: none
+            display: flex
+            justify-content: space-between
+            padding-bottom: $spacer-3
+            align-items: center
+            input, textarea
+                flex: 3
