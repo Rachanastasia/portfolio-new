@@ -11,7 +11,6 @@ mailRouter
     .post('/',  async (req, res, next) => {
         try {
             const {name, email, message} = sanitizeData(req.body)
-            console.log('BEGAN REQUEST')
             const request = mailjet
             .post("send", {'version': 'v3.1'})
             .request({
@@ -23,7 +22,7 @@ mailRouter
                 },
                 "To": [
                     {
-                    "Email": process.env.EMAIL,
+                    "Email": process.env.EMAIL_TEST,
                     "Name": "Rachel Reilly"
                     }
                 ],

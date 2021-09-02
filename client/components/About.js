@@ -3,10 +3,8 @@ import SocialLinks  from './SocialLinks'
 import Me from '../assets/rachel-reilly.jpg'
 import Image from 'next/image'
 
-//TODO: Skills section
-
-
 export default function About(){
+    //TODO: Skills section
     return (
         <section> 
             <div className='content-width-wrapper'>

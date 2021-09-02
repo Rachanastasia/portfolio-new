@@ -15,8 +15,8 @@ a
     max-width: 100vw
     overflow-x: hidden
     dispay: flex
-    height: 100%
     margin: 0
+    height: inherit
     padding: 0
     background-color: $colors-dark-background
 
@@ -40,28 +40,29 @@ a
 
 
 main
-    height: 100%
+    height: inherit
     padding: 0
     margin: 0
+    min-height: 100vh
     display: flex
     flex-direction: column
+    justify-content: space-between
     align-items: center
     font-family: $font
     animation: content-no-scroll 0.35s ease-out
     .content-wrapper
         width: 100%
         height: inherit
-        min-height: 90vh
         display: flex
         flex-direction: column
-        justify-content: center
+        justify-content: flex-start
         padding: $spacer-3
+        flex: 10
         section
-            height: 100%
             margin: $spacer-2 $spacer-1
             width: 100%
             box-sizing: border-box
-            flex: 1
+
             display: flex
             flex-direction: column
             padding: $spacer-3
