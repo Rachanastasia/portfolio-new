@@ -13,7 +13,7 @@ app.use(helmet())
 app.use(cors())
 
 app.get('/', async (req, res) => {
-   res.send(200).json({message: 'Hello there!'})
+   res.status(200).json({message: 'Hello there!'})
 })
 
 app.use('/api/feed', feedRouter)

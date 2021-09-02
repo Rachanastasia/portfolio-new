@@ -1,6 +1,6 @@
 export async function postContactForm({name, email, message}){
     try {
-        const response = await fetch(`${process.env.API_URL}api/mail`, {
+        const response = await fetch(`${process.env.API_URL}/api/mail`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -10,6 +10,7 @@ export async function postContactForm({name, email, message}){
         const json  = await response.json()
         return json
     } catch (error) {
-        console.error('Error fetching Medium articles: ', error?.message)
+        console.error('Error sending message: ', error?.message)
+        return error
     }
 }

@@ -1,17 +1,29 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import DOMPurify from 'dompurify'
+import {BaseButtonLink} from './BaseButton'
 import { postContactForm } from '../services/postContactForm'
 
 export default function ContactForm(){
     const [error, setError] = useState(null)
+    const [complete, setComplete] = useState(false)
+    const [loading, setLoading] = useState(false)
 
-    const handleSubmit = (e) => {
+    useEffect(()=>{
+        return () => complete ? setComplete(false) : {}
+    },[])
+
+    const handleSubmit = async (e) => {
+        if (loading){
+            setError("Sending form...")
+            return null
+        }
         try{
-            if (error) setError(null)
             e.preventDefault()
+            setLoading(true)
+            if (error) setError(null)
 
             const {name, email, message} = e.target
-            const hasAllFields = name && email && message
+            const hasAllFields = !!name.value?.length && !!email.value?.length && !!message.value?.length
             if (!hasAllFields){
                 setError('Please enter all all fields')
                 return null
@@ -28,17 +40,22 @@ export default function ContactForm(){
                 email: DOMPurify.sanitize(email.value),
                 message: DOMPurify.sanitize(message.value)
             }
-           postContactForm(sanitizedData)
-           //TODO: display message on screen if successful
+
+           const response = await postContactForm(sanitizedData)
+           if (response?.message === 'Email was successfully sent!') setComplete(true)
+           else setError('Email could not be sent. Please try again!')
         } catch (err) {
             console.error('Error sending email from contact form: ', err || err?.message)
-            setError(null)
+            setError('This form could not be sent. Please try again. ')
+        } finally {
+            setLoading(false)
         }
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            {error && <span>{error}</span>}
+        <form onSubmit={handleSubmit} className='contact-form'>
+            {!complete 
+            ? <>
             <fieldset>
                 <label>Name</label>
                 <input name='name' type='text' />
@@ -51,7 +68,16 @@ export default function ContactForm(){
                 <label>Message</label>
                 <textarea autoComplete="off" name='message' type='text'  />
             </fieldset>
+            <div className='error-wrapper'>
+                <span>{error}</span>
+            </div>
             <button  type='submit'>submit</button>
+            </>
+            : <div className='complete-wrapper'>
+                <span className='complete-text'>Your form was submitted.</span>
+                <span className='complete-text'>Thank you for reaching out!</span>
+                <BaseButtonLink content='Go back' url='/' />
+            </div>}
         </form>
     )
 }

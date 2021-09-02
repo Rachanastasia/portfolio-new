@@ -25,7 +25,8 @@
         h3
             font-size: $text-5
             line-height: calc(1.1 * $text-5)
-            margin-top: $spacer-6
+            color: $colors-white
+            margin-bottom: $spacer-1
         h4
             font-size: $text-3
             line-height: calc(1.4 * $text-3)
@@ -34,27 +35,34 @@
             height: 100%
             display: flex
             flex-direction: column
+            margin-top: $spacer-2
         ul
             list-style: none
         .date-posted
             font-size: $text-1
             line-height: calc(1.4 * $text-1)
             font-weight: bold
-            padding: 0 0 $spacer-3
+            display: block
+            @media all and (min-width: 600px)
+                margin-bottom: $spacer-3
         .link-text
             font-size: $text-1
             line-height: calc(1.4 * $text-1)
         a
             font-weight: bold
+            color: $colors-white
+            letter-spacing: 0.3px
             &:hover, &:focus, &:active
                 color: $colors-accent-2
         p:last-of-type
             padding-bottom: 0
         figcaption
-            font-size: $text-1
-            line-height: calc(1.4 * $text-1)
+            font-size: $text-0-5
+            line-height: calc(1.4 * $text-0-5)
+            letter-spacing: 0.3px
             align-self: center
             text-align: center
             margin-top: $spacer-1
+            color: $colors-white
         figure
             margin: $spacer-2 0 $spacer-3

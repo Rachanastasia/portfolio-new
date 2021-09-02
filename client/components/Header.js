@@ -12,7 +12,7 @@ export default function Header({path, dimensions}){
     const contactClass = validateAgainstPath(PAGES.CONTACT.PATH)
     const hireClass = validateAgainstPath(PAGES.HIRE_ME.PATH)
     const mainPageClass = path === PAGES.DEFAULT.PATH ? 'main-page' : ''
-    const isNarrowScreen = dimensions.width > 400
+    const isNarrowScreen = dimensions.width > 500
     return (
         <header id={mainPageClass}>
             <h1 className='section-title main-title'>Rachel Reilly</h1>
@@ -21,7 +21,6 @@ export default function Header({path, dimensions}){
                 <BaseButtonLink url='/about' className={aboutClass} content='About'/>
                 <BaseButtonLink url='/contact' className={contactClass} content='Contact'/>
                 <BaseButtonLink url='/blog' className={blogClass} content='Blog'/>
-                {isNarrowScreen && <BaseButtonLink url='/hire-me' className={hireClass} content='Hire Me'/> }
             </div>
         </header>
     )
