@@ -5,19 +5,26 @@ import { postContactForm } from '../services/postContactForm'
 
 export default function ContactForm(){
     const [error, setError] = useState(null)
-    const [complete, setComplete] = useState(true)
+    const [complete, setComplete] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     useEffect(()=>{
         return () => complete ? setComplete(false) : {}
     },[])
 
     const handleSubmit = async (e) => {
+        if (loading){
+            setError("Sending form...")
+            return null
+        }
         try{
-            if (error) setError(null)
             e.preventDefault()
-
+            setLoading(true)
+            if (error) setError(null)
             const {name, email, message} = e.target
-            const hasAllFields = name.length && email.length && message.length
+            console.log('MADE IT AFTER SET ERRORRR', error)
+            const hasAllFields = !!name.value?.length && !!email.value?.length && !!message.value?.length
+            console.log('HAS ALL FIELDS', {hasAllFields})
             if (!hasAllFields){
                 setError('Please enter all all fields')
                 return null
@@ -36,10 +43,13 @@ export default function ContactForm(){
             }
 
            const response = await postContactForm(sanitizedData)
+           console.log('THIS WAS THE RESPONSEEEEEE', response)
            if (response?.message === 'Email was successfully sent!') setComplete(true)
         } catch (err) {
             console.error('Error sending email from contact form: ', err || err?.message)
             setError('This form could not be sent. Please try again. ')
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -62,12 +72,12 @@ export default function ContactForm(){
             <div className='error-wrapper'>
                 <span>{error}</span>
             </div>
-            <button  type='submit'>submit</button>
+            <button  type='submit' disabled={loading}>submit</button>
             </>
             : <div className='complete-wrapper'>
                 <span className='complete-text'>Your form was submitted.</span>
                 <span className='complete-text'>Thank you for reaching out!</span>
-                <BaseButtonLink content='Go back' url='/'/>
+                <BaseButtonLink content='Go back' url='/' />
             </div>}
         </form>
     )
