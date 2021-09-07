@@ -23,9 +23,8 @@ export default function Layout({
     const getDimensionsEvent = getDimensions()
     window.addEventListener("resize", getDimensionsEvent)
     return () => window.removeEventListener("resize", getDimensionsEvent)
-  },[])
+  },[dimensions])
 
-  const isLandingPage = path === PATH
   const {width} = dimensions
   const isLargeScreen = width > 1400
   const contentWrapperClassName = contentWrapperClass + ' ' + 'content-wrapper'
