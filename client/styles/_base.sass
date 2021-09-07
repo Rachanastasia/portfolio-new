@@ -67,6 +67,9 @@ main
         justify-content: flex-start
         align-items: flex-start
         padding: $spacer-3
+        flex: 5
+        @media all and (min-width: $max-content-width)
+            padding: $spacer-4
         flex: 10
         section
             margin: $spacer-2 $spacer-1
@@ -154,21 +157,25 @@ p
         margin-bottom: $spacer-4
 
 .hire-me-wrapper
-    width: 100%
-    min-width: 200px
+    @media all and (max-width: 1500px)
+        display: none
     height: 70vh
     display: flex
     align-items: flex-start
     align-self: flex-start
     margin-right: $spacer-6
+    margin-top: $spacer-6
     .hire-me-banner
-        height: 200px
-        background-color: red
+        height: 300px
         width: 100%
+        right: $spacer-4
+        background-color: red
+        width: inherit
         display: flex
         flex-direction: column
         justify-content: space-between
         padding: $spacer-2
+        margin-right: $spacer-6
         span
             flex: 1
             display: block
@@ -176,4 +183,3 @@ p
             flex-direction: row
             justify-content: space-between
             height: 60px
-            width: 100%

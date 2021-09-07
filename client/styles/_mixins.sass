@@ -79,7 +79,7 @@
 
 @mixin text-body
     font-size: $text-1
-    line-spacing: calc($text-1 * 1.4)
+    line-spacing: calc($text-1 * $line-height-constant)
     font-family: $font
     color: $colors-off-white-text
 
@@ -87,7 +87,16 @@
     letter-spacing: $letter-spacing-5
     font-weight: 300
     font-size: $text-5
-    line-spacing: calc($text-5 * 1.4)
+    line-spacing: calc($text-5 * $line-height-constant)
     @media all and (min-width: 620px)
         font-size: $text-6
-        line-spacing: calc($text-6 * 1.4)
+        line-spacing: calc($text-6 * $line-height-constant)
+
+@mixin link-col
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    height: 200px
+    width: 160px
+
+@mixin link-row

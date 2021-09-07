@@ -14,8 +14,10 @@ export default function About(){
                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
                         </p>
                         </div>
-                        <Skills />   
-                        <SocialLinks hasResume />
+                        <div className='skills-links-wrapper'>
+                            <Skills />   
+                            <SocialLinks hasResume />
+                        </div>
                     </div>  
         </section>
     )
