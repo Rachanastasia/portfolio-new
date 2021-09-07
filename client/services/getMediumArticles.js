@@ -8,7 +8,7 @@ export async function getMediumArticles(offset=0){
             body: JSON.stringify({offset})
         })
         const json  = await response.json()
-        return {status: response.status, posts: json}
+        return json
     } catch (error) {
         console.error('Error fetching Medium articles: ', error?.message)
         return {status: error?.status}
