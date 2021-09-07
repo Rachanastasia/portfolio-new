@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import {PAGES} from '../utils/constants'
 import Header from './Header'
+import HireMeBanner from './HireMeBanner'
 
 const {DESCRIPTION, PATH, TITLE} = PAGES.DEFAULT
 
@@ -25,11 +26,10 @@ export default function Layout({
   },[])
 
   const isLandingPage = path === PATH
-  const {width, height} = dimensions
-  const isLargeScreen = width > 1200
-  const showHireMeBanner = isLandingPage && isLargeScreen
-  const largeScreenClass = 'content-with-banner'
+  const {width} = dimensions
+  const isLargeScreen = width > 1400
   const contentWrapperClassName = contentWrapperClass + ' ' + 'content-wrapper'
+  const WrapperBasedOnWidth = isLargeScreen ? LargeScreenLayout : RegularLayout
   return (
     <div className='container'>
       <Head>
@@ -39,9 +39,11 @@ export default function Layout({
       </Head>
       <main>
         <Header path={path} dimensions={dimensions}/>
-        <div className={contentWrapperClassName}>
-          {children}
-        </div>
+        <WrapperBasedOnWidth> 
+          <div className={contentWrapperClassName}>
+            {children}
+          </div>
+        </WrapperBasedOnWidth>
         <footer>
           <span>Rachel Reilly | 2021</span>
         </footer>
@@ -50,4 +52,15 @@ export default function Layout({
   )
 }
 
-//content-wrapper === outer-wrapper
+function RegularLayout({children}){
+    return <>{children}</>
+}
+
+function LargeScreenLayout({children}){
+  return (
+    <div className='large-screen-wrapper'>
+      {children}
+      <HireMeBanner />
+    </div>
+  )
+}

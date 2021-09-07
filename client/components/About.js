@@ -10,7 +10,6 @@ export default function About(){
                 <h2>About</h2>
                 <div className='about-content-wrapper'>
                     <Image className='about-img' src={Me} priority={true} />
-
                         <div className="about-paragraph-wrapper">
                         <p>
                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
