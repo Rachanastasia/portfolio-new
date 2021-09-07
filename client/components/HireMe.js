@@ -3,7 +3,6 @@ import BaseButton from './BaseButton'
 import SocialLinks  from './SocialLinks'
 
 export default function HireMe(){
-    //TODO: have link to resume and LinkedIn and gmail
     //TODO: write breif description of looking for a job
     return (
         <section className='about-wrapper'> 
