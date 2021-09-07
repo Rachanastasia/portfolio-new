@@ -3,7 +3,7 @@ import {PAGES} from '../../utils/constants'
 import Layout from '../../components/layout'
 import Blog from '../../components/Blog/index'
 import TempLoader from '../../components/TempLoader'
-import BlogError from './BlogError'
+import BlogError from '../../components/Blog/BlogError'
 import { getMediumArticles } from '../../services/getMediumArticles'
 
 export default function BlogPage(){
