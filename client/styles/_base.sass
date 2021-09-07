@@ -89,8 +89,9 @@ main
             h2, h3, h4, p, span, image, ul, li, div, article
                 animation: content-animate-in 0.35s ease-out
             @include text-body
-            @media all and (min-width: 425px)
-                margin: $spacer-2 $spacer-3
+            @media all and (min-width: 500px)
+                margin: $spacer-4 $spacer-3
+                padding: $spacer-4 $spacer-3
             @media all and (min-width: 825px)
                 margin: $spacer-5 $spacer-4 $spacer-4
                 width: 90vw
@@ -101,6 +102,7 @@ main
                 margin: $spacer-6 $spacer-4
             .section-title, h2
                 margin-bottom: $spacer-1
+                padding-right: $spacer-3
                 align-self: flex-start
                 @include text-title
             .main-title

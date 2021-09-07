@@ -11,7 +11,7 @@ export default function ProjectCard({title, images, description, stack, links, i
                 <h3 className='section-title'>{title}</h3>
                 <Stack stack={stack} />
             </div>
-            <div className='link-p-wrapper project-content-wrapper'>
+            <div className='project-content-wrapper'>
                 <div className='test-image-wrapper'>
                     <Image src={image} {...imageOptions} className='project-image project-image-landscape test-image-class' layout='fixed' />
                     <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>
