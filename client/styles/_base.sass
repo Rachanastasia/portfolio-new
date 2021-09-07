@@ -77,14 +77,15 @@ main
             margin: $spacer-2 $spacer-1
             width: 100%
             box-sizing: border-box
-            min-height: 40vh
+            height: 100%
+            min-height:80vh
             display: flex
             flex-direction: column
             padding: $spacer-3
             align-self: center
             max-width: $max-content-width
             background-color: $colors-accent-2-dark-muted
-            border-radius: 2px
+            border-radius: 4px
             h2, h3, h4, p, span, image, ul, li, div, article
                 animation: content-animate-in 0.35s ease-out
             @include text-body
@@ -191,3 +192,6 @@ p
             flex-direction: row
             justify-content: space-between
             height: 60px
+
+.test-image-wrapper
+    height: 300px

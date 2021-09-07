@@ -1,3 +1,4 @@
+/**the "Landscape" in ProjectCardLandscape refers to the orientation of the project's image*/
 import Image from 'next/image'
 import Links from './Links'
 import Stack from './Stack'
@@ -11,11 +12,11 @@ export default function ProjectCard({title, images, description, stack, links, i
                 <Stack stack={stack} />
             </div>
             <div className='link-p-wrapper project-content-wrapper'>
-                <Image src={image} {...imageOptions} className='project-image project-image-landscape'/>
-                <div className='link-p-wrapper '>
+                <div className='test-image-wrapper'>
+                    <Image src={image} {...imageOptions} className='project-image project-image-landscape test-image-class' layout='fixed' />
                     <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>
-                    <p>{description}</p>
                 </div>
+                <p>{description}</p>           
             </div>
         </section>
     )
