@@ -4,15 +4,14 @@ const { CLIENT_URL } = require('./config')
 
 const feedRouter = express.Router()
 feedRouter
-    .get('/', async (req, res, next) => {
+    .post('/', async (req, res, next) => {
         try {
-            const articles = await getMediumArticles()
-            // FOR TESTING, PAGINATE INSTEAD OF RETURNING ALL ARTICLES!!!
-            const PAGINATE_ME = articles.slice(0, 3)
+            const {offset=0} = req.body
+            const articles = await getMediumArticles(offset)
             return res
             .set('Access-Control-Allow-Origin', CLIENT_URL)
             .status(200)
-            .json(PAGINATE_ME)
+            .json(articles)
           } catch (error) {
               const errorMessage = 'Error fetching Medium articles: ' + (error?.message || error)
               if (process.env.NODE_ENV === 'development') console.error(errorMessage)

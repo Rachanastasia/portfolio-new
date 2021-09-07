@@ -1,18 +1,21 @@
 let Parser = require('rss-parser');
+const { FEED_LIMIT } = require('./config')
+
 let parser = new Parser();
 
 module.exports = {
-    getMediumArticles: async () => {
+    getMediumArticles: async (offset=0) => {
     const MEDIUM_FEED = process.env.MEDIUM_FEED
     const feed = await parser.parseURL(MEDIUM_FEED)
-    const parsedFeed = feed.items.map(parseArticle)
+    const endPaginatedItems = offset + FEED_LIMIT
+    const paginatedItems = feed.items.slice(offset, endPaginatedItems)
+    const parsedFeed = paginatedItems.map(parseArticle)
     return parsedFeed
 }}
 
 function parseArticle(article){
     const articleBody = article['content:encoded']
     //to preserve semantic html of client
-    //TODO: use regex to just target html tag not h3 in plain text
     const semanticArticleBody = articleBody.replace(/h3/g, 'h4')
     const date = new Date(article.isoDate)
     const dateFormatOptions = {
