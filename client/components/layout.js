@@ -23,10 +23,10 @@ export default function Layout({
     const getDimensionsEvent = getDimensions()
     window.addEventListener("resize", getDimensionsEvent)
     return () => window.removeEventListener("resize", getDimensionsEvent)
-  },[dimensions])
+  },[])
 
   const {width} = dimensions
-  const isLargeScreen = width > 1400
+  const isLargeScreen = width > 1500
   const contentWrapperClassName = contentWrapperClass + ' ' + 'content-wrapper'
   const WrapperBasedOnWidth = isLargeScreen ? LargeScreenLayout : RegularLayout
   return (

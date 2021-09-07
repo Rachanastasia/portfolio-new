@@ -5,8 +5,7 @@ import Image from 'next/image'
 
 export default function About(){
     return (
-        <section> 
-            <div className='content-width-wrapper'>
+        <section className='full-section'> 
                 <h2>About</h2>
                 <div className='about-content-wrapper'>
                     <Image className='about-img' src={Me} priority={true} />
@@ -17,8 +16,7 @@ export default function About(){
                         </div>
                         <Skills />   
                         <SocialLinks hasResume />
-                    </div>
-            </div>
+                    </div>  
         </section>
     )
 }
