@@ -27,7 +27,7 @@ export default function About(){
 
 function Skills(){
     return (
-        <div>
+        <div className='skills-wrapper'>
             <h3>Skills</h3>
             <ul>
                 <li>JavaScript</li>
