@@ -11,7 +11,6 @@ export async function getMediumArticles(offset=0){
         return json
     } catch (error) {
         console.error('Error fetching Medium articles: ', error?.message)
-        return {status: error?.status}
     }
 
 }
