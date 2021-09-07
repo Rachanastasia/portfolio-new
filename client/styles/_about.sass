@@ -1,9 +1,11 @@
 $switch-at-width: 900px
+$column-to-row: 675px
 
 .about-paragraph-wrapper
     max-width: 950px
     margin-top: $spacer-2
-    @media all and (min-width: 850px)
+    
+    @media all and (min-width: $column-to-row)
         padding: 0 $spacer-3 $spacer-2
         margin-top: 0
 
@@ -14,8 +16,6 @@ $switch-at-width: 900px
     padding: $spacer-1 0
     @include row-between
     font-size: 20px
-    @media all and (min-width: $switch-at-width)
-        @include link-col  
 
 .paragraph-links-wrapper
     display: flex
@@ -29,7 +29,7 @@ $switch-at-width: 900px
 .image-wrapper
     min-width: 300px
     margin-bottom: $spacer-2
-    @media all and (min-width: 600px)
+    @media all and (min-width: $column-to-row)
         align-self: flex-start
         margin-right: $spacer-3
     @media all and (min-width: 1200px)
@@ -39,10 +39,13 @@ $switch-at-width: 900px
 .about-content-wrapper
     .about-links-wrapper
         @include link-col
+        width: 100%
+        flex: 1
     display: flex
     flex-direction: column
     align-items: center
-    @media all and (min-width: 675px)
+    padding-top: $spacer-2
+    @media all and (min-width: $column-to-row)
         flex-direction: row
         align-items: flex-start
         justify-content: center
@@ -53,7 +56,6 @@ $switch-at-width: 900px
 
 
 .about-img
-    max-width: 200px
     height: auto
         
 .skills-wrapper
@@ -73,11 +75,13 @@ $switch-at-width: 900px
         text-align: center
         li
             margin-top: $spacer-1
+            span
+                font-size: $text-1
+                line-height: calc($text-1 * $line-height-contsant)
 
         
 .skills-links-wrapper
     display: flex
     justify-content: space-between
     width: 100%
-    @media all and (min-width: $switch-at-width)
-        width: 300px
+    max-width: 250px

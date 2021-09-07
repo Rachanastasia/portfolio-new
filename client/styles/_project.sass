@@ -17,7 +17,7 @@
         margin: $spacer-4 $spacer-2 $spacer-2
         h3
             font-size: $text-5
-            line-height: calc(1.1 * $text-5)
+            line-height: calc($line-height-constant * $text-5)
         .stack-wrapper
             display: flex
             width: 100%
@@ -29,6 +29,8 @@
             span
                 color: mix($colors-white, $colors-accent-2-dark, 73%)
                 letter-spacing: 0.2px
+                min-width: 40px
+                padding: 0 $spacer-1
         .links-wrapper
             flex: 1
             width: 100%
