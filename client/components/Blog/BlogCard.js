@@ -2,7 +2,7 @@ export default function BlogCard({children, title, link, date}){
 
     return (
         <section>
-            <div className='blog-post-wrapper content-width-wrapper'>
+            <div className='blog-post-wrapper '>
                 <h3>{title}</h3>
                 <span className='date-posted'>{date}</span>
                 {children}

@@ -1,3 +1,5 @@
+$row-to-column: 605px
+
 header
     display: flex
     align-items: center
@@ -9,12 +11,14 @@ header
     transition: 5s ease height
     background-color: $colors-accent-2-dark
     h1
-        display: hidden
         color: $colors-white
         padding-top: $spacer-2
+        flex: 1
+        @media all and (min-width: $row-to-column)
+            width: 100%
     div div span
         text-size: $text-0-5
-    @media all and (min-width: 525px)
+    @media all and (min-width: 605px)
         @include row-between
         min-height: 10vh
         padding: 0 $spacer-3
@@ -24,10 +28,11 @@ header
         padding: $spacer-2 $spacer-6
     .header-title-link-wrapper
         display: flex
+        flex: 1
         justify-content: space-between
         width: inherit
         padding: 0 $spacer-2
-        @media all and (min-width: 500px)
+        max-width: clamp(290px, 450px, 620px)
             
 
 #main-page

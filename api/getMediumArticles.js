@@ -20,7 +20,7 @@ function parseArticle(article){
     const date = new Date(article.isoDate)
     const dateFormatOptions = {
         year: 'numeric',
-        month: 'short',
+        month: 'long',
         day: 'numeric',
     }
     const datePosted = new Intl.DateTimeFormat('en-US', dateFormatOptions).format(date)

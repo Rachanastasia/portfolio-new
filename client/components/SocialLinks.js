@@ -2,9 +2,10 @@ import {RiLinkedinLine, RiGithubLine} from 'react-icons/ri'
 import {AiOutlineMedium, AiOutlineFile} from 'react-icons/ai'
 
 
-export default function SocialLinks({hasResume=false}){
+export default function SocialLinks({hasResume=false, className}){
+    const wrapperClass = className + ' about-links-wrapper' 
    return (
-    <div className='about-links-wrapper'>
+    <div className={wrapperClass}>
         <a className='social-icon' href='https://www.linkedin.com/in/rachelrly/'>
             <RiLinkedinLine />
         </a>

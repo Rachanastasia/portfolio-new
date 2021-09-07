@@ -5,6 +5,8 @@
         display: flex
         .about-links-wrapper
             margin-top: $spacer-2
+            @media all and (min-width: 675px)
+                @include link-col  
 
     form
         display: flex
@@ -22,7 +24,7 @@
             padding: $spacer-1 0
             span
                 font-size: $text-1
-                line-height: calc($text-1 * 1.4)
+                line-height: calc($text-1 * $line-height-constant)
                 letter-spacing: 1px
                 color: $colors-accent-1
         fieldset
@@ -41,7 +43,7 @@
                 flex: 3
                 width: 100%
                 font-size: $text-1
-                line-height: calc($text-1 * 1.4)
+                line-height: calc($text-1 * $line-height-constant)
                 padding: $spacer-1
                 outline: 0
                 border: 0
@@ -51,6 +53,9 @@
                 height: 200px
                 font-family: $font
         button
+            margin-left: 0
+            @media all and (min-width: 700px)
+                margin-left: 65px
             background-color: $colors-accent-1
             border: 0
             padding: $spacer-2
@@ -68,7 +73,7 @@
             align-items: center
             text-align: center
             font-size: $text-4
-            line-height: calc($text-4 * 1.4)
+            line-height: calc($text-4 * $line-height-constant)
             flex-direction: column  
             display: flex
             margin-top: $spacer-4
