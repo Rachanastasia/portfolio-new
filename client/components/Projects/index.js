@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react'
-import ProjectCardLandscape from './ProjectCardLandscape'
-import ProjectCardPortrait from './ProjectCardPortrait'
+import ProjectCard from './ProjectCard'
 
 import SlicedNewImage from '../../assets/sliced-new.jpg'
 import SlicedOldImage from '../../assets/sliced-old-input-view.png'
@@ -103,7 +102,7 @@ export default function Projects(){
         links, 
         date, 
         images, 
-    }, index) => <ProjectCardLandscape 
+    }, index) => <ProjectCard 
     key={title} 
     title={title} 
     description={description} 
