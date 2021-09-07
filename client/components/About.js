@@ -11,7 +11,10 @@ export default function About(){
                     <Image className='about-img' src={Me} priority={true} />
                         <div className="about-paragraph-wrapper">
                         <p>
-                            I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
+                            I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. CHANGE ME!!!                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
+                        </p>
+                        <p>
+                            I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. CHANGE ME!!!                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
                         </p>
                         </div>
                         <div className='skills-links-wrapper'>
