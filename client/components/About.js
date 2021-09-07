@@ -4,7 +4,6 @@ import Me from '../assets/rachel-reilly.jpg'
 import Image from 'next/image'
 
 export default function About(){
-    //TODO: Skills section
     return (
         <section> 
             <div className='content-width-wrapper'>
@@ -17,10 +16,32 @@ export default function About(){
                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
                         </p>
                         </div>
-
-                        <SocialLinks />
+                        <Skills />   
+                        <SocialLinks hasResume />
                     </div>
             </div>
         </section>
+    )
+}
+
+
+function Skills(){
+    return (
+        <div>
+            <h3>Skills</h3>
+            <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>React Native</li>
+                <li>Node.js</li>
+                <li>GraphQL</li>
+                <li>PostgreSQL</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Python</li>
+                <li>CSS</li>
+                <li>SASS</li>
+            </ul>
+        </div>
     )
 }
