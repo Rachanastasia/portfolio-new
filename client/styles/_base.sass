@@ -81,8 +81,8 @@ main
             @media all and (min-width: 900px)
                 padding: $spacer-3 $spacer-4
             @media all and (min-width: 1220px)
-                padding: $spacer-5
-                margin-top: $spacer-6
+                padding: $spacer-6 $spacer-5 $spacer-5
+                margin-top: $spacer-6 $spacer-3 
             .section-title, h2
                 margin-bottom: $spacer-1
                 align-self: flex-start
@@ -136,3 +136,10 @@ footer
 
 span
     letter-spacing: 0.2px
+
+p
+    margin-bottom: $spacer-3
+    @include p-text
+    color: $colors-white
+    @media all and (min-width: 1100px)
+        margin-bottom: $spacer-4
