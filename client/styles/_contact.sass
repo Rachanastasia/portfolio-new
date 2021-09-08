@@ -26,7 +26,8 @@
                 font-size: $text-1
                 line-height: calc($text-1 * $line-height-constant)
                 letter-spacing: 1px
-                color: $colors-accent-1
+                color: $accent-3
+                font-weight: 500
         fieldset
             outline: none
             border: none
@@ -48,7 +49,7 @@
                 outline: 0
                 border: 0
             input:focus, input:active, textarea:focus, textarea:active
-                outline: 2px solid $colors-accent-1
+                outline: 2px solid $accent-2
             textarea
                 height: 200px
                 font-family: $font
@@ -56,17 +57,18 @@
             margin-left: 0
             @media all and (min-width: 700px)
                 margin-left: 65px
-            background-color: $colors-accent-1
+            background-color: $accent-1
             border: 0
             padding: $spacer-2
             outline: 0
-            border: 2px solid $colors-accent-1
+            border: 2px solid $accent-1
+            color: $colors-white
             border-radius: 4px
             transition: $default-transition
-            &:focus, &:active
-                background-color: $colors-accent-2-dark
-                color: $colors-accent-1
+            &:focus, &:active, &:hover
+                background-color: $accent-2
                 transition: $default-transition
+                border: 2px solid $accent-2
         .complete-wrapper
             width: 100%
             justify-content: center
