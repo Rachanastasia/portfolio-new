@@ -14,9 +14,9 @@ export default function ProjectCard({title, images, description, stack, links, i
             <div className='project-content-wrapper'>
                 <div className='image-link-wrapper'>
                     <Image src={image} {...imageOptions} className='project-image project-image-landscape test-image-class' layout='fixed' />
-                    <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>
                 </div>
-                <p>{description}</p>           
+                <p>{description}</p>
+                <Links  links={links} className='lg-vertical' buttonClassName='project-link'/>           
             </div>
         </section>
     )

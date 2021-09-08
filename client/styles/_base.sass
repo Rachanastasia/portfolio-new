@@ -67,8 +67,10 @@ main
         flex-direction: column
         justify-content: flex-start
         align-items: flex-start
-        padding: $spacer-3
+        padding: $spacer-2
         flex: 5
+        @media all and (min-width: 600px)
+            padding: $spacer-3
         @media all and (min-width: $max-content-width)
             padding: $spacer-4
         flex: 10
