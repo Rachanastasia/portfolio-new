@@ -15,8 +15,8 @@ export default function ProjectCardPortrait({title, images, description, stack, 
                 <Image src={image} {...imageOptions}/>
                 <div className='links-stack-wrapper'>
                     <Links links={links} className='lg-vertical' buttonClassName='project-link'/>
-                    
+
                 </div>
         </section>
     )
-}
+} 

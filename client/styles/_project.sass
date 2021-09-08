@@ -8,7 +8,6 @@
     h3
         color: $colors-white
     section
-        min-height: 0
         height: 100%
         align-items: center
         overflow-x: hidden
@@ -20,7 +19,7 @@
             line-height: calc($line-height-constant * $text-5)
         .stack-wrapper
             display: flex
-            width: 100%
+            width: auto
             height: inherit
             justify-content: space-between
             max-width: 500px
@@ -38,6 +37,11 @@
             flex-direction: column
             align-items: center
             justify-content: center
+            ul
+                li
+                    .project-links
+                        font-weight: 600
+                        font-family: $title-font
     ul
         list-style: none
     .landscape-top-wrapper
@@ -46,16 +50,13 @@
         .link-wrapper
             justify-content: space-evenly
     .project-content-wrapper
+        height: 100%
         display: flex
+        width: 100%
+        flex-direction: column
         margin-top: $spacer-3
-        background-color: transparentize($colors-accent-2-dark, 0.5)
         padding: $spacer-3 $spacer-2
         border-radius: 3px
-        .p-link-wrapper
-            display: flex
-            flex-direction: column
-            @media all and (min-width: 750px)
-                flex-direction: row
         p
             margin-bottom: 0
             color: mix($colors-white, $colors-accent-2-dark, 73%)
@@ -65,10 +66,10 @@
         min-width: 95px
         margin: $spacer-1
         height: 40px
-        border: 2px solid $colors-accent-2
         border-radius: 4px
         span
             font-size: $text-1
+            color: $accent-3
 
         
     
@@ -102,6 +103,3 @@
         align-items: center
         
     
-
-.project-wrapper
-    min-height: 0
