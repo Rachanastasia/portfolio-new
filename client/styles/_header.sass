@@ -12,13 +12,13 @@ header
     background-color: $accent-2
     h1
         color: $colors-white
-        padding-top: $spacer-2
         flex: 1
         font-weight: 600
         letter-spacing: 2.4px
         font-size: $text-5
         @media all and (min-width: 770px)
             font-size: $text-6
+            padding-top: $spacer-2
         @media all and (min-width: $row-to-column)
             width: 100%
     div div span
@@ -39,8 +39,10 @@ header
         flex: 1
         justify-content: space-between
         width: inherit
-        padding: 0 $spacer-2
+        padding: 0 $spacer-1
         max-width: clamp(290px, 450px, 620px)
+        @media all and (min-width: 500px)
+            padding: 0 $spacer-2
             
 
 #main-page

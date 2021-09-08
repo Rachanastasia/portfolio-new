@@ -81,8 +81,10 @@
     font-size: $text-1
     line-height: calc($text-1 * $line-height-constant)
     font-family: $font
-    color: $colors-off-white-text
+    color: $colors-text-gray
     letter-spacing: 0.5px
+    @media all and (min-width: 1000px)
+        font-size: $text-2
 
 
 @mixin text-title

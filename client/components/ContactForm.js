@@ -25,13 +25,13 @@ export default function ContactForm(){
             const {name, email, message} = e.target
             const hasAllFields = !!name.value?.length && !!email.value?.length && !!message.value?.length
             if (!hasAllFields){
-                setError('Please enter all all fields')
+                setError('Please enter all fields')
                 return null
             }
     
             const isValidEmail = validateEmail(email.value)
             if (!isValidEmail){
-                setError('Please enter a valid email address')
+                setError('Please enter a valid email')
                 return null
             }
     

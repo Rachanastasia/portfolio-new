@@ -11,6 +11,7 @@ $column-to-row: 675px
 
 .about-links-wrapper
     width: 100%
+    flex: 1
     height: 100%
     max-width: 850px
     padding: $spacer-1 0
@@ -28,6 +29,7 @@ $column-to-row: 675px
 
 .image-wrapper
     min-width: 300px
+    flex: 3
     margin-bottom: $spacer-2
     @media all and (min-width: $column-to-row)
         align-self: flex-start
@@ -40,7 +42,6 @@ $column-to-row: 675px
     .about-links-wrapper
         @include link-col
         width: 100%
-        flex: 1
     display: flex
     flex-direction: column
     align-items: center
@@ -50,7 +51,6 @@ $column-to-row: 675px
         align-items: flex-start
         justify-content: center
 .about-subtitle
-
     @include p-text
 
 
