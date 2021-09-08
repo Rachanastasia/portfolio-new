@@ -5,8 +5,10 @@
         display: flex
         .about-links-wrapper
             margin-top: $spacer-2
+            min-width: 35px
             @media all and (min-width: 675px)
                 @include link-col  
+                margin-left: $spacer-4
 
     form
         display: flex
@@ -39,6 +41,7 @@
             @media all and (min-width: 425px)
                 justify-content: space-between
                 align-items: center
+                flex-direction: row
             label
                 width: 65px
                 color: $colors-off-white-text
