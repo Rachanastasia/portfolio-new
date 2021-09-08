@@ -14,10 +14,10 @@ export default function Header({path}){
         <header id={mainPageClass}>
             <h1 className=' main-title'>Rachel Reilly</h1>
             <div className='header-title-link-wrapper'>
-                <BaseButtonLink url='/projects' className={projectsClass} content='Projects'/>
-                <BaseButtonLink url='/about' className={aboutClass} content='About'/>
-                <BaseButtonLink url='/contact' className={contactClass} content='Contact'/>
-                <BaseButtonLink url='/blog' className={blogClass} content='Blog'/>
+                <BaseButtonLink url='/projects' className={projectsClass} content='PROJECTS'/>
+                <BaseButtonLink url='/about' className={aboutClass} content='ABOUT'/>
+                <BaseButtonLink url='/contact' className={contactClass} content='CONTACT'/>
+                <BaseButtonLink url='/blog' className={blogClass} content='BLOG'/>
             </div>
         </header>
     )

@@ -14,10 +14,18 @@ header
         color: $colors-white
         padding-top: $spacer-2
         flex: 1
+        font-weight: 600
+        letter-spacing: 2.4px
+        font-size: $text-5
+        @media all and (min-width: 770px)
+            font-size: $text-6
         @media all and (min-width: $row-to-column)
             width: 100%
     div div span
         text-size: $text-0-5
+        font-family: $title-font
+        font-weight: 300
+        letter-spacing: 0.6px
     @media all and (min-width: 605px)
         @include row-between
         min-height: 10vh

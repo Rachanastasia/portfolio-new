@@ -114,14 +114,20 @@ main
         .full-section
             min-height: 60vh
 
-
+#loader
+    background-color: inherit
+    transition: $default-transition
         
 
 
 
 
-h1, h3
-    letter-spacing: 2px
+h1, h3, h2, h4
+    letter-spacing: 1.4px
+    font-family: $title-font
+h3
+    font-weight: 300
+
 
 footer
     color: white
@@ -174,7 +180,6 @@ p
     margin-right: $spacer-6
     margin-top: $spacer-6
     .hire-me-banner
-        position: sticky
         border-radius: 20px
         height: 300px
         width: 100%
@@ -186,10 +191,12 @@ p
         display: flex
         flex-direction: column
         justify-content: space-between
-        padding: $spacer-3
+        align-items: center
+        padding: $spacer-4
         span
             flex: 1
             display: block
+            padding: $spacer-3
         .hire-me-links
             flex-direction: row
             justify-content: space-between

@@ -79,9 +79,11 @@
 
 @mixin text-body
     font-size: $text-1
-    line-spacing: calc($text-1 * $line-height-constant)
+    line-height: calc($text-1 * $line-height-constant)
     font-family: $font
     color: $colors-off-white-text
+    letter-spacing: 0.5px
+
 
 @mixin text-title
     letter-spacing: $letter-spacing-5
