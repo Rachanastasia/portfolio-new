@@ -8,7 +8,9 @@ export default function About(){
         <section className='full-section'> 
                 <h2>About</h2>
                 <div className='about-content-wrapper'>
-                    <Image className='about-img' src={Me} priority={true} />
+                    <div className='image-wrapper'>
+                        <Image className='about-img' src={Me} priority={true}/>
+                    </div>
                         <div className="about-paragraph-wrapper">
                         <p>
                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. CHANGE ME!!!                             I'm a fullstack Software Engineer in Chicago, IL who is passionate about helping start-ups. 
