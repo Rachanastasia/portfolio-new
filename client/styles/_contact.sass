@@ -32,14 +32,19 @@
             outline: none
             border: none
             display: flex
-            justify-content: space-between
+            flex-direction: column
             padding-top: $spacer-2
-            align-items: center
             @media all and (min-width: 600px)
                 padding-top: $spacer-3
+            @media all and (min-width: 425px)
+                justify-content: space-between
+                align-items: center
             label
                 width: 65px
                 color: $colors-off-white-text
+                margin-bottom: $spacer-1
+                @media all and (min-width: 425px)
+                    margin-bottom: 0
             input, textarea
                 flex: 3
                 width: 100%
