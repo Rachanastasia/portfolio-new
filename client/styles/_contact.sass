@@ -70,6 +70,7 @@
                 font-family: $font
         button
             margin-left: 0
+            cursor: pointer
             @media all and (min-width: 700px)
                 margin-left: 85px
             background-color: $accent-1
@@ -81,9 +82,12 @@
             border-radius: 4px
             transition: $default-transition
             &:focus, &:active, &:hover
-                background-color: $accent-2
+                background-color: $accent-4
                 transition: $default-transition
-                border: 2px solid $accent-2
+                border: 2px solid $accent-4
+            .loading
+                background-color: $accent-4
+
         .complete-wrapper
             width: 100%
             justify-content: center
