@@ -13,8 +13,8 @@ mailRouter
             const {name, email, message} = sanitizeData(req.body)
             
             if (!name || !email || !message) return res
-            .status(400)
             .set('Access-Control-Allow-Origin', CLIENT_URL)
+            .status(400)
             .json({message: 'Cannot send email without name, email, and message after sanitization'})
 
             const request = mailjet

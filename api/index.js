@@ -19,9 +19,11 @@ app.get('/', async (req, res) => {
 app.use('/api/feed', feedRouter)
 app.use('/api/mail', mailRouter)
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`server listening at http://localhost:${PORT}`)
 })
+
+server.setTimeout(500000)
 
 module.exports = app;
 
