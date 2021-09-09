@@ -16,6 +16,11 @@
         width: 100%
         height: 100%
         margin-bottom: $spacer-4
+        p
+            color: $accent-4
+        .loading
+            background-color: $accent-4
+            cursor: not-allowed
         .error-wrapper
             height: 25px
             @media all and (min-width: 600px)
@@ -30,6 +35,8 @@
                 letter-spacing: 1px
                 color: $accent-3
                 font-weight: 500
+                @media all and (min-width: 700px)
+                    margin-left: 85px
         fieldset
             outline: none
             border: none
@@ -48,6 +55,8 @@
                 margin-bottom: $spacer-1
                 @media all and (min-width: 425px)
                     margin-bottom: 0
+                @media all and (min-width: 700px)
+                    width: 85px
             input, textarea
                 flex: 3
                 width: 100%
@@ -66,8 +75,9 @@
                 font-family: $font
         button
             margin-left: 0
+            cursor: pointer
             @media all and (min-width: 700px)
-                margin-left: 65px
+                margin-left: 85px
             background-color: $accent-1
             border: 0
             padding: $spacer-2
@@ -77,9 +87,11 @@
             border-radius: 4px
             transition: $default-transition
             &:focus, &:active, &:hover
-                background-color: $accent-2
+                background-color: $accent-4
                 transition: $default-transition
-                border: 2px solid $accent-2
+                border: 2px solid $accent-4
+        
+
         .complete-wrapper
             width: 100%
             justify-content: center

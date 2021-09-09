@@ -19,6 +19,7 @@ a
     height: inherit
     padding: 0
     background-color: mix(#fafafa, #fff, 50%)
+
 @keyframes content-animate-in
     0%
         transform: translateY(90%)
@@ -87,8 +88,7 @@ main
             max-width: $max-content-width
             background-color: #f4f4f4
             border-radius: 4px
-            h2, h3, h4, p, span, image, ul, li, div, article
-                animation: content-animate-in 0.35s ease-out
+            animation: content-animate-in 0.35s ease-out
             @include text-body
             @media all and (min-width: 500px)
                 margin: $spacer-4 $spacer-3

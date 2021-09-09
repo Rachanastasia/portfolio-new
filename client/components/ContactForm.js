@@ -7,6 +7,7 @@ export default function ContactForm(){
     const [error, setError] = useState(null)
     const [complete, setComplete] = useState(false)
     const [loading, setLoading] = useState(false)
+    const buttonStatusClass = loading ? 'form-loading' : undefined
 
     useEffect(()=>{
         return () => complete ? setComplete(false) : {}
@@ -54,6 +55,8 @@ export default function ContactForm(){
 
     return (
         <form onSubmit={handleSubmit} className='contact-form'>
+            <p>I am currently looking for new oppertunities as a Software Engineer.
+                If you have any more questions or comments, leave me a message below. I'll get back to you as quickly as possible.</p>
             {!complete 
             ? <>
             <fieldset>
@@ -71,7 +74,7 @@ export default function ContactForm(){
             <div className='error-wrapper'>
                 <span>{error}</span>
             </div>
-            <button  type='submit'>submit</button>
+            <button  type='submit' className={buttonStatusClass} disabled={loading}>submit</button>
             </>
             : <div className='complete-wrapper'>
                 <span className='complete-text'>Your form was submitted.</span>
