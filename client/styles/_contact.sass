@@ -16,6 +16,9 @@
         width: 100%
         height: 100%
         margin-bottom: $spacer-4
+        .loading
+            background-color: $accent-4
+            cursor: not-allowed
         .error-wrapper
             height: 25px
             @media all and (min-width: 600px)
@@ -85,8 +88,7 @@
                 background-color: $accent-4
                 transition: $default-transition
                 border: 2px solid $accent-4
-            .loading
-                background-color: $accent-4
+        
 
         .complete-wrapper
             width: 100%
