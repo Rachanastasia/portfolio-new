@@ -44,7 +44,7 @@ export default function Layout({
           </div>
         </WrapperBasedOnWidth>
         <footer>
-          <span>Rachel Reilly | 2021</span>
+          <span>Designed and Built by Rachel Reilly | 2021</span>
         </footer>
       </main>
     </div>
