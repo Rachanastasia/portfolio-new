@@ -11,7 +11,7 @@ export default function Header({path}){
     const contactClass = validateAgainstPath(PAGES.CONTACT.PATH)
     const mainPageClass = path === PAGES.DEFAULT.PATH ? 'main-page' : ''
     return (
-        <header id={mainPageClass}>
+        <header >
             <h1 className=' main-title'>Rachel Reilly</h1>
             <div className='header-title-link-wrapper'>
                 <BaseButtonLink url='/projects' className={projectsClass} content='PROJECTS'/>
