@@ -31,7 +31,7 @@ export default function About(){
 function Skills(){
     return (
         <div className='skills-wrapper'>
-            <h3>Skills</h3>
+            <h3>SKILLS</h3>
             <ul>
                 <li>JavaScript</li>
                 <li>React</li>
