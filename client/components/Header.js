@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {PAGES} from '../utils/constants'
 import { BaseButtonLink } from './BaseButton'
 
@@ -12,7 +13,9 @@ export default function Header({path}){
     const mainPageClass = path === PAGES.DEFAULT.PATH ? 'main-page' : ''
     return (
         <header >
-            <h1 className=' main-title'>Rachel Reilly</h1>
+            <Link href='/'>
+                <h1 className=' main-title'>Rachel Reilly</h1>
+            </Link>
             <div className='header-title-link-wrapper'>
                 <BaseButtonLink url='/projects' className={projectsClass} content='PROJECTS'/>
                 <BaseButtonLink url='/about' className={aboutClass} content='ABOUT'/>
