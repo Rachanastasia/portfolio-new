@@ -5,6 +5,7 @@ import Stack from './Stack'
 
 export default function ProjectCard({title, images, description, stack, links, imageOptions={}}){
     const image = images[0]
+    title = title.toUpperCase()
     return (
         <section className='project-wrapper'>
             <div className='title-stack-wrapper'>
