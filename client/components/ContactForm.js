@@ -4,7 +4,7 @@ import {BaseButtonLink} from './BaseButton'
 import { postContactForm } from '../services/postContactForm'
 
 export default function ContactForm(){
-    const [error, setError] = useState('The contact form is currently down. Please check back later. ')
+    const [error, setError] = useState('The contact form is temporarily down')
     const [complete, setComplete] = useState(false)
     const [loading, setLoading] = useState(false)
     const buttonStatusClass = loading ? 'loading' : undefined
