@@ -38,6 +38,7 @@ $column-to-row: 675px
         margin-right: $spacer-4
     @media all and (min-width: 1700px)
         margin-right: $spacer-5
+    
 .about-content-wrapper
     .about-links-wrapper
         @include link-col
@@ -58,6 +59,9 @@ $column-to-row: 675px
 .about-img
     height: auto
     border-radius: 50%
+    &::after
+        z-index: 10
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2)
         
 .skills-wrapper
     flex: 1
