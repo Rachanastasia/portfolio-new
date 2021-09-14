@@ -55,8 +55,7 @@ export default function ContactForm(){
 
     return (
         <form onSubmit={handleSubmit} className='contact-form'>
-            <p>I am currently looking for new oppertunities as a Software Engineer.
-                If you have any more questions or comments, leave me a message below. I'll get back to you as quickly as possible.</p>
+            <p>I'm currently looking for new oppertunities as a Software Engineer, and I am always open to contract work. To learn more, please leave me a brief message.</p>
             {!complete 
             ? <>
             <fieldset>
