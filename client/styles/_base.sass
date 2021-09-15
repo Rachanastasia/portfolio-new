@@ -18,7 +18,7 @@ a
     margin: 0
     height: inherit
     padding: 0
-    background-color: mix(#fafafa, #fff, 50%)
+    background-color: $background-light-gray
 
 @keyframes content-animate-in
     0%
@@ -86,7 +86,6 @@ main
             padding: $spacer-3
             align-self: center
             max-width: $max-content-width
-            background-color: #f4f4f4
             border-radius: 4px
             animation: content-animate-in 0.35s ease-out
             @include text-body
@@ -105,16 +104,17 @@ main
                 margin-bottom: $spacer-1
                 padding-right: $spacer-3
                 align-self: flex-start
-                color: $accent-2
+                color: $text-dark-gray
+                letter-spacing: 1px
                 @include text-title
             .main-title
                 font-size: $text-6
             h2
                 padding-bottom: $spacer-1
-                margin-left: $spacer-1
-                color: $accent-2
+                color: $accent-blue
             h3 
-                color: $accent-2
+                color: $text-dark-gray
+           
         .full-section
             min-height: 50vh
 
@@ -137,7 +137,7 @@ section
 
 footer
     color: white
-    background-color: $accent-2
+    background-color: $accent-blue
     width: 100vw
     height: 50px
     display: flex
@@ -147,8 +147,7 @@ footer
 
 
 .social-icon
-    border: 2px solid $accent-2
-    border-radius: 50%
+    border: 2px solid $text-dark-gray
     padding: 2px
     width: 35px
     height: 35px
@@ -158,12 +157,12 @@ footer
     align-items: center
     transition: $default-transition
     svg
-        fill: $colors-accent-text
+        fill: $accent-blue
     &:hover, &:focus, &:active
-        border: 2px solid $accent-1
+        border: 2px solid $text-dark-gray
         transition: $default-transition
     &:hover svg, &:focus svg, &:active svg
-        fill: $accent-1
+        fill: $accent-red
         transition: $default-transition
     
 
