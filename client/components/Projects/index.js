@@ -2,9 +2,11 @@ import React, {Fragment} from 'react'
 import ProjectCard from './ProjectCard'
 
 import SlicedNewImage from '../../assets/sliced-new.jpg'
-import SlicedOldImage from '../../assets/sliced-old-input-view.png'
+import SlicedOldImage from '../../assets/sliced-old-recipe-view.png'
 import Init from '../../assets/init.jpg'
 import SpacedRepetition from '../../assets/spaced-repetition.jpg'
+import OneDChess from '../../assets/one-d-chess.jpg'
+import LoanCalculator from '../../loan-calculator.jpg'
 
 
 const PROJECTS = [
@@ -49,7 +51,7 @@ const PROJECTS = [
         title: 'One Dimensional Chess',
         description: "One Dimensional Chess is a static two-player game that follows Glimne's rules for the game",
         stack: ['React', 'CSS3'],
-        images: [SlicedOldImage],
+        images: [OneDChess],
         links: [
             {title: 'View App', href: 'https://one-d-chess.vercel.app/'},
             {title: 'Game Code', href: 'https://github.com/rachelrly/one-dimensional-chess'},
@@ -60,7 +62,7 @@ const PROJECTS = [
         title: 'Loan Calculator',
         description: 'This loan calculator uses the useReducer() React Hook to process the changes in input and update the result immediately.',
         stack: ['React', 'CSS3'],
-        images: [SlicedOldImage],
+        images: [LoanCalculator],
         links: [
             {title: 'View App', href: 'https://loan-calculator-two.vercel.app/'},
             {title: 'App Code', href: 'https://github.com/rachelrly/loan-calculator'},
