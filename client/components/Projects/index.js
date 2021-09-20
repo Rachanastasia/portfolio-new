@@ -7,6 +7,7 @@ import Init from '../../assets/init.jpg'
 import SpacedRepetition from '../../assets/spaced-repetition.jpg'
 import OneDChess from '../../assets/one-d-chess.jpg'
 import LoanCalculator from '../../loan-calculator.jpg'
+import GraphQLBookshelf from '../../graphql-bookshelf.jpg'
 
 
 const PROJECTS = [
@@ -86,7 +87,7 @@ const PROJECTS = [
         title: 'GraphQL Bookshelf',
         description: "This full stack project explores types and the connections between data in GraphQL",
         stack: ['React', 'GraphQL', 'Apollo', 'Node.js', 'Express', 'CSS3'],
-        images: [SlicedOldImage],
+        images: [GraphQLBookshelf],
         links: [
             {title: 'View App', href: 'https://bookshelf-orcin.vercel.app/'},
             {title: 'Client Code', href: 'https://github.com/rachelrly/graphql-bookshelf-client'},
