@@ -16,8 +16,9 @@
     "helmet": "^4.6.0",
     "jsdom": "^17.0.0",
     "node-fetch": "^2.6.1",
-    "node-mailjet": "^3.3.4",
-    "rss-parser": "^3.12.0"
+    "node-mailjet": "^3.0.5",
+    "rss-parser": "^3.12.0",
+    "ansi-regex": ">=6.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
