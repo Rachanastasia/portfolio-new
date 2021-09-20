@@ -43,10 +43,13 @@
             align-items: center
             justify-content: center
             margin-top: $spacer-2
-            ul
-                height: 100%
+            height: 100%
+            .base-button-wrapper
+                height: 200%
+            ul  
                 li
-                    height: 100%
+                    display: flex
+                    justify-content: center
                     .project-links
                         font-weight: 600
                         font-family: $title-font
@@ -126,6 +129,6 @@
         
 .image-link-wrapper
     div
-        border: 2px solid $accent-blue
-        border-radius: 10px
+        border: $spacer-3 solid white
+        border-radius: 4px
         overflow: hidden
