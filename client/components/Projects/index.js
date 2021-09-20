@@ -6,8 +6,8 @@ import SlicedOldImage from '../../assets/sliced-old-recipe-view.png'
 import Init from '../../assets/init.jpg'
 import SpacedRepetition from '../../assets/spaced-repetition.jpg'
 import OneDChess from '../../assets/one-d-chess.jpg'
-import LoanCalculator from '../../loan-calculator.jpg'
-import GraphQLBookshelf from '../../graphql-bookshelf.jpg'
+import LoanCalculator from '../../assets/loan-calculator.jpg'
+import GraphQLBookshelf from '../../assets/graphql-bookshelf.jpg'
 
 
 const PROJECTS = [
