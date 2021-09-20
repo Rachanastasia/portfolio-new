@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {BaseButtonLink} from '../BaseButton'
+import {RectangleButtonLink} from '../RectangleButton'
 
 export default function BlogError(){
     return (
@@ -13,7 +13,7 @@ export default function BlogError(){
                     </Link>
                 </span>
             </div>
-            <BaseButtonLink url='/' content='Go back' />
+            <RectangleButtonLink url='/' content='Go back' />
         </section>
     )
 }
