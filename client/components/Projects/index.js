@@ -2,12 +2,12 @@ import React, {Fragment} from 'react'
 import ProjectCard from './ProjectCard'
 
 import SlicedNewImage from '../../assets/sliced-new.jpg'
-import SlicedOldImage from '../../assets/sliced-old-recipe-view.png'
-import Init from '../../assets/init.jpg'
-import SpacedRepetition from '../../assets/spaced-repetition.jpg'
-import OneDChess from '../../assets/one-d-chess.jpg'
-import LoanCalculator from '../../assets/loan-calculator.jpg'
-import GraphQLBookshelf from '../../assets/graphql-bookshelf.jpg'
+import SlicedOldImage from '../../assets/sm-sliced-old.jpg'
+import Init from '../../assets/sm-init.jpg'
+import SpacedRepetition from '../../assets/sm-spaced-repetition.jpg'
+import OneDChess from '../../assets/sm-1d-chess.jpg'
+import LoanCalculator from '../../assets/sm-loan-calc.jpg'
+import GraphQLBookshelf from '../../assets/sm-books.jpg'
 
 
 const PROJECTS = [
