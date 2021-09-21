@@ -27,7 +27,7 @@ export default function Layout({
           <div className={contentWrapperClassName}>
             {children}
           </div>
-          <HireMeBanner />
+          <HireMeBanner hidden={path === PATH}/>
         </div>
         <footer>
           <span>Designed and Built by Rachel Reilly | 2021</span>

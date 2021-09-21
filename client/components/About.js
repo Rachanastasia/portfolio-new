@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import SocialLinks  from './SocialLinks'
 import Me from '../assets/rachel-reilly.jpg'
 import Image from 'next/image'
@@ -13,7 +14,8 @@ export default function About(){
                     </div>
                         <div className="about-paragraph-wrapper">
                         <p>
-                        I am a full stack Software Engineer specializing in React Native but passionate about the future of tech beyond mobile. I was introduced to tech as an artist through the Maker community where I learned that -- with some additional knowledge -- I could apply the constructive skills I developed as an artist to make things that solve concrete problems.</p>
+                        I am a product-oriented Software Engineer with expierence at early stage start-ups. I was introduced to programming as an artist through the Maker community where I learned that -- with some additional knowledge -- I could adapt the constructive skills I developed as an artist to make things that solve concrete problems.</p>
+                        <p>To learn more, send me a message <Link href='/contact'><span className='hover-link'>here</span></Link>, and I will get back to you as soon as I can.</p>
                         </div>
                         <div className='skills-links-wrapper'>
                             <Skills />   
