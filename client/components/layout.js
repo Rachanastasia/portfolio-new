@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import {PAGES} from '../utils/constants'
 import Header from './Header'
-import HireMeBanner from './HireMeBanner'
 
 const {DESCRIPTION, PATH, TITLE} = PAGES.DEFAULT
 
@@ -27,7 +25,6 @@ export default function Layout({
           <div className={contentWrapperClassName}>
             {children}
           </div>
-          <HireMeBanner hidden={path === PATH}/>
         </div>
         <footer>
           <span>Designed and Built by Rachel Reilly | 2021</span>
