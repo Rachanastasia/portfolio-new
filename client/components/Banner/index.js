@@ -2,8 +2,6 @@ import {BaseButtonLink }from "../BaseButton"
 export default function Banner(){
 
     return (
-        <div className='temp-wrapper'>
-         
-        </div>
+        <div className='temp-wrapper'/>
     )
 }
