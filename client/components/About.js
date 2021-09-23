@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function About(){
     return (
         <section className='full-section'> 
-                <h2>About</h2>
+                <h2 className='page-title'>ABOUT</h2>
                 <div className='about-content-wrapper'>
                     <div className='image-wrapper'>
                         <Image className='about-img' src={Me} priority={true}/>
