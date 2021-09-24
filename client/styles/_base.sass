@@ -100,7 +100,7 @@ main
             @media all and (min-width: 1220px)
                 padding: $spacer-6 $spacer-5 $spacer-6
                 margin: $spacer-6 $spacer-4
-            .section-title, h2
+            .section-title, h2, .page-title
                 margin-bottom: $spacer-1
                 padding-right: $spacer-3
                 align-self: flex-start
@@ -142,8 +142,11 @@ footer
     height: 50px
     display: flex
     align-items: center
-    span
-        padding-left: $spacer-3
+    padding-left: $spacer-1
+    @media all and (min-width: 550px)
+        span
+            padding-left: $spacer-3
+            font-size: $text-1
 
 
 .social-icon
@@ -155,15 +158,15 @@ footer
     display: flex
     justify-content: center
     align-items: center
-    transition: $default-transition
+    transition: $default-fast-transition
     svg
         fill: $accent-blue
     &:hover, &:focus, &:active
         border: 2px solid $text-dark-gray
-        transition: $default-transition
+        transition: $default-fast-transition
     &:hover svg, &:focus svg, &:active svg
         fill: $accent-red
-        transition: $default-transition
+        transition: $default-fast-transition
     
 
 span
@@ -179,21 +182,20 @@ p
 .hire-me-wrapper
     @media all and (max-width: 1500px)
         display: none
-    height: inherit
-    width: 100%
+    height: 100vh
+    width: 120%
     display: flex
     align-items: flex-start
     align-self: flex-start
     margin-right: $spacer-6
     margin-top: $spacer-6
     .hire-me-banner
-        border-radius: 20px
-        height: 300px
         width: 100%
         right: $spacer-4
         top: 0
+        min-height: 20vh
         margin-top: $spacer-4
-        background-color: $accent-1
+        background-color: $background-mid-gray
         width: inherit
         display: flex
         flex-direction: column
@@ -211,3 +213,10 @@ p
 
 .test-image-wrapper
     height: 300px
+
+.hover-link
+    color: $accent-blue
+    transition: $default-fast-transition
+    &:hover, &:focus
+        color: $accent-red
+        transition: $default-fast-transition

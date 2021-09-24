@@ -3,8 +3,7 @@ import Image from 'next/image'
 import Links from './Links'
 import Stack from './Stack'
 
-export default function ProjectCard({title, images, description, stack, links, imageOptions={}}){
-    const image = images[0]
+export default function ProjectCard({title, image, description, stack, links, imageOptions={}}){
     title = title.toUpperCase()
     return (
         <section className='project-wrapper'>
