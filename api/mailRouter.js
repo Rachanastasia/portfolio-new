@@ -18,6 +18,29 @@ mailQueue.process(function (job){
     throw new Error('Could not process mail')
 })
 
+const makeEmailBody = ({name, message, email}) => ({
+    "Messages":[
+    {
+    "From": {
+        "Email": process.env.EMAIL,
+        "Name": name
+    },
+    "To": [
+        {
+        "Email": process.env.EMAIL_TEST,
+        "Name": "Rachel Reilly"
+        }
+    ],
+    "Subject":  `${name} Used Your Contact Form`,
+    "TextPart": message,
+    "HTMLPart":`
+    <h1>Below is an email from the contact form:</h1>
+    <p>${message}</p>
+    <p>Respond to ${name} at</p> 
+    <h3>__${email}__</h3>`
+    }
+]})
+
 mailRouter
     .post('/',  async (req, res, next) => {
         try {
@@ -27,33 +50,13 @@ mailRouter
             if (!name || !email || !message) return res
             .set('Access-Control-Allow-Origin', CLIENT_URL)
             .status(400)
-            .json({message: 'Cannot send email without name, email, and message after sanitization'})
+            .json({message: 'Cannot send email because input lacks valid name, email, or message after sanitization'})
+
+            const emailBody = makeEmailBody({name, email, message})
 
             const request = mailjet
             .post("send", {'version': 'v3.1'})
-            .request({
-            "Messages":[
-                {
-                "From": {
-                    "Email": process.env.EMAIL,
-                    "Name": name
-                },
-                "To": [
-                    {
-                    "Email": process.env.EMAIL_TEST,
-                    "Name": "Rachel Reilly"
-                    }
-                ],
-                "Subject":  `${name} Used Your Contact Form`,
-                "TextPart": message,
-                "HTMLPart":`
-                <h1>Below is an email from the contact form:</h1>
-                <p>${message}</p>
-                <p>Respond to ${name} at</p> 
-                <h3>__${email}__</h3>`
-                }
-            ]
-            })
+            .request(emailBody)
             request.then((result) => {
                 return res
                 .set('Access-Control-Allow-Origin', CLIENT_URL)
