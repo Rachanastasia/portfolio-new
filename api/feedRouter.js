@@ -1,5 +1,5 @@
 const express = require('express')
-const {getMediumArticles} = require('./getMediumArticles.js')
+const {handleBlogCache} = require('./redis')
 const { CLIENT_URL } = require('./config')
 
 const feedRouter = express.Router()
@@ -7,7 +7,7 @@ feedRouter
     .post('/', async (req, res, next) => {
         try {
             const {offset=0} = req.body
-            const articles = await getMediumArticles(offset)
+            const articles = await handleBlogCache(offset)
             return res
             .set('Access-Control-Allow-Origin', CLIENT_URL)
             .status(200)
