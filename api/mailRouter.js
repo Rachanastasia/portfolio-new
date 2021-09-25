@@ -1,16 +1,28 @@
 const express = require('express')
 const createDOMPurify = require('dompurify')
 const {JSDOM} = require('jsdom')
+const Queue = require('bull')
 
 const mailjet = require ('node-mailjet').connect(process.env.MAILJET_KEY_1, process.env.MAILJET_KEY_2)
-const { CLIENT_URL } = require('./config')
+const { CLIENT_URL, REDIS_CONFIG, REDIS_KEYS: {MAIL} } = require('./config')
+const mailQueue = new Queue(MAIL, { redis: REDIS_CONFIG})
+
 
 const mailRouter = express.Router()
+
+mailQueue.process(function (job){
+    job.progress(42)
+    const {name, email, message} = job.data
+    console.log('PRENTENDING TO PROCESS')
+    //RETURN PROMISE
+    throw new Error('Could not process mail')
+})
 
 mailRouter
     .post('/',  async (req, res, next) => {
         try {
             const {name, email, message} = sanitizeData(req.body)
+            //call func to offload task
             
             if (!name || !email || !message) return res
             .set('Access-Control-Allow-Origin', CLIENT_URL)
