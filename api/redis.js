@@ -9,14 +9,24 @@ client.on('error', error => {
 
 const BLOG = 'blog_posts'
 
-if (!client.get(BLOG, redis.print)){
-    getMediumArticles(0).then(articles => {
-        const articleString = JSON.stringify(articles)
-        client.set(BLOG, articleString, redis.print)
-    })
-    
-} else {
-    let blogs = client.get(BLOG, redis.print)
-    const parsedBlogs = JSON.parse(blogs)
+async function handleBlogCache(){
+    if (!client.get(BLOG, redis.print)){
+        getMediumArticles().then(articles => {
+            const articleString = JSON.stringify(articles)
+            client.set(BLOG, articleString, redis.print)
+            return articles
+        })
+    } else {
+        let blogs = client.get(BLOG, redis.print)
+        const parsedBlogs = JSON.parse(blogs)
+        return parsedBlogs
+    }
 }
+
+async function handleOffloadMain(){
+
+}
+
+module.exports = {handleBlogCache, handleOffloadMain}
+
 

@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
+const redis = require('redis')
 
 const { PORT } = require('./config')
 const feedRouter = require('./feedRouter')
@@ -19,11 +20,11 @@ app.get('/', async (req, res) => {
 app.use('/api/feed', feedRouter)
 app.use('/api/mail', mailRouter)
 
-const server = app.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`server listening at http://localhost:${PORT}`)
 })
 
-server.setTimeout(500000)
+
 
 module.exports = app;
 
