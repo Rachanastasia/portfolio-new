@@ -17,8 +17,9 @@ export default function SocialLinks({ hasResume = false, className }) {
       {hasResume && (
         <a
           className="social-icon"
-          href={`${process.env.CLIENT_URL}/assets/RachelReillyResume.pdf`}
-          download="RachelReillyResume"
+          href="RachelReillyResume.pdf"
+          alt="Rachel Reilly's Resume"
+          download
         >
           <AiOutlineFile />
         </a>
