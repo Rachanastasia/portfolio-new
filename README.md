@@ -9,7 +9,6 @@ This is the repository for Software Engineer Rachel Reilly's portfolio site.
 - SASS
 - Node.js
 - Express.js
-- Docker
 - Redis
 - [bull](https://github.com/OptimalBits/bull)
 - [rss-parser](https://www.npmjs.com/package/rss-parser)

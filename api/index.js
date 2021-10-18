@@ -19,6 +19,8 @@ app.get('/', async (req, res) => {
 app.use('/api/feed', feedRouter)
 app.use('/api/mail', mailRouter)
 
+//INSTANCE OF REDIS CLIENT SHOULD BE HERE
+
 app.listen(PORT, () => {
     console.log(`server listening at http://localhost:${PORT}`)
 })
