@@ -9,11 +9,9 @@ const {
 } = require("./config");
 
 const feedRouter = express.Router();
-feedRouter.post("/", async (req, res, next) => {
+feedRouter.get("/", async (req, res, next) => {
   try {
-    let client = "";
     const articles = await handleBlogCache();
-    console.log("THESE ARE MY ARTICLES", { articles });
     return res
       .set("Access-Control-Allow-Origin", CLIENT_URL)
       .status(200)
@@ -38,10 +36,6 @@ async function handleBlogCache() {
     console.error("Error " + error);
   });
 
-  client.once("ready", function () {
-    //client.flushdb()
-  });
-
   if (!client.get(FEED, redis.print)) {
     return getMediumArticles().then((articles) => {
       const articleString = JSON.stringify(articles);
@@ -50,7 +44,7 @@ async function handleBlogCache() {
     });
   } else {
     return client.get(FEED, (err, reply) => {
-      console.log("THIS IS THE REPLY IN CACHE", reply);
+      if (err) throw new Error("Could not get posts from Redis cache: " + err);
       return JSON.parse(reply);
     });
   }
