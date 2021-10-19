@@ -1,7 +1,10 @@
 const express = require("express");
 const Promise = require("bluebird");
+
 const redis = Promise.promisifyAll(require("redis"));
+
 const { getMediumArticles } = require("./getMediumArticles.js");
+
 const {
   REDIS_KEYS: { FEED },
   REDIS_CONFIG,
@@ -9,6 +12,7 @@ const {
 } = require("./config");
 
 const feedRouter = express.Router();
+
 feedRouter.get("/", async (req, res, next) => {
   try {
     const articles = await handleBlogCache();
@@ -26,8 +30,6 @@ feedRouter.get("/", async (req, res, next) => {
       .json({ message: errorMessage });
   }
 });
-
-module.exports = feedRouter;
 
 async function handleBlogCache() {
   const client = redis.createClient(REDIS_CONFIG);
@@ -49,3 +51,5 @@ async function handleBlogCache() {
     });
   }
 }
+
+module.exports = feedRouter;
