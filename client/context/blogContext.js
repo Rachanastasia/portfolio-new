@@ -7,7 +7,7 @@ export default function BlogContextProvider({ children }) {
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
-    if (!children?.length) fetchMediumArticles();
+    if (!blogPosts?.length) fetchMediumArticles();
   }, []);
 
   async function fetchMediumArticles() {
@@ -19,7 +19,7 @@ export default function BlogContextProvider({ children }) {
     }
   }
 
-  const value = { blogPosts };
+  const value = { blogPosts, fetchMediumArticles };
 
   return <BlogContext.Provider value={value}>{children}</BlogContext.Provider>;
 }

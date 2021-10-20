@@ -1,18 +1,29 @@
-import { useContext} from 'react'
-import {BlogContext} from '../../context/blogContext'
-import {PAGES} from '../../utils/constants'
-import Layout from '../../components/layout'
-import Blog from '../../components/Blog/index'
-import BlogError from '../../components/Blog/BlogError'
+import { useContext, useEffect } from "react";
+import { BlogContext } from "../../context/blogContext";
+import { PAGES } from "../../utils/constants";
+import Layout from "../../components/layout";
+import Blog from "../../components/Blog/index";
 
-export default function BlogPage(){
-    const {BLOG: {TITLE, DESCRIPTION, PATH}} = PAGES
-    const {blogPosts} = useContext(BlogContext)
-    const hasPosts = blogPosts?.length
+export default function BlogPage() {
+  const {
+    BLOG: { TITLE, DESCRIPTION, PATH },
+  } = PAGES;
+  const { blogPosts, fetchMediumArticles } = useContext(BlogContext);
 
-    return (
-        <Layout title={TITLE} description={DESCRIPTION} path={PATH} contentWrapperClass='blog-wrapper'>
-            {hasPosts ? <Blog blogPosts={blogPosts} /> : <BlogError />}
-        </Layout>
-    )
+  useEffect(() => {
+    if (!blogPosts?.length) {
+      fetchMediumArticles();
+    }
+  });
+
+  return (
+    <Layout
+      title={TITLE}
+      description={DESCRIPTION}
+      path={PATH}
+      contentWrapperClass="blog-wrapper"
+    >
+      <Blog blogPosts={blogPosts} />
+    </Layout>
+  );
 }
