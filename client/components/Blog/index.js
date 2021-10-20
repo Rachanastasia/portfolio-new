@@ -1,15 +1,12 @@
 import { Fragment } from "react";
+import BlogError from "./BlogError";
 import BlogPost from "./BlogPost";
 
 export default function BlogPosts({ blogPosts }) {
-  const hasBlogPosts = blogPosts?.length;
   return (
     <Fragment>
-      {hasBlogPosts ? (
-        blogPosts.map((post) => <BlogPost {...post} key={post.datePosted} />)
-      ) : (
-        <BlogError />
-      )}
+      {blogPosts?.length &&
+        blogPosts.map((post) => <BlogPost {...post} key={post.datePosted} />)}
     </Fragment>
   );
 }
