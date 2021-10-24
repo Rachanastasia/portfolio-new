@@ -36,6 +36,7 @@
             font-size: $text-5
             line-height: calc(1.1 * $text-5)
             color: $colors-white
+            border-bottom: 1.3px solid $text-dark-gray
             margin-bottom: $spacer-1
         h4
             font-size: $text-3
@@ -55,10 +56,11 @@
             font-size: $text-1
             line-height: calc($line-height-constant * $text-1)
             font-weight: 300
+            margin-top: $spacer-2
             font-family: $title-font
             letter-spacing: 0.5px
             display: block
-            color: $colors-accent-text
+            color: $text-dark-gray
             @media all and (min-width: 600px)
                 margin-bottom: $spacer-3
             @media all and (min-width: 1100px)
@@ -68,7 +70,7 @@
             line-height: calc($line-height-constant * $text-1)
         a
             font-weight: bold
-            color: $colors-accent-text
+            color: $accent-blue
             letter-spacing: 0.3px
             &:hover, &:focus, &:active
                 color: $accent-1
