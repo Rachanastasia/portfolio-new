@@ -1,4 +1,4 @@
-export async function getMediumArticles(offset = 0) {
+export async function getMediumArticles() {
   try {
     const response = await fetch(`${process.env.API_URL}/api/feed`);
     const json = await response.json();
