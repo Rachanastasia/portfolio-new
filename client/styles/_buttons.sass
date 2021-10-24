@@ -3,11 +3,11 @@
     0%
         background-color: $colors-white
     100%
-        background-color: $colors-accent-2
+        background-color: $accent-blue
 
-@keyframes button-underline-color
+@keyframes button-underline-color-out
     0%
-        background-color: $colors-accent-2
+        background-color: $accent-blue
     100%
         background-color: $colors-white
 
@@ -28,28 +28,31 @@
     .base-button-content:after
         content: ""
         top: 65%
-        height: 2px
+        height: 1.5px
         width: 0%
         left: 0
         animation: button-underline-color-out 0.3s ease-in
         transition: 0.3s ease-in all .01s
+        borderRadius: 50%
     &:hover .base-button-content:after
-        background-color: $accent-yellow
+        background-color: $accent-blue
         content: ""
         width: 100%
         position: absolute
         left: 300
-        top: -26
+        top: -14
         transition: $default-transition
     .base-button-content
-        color: $text-dark-blue
+        color: $text-dark-gray
         cursor: pointer
-        line-height: 80px
+        line-height: 70px
         position: relative
         display: inline-block
         text-align: center
         align-self: center
         font-size: $text-0-5
+        &:hover
+            color: $accent-blue
         @media all and (min-width: 500px)
             font-size: $text-1
         @media all and (min-width: 900px)
@@ -58,14 +61,16 @@
         &:after
             content: ""
             position: absolute
-    #active:after
-        background-color: $accent-yellow
-        content: ""
-        width: 100%
-        position: absolute
-        left: 300
-        top: -26
-        transition: $default-transition
+    #active
+        color: $accent-blue
+        &:after
+            background-color: $accent-blue
+            content: ""
+            width: 100%
+            position: absolute
+            left: 300
+            top: -14
+            transition: $default-transition
 
 
 .rectangle-button

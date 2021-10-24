@@ -15,7 +15,11 @@
         overflow-x: hidden
         overflow-y: hidden
         width: 100%
-        margin: $spacer-4 $spacer-2 $spacer-2
+        margin: $spacer-4 $spacer-2 $spacer-4
+        padding-bottom: $spacer-6
+        &:last-of-type
+            padding-bottom: $spacer-1
+        
         h3
             font-size: $text-5
             line-height: calc($line-height-constant * $text-5)
@@ -45,7 +49,7 @@
             margin-top: $spacer-2
             height: 100%
             .base-button-wrapper
-                height: 200%
+                height: 100%
             ul  
                 li
                     display: flex
@@ -86,7 +90,6 @@
         p
             margin-bottom: 0
             color: $colors-text-gray
-            font-size: $text-1
             margin-top: $spacer-2
     .project-link
         min-width: 95px
@@ -117,8 +120,8 @@
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    margin-bottom: $spacer-2
-    border-bottom: 2px solid $accent-red
+    padding-bottom: $spacer-1
+    border-bottom: 1.3px solid $text-dark-gray
     @media all and (min-width: 400px)
         h3
             margin-right: $spacer-2
