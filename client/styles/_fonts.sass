@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;500&family=Nanum+Gothic&display=swap')
+
+$font: 'Nanum Gothic', sans-serif
+$title-font: 'Fira Sans', sans-serif
+
+@mixin p
+    font-size: 0.875rem
+    line-height: 1.5
+    font-weight: normal
+    font-family: $font
+    @media all and (min-width: 400px)
+        font-size: 1rem
+    @media all and (min-width: 1000px)
+        font-size: 1.125rem
+
+@mixin h4
+    font-size: 1rem
+    line-height: 1.5
+    font-weight: light
+    font-family: $title-font
+    text-transform: capitalize
+    @media all and (min-width: 600px)
+        font-size: 1.125rem
+    @media all and (min-width: 1000px)
+        font-size: 1.25rem
+
+@mixin h3
+    font-size: 1.825rem
+    line-height: 1.5
+    font-weight: light
+    font-family: $title-font
+    @media all and (min-width: 600px)
+        font-size: 2rem
+    @media all and (min-width: 1000px)
+        font-size: 2.5rem
+
+@mixin h2
+    font-size: 2rem
+    line-height: 1.5
+    font-weight: normal
+    font-family: $title-font
+    letter-spacing: -0.03125em
+    @media all and (min-width: 600px)
+        font-size: 3.75rem
+    @media all and (min-width: 1000px)
+        font-size: 5rem
+
+@mixin caption
+    font-size: 0.875rem
+    line-height: 1.5
+    font-weight: bolder
+    font-family: $font
+    letter-spacing: -0.03125em
