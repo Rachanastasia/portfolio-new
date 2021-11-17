@@ -8,8 +8,6 @@ a
     color: inherit
     cursor: pointer
 
-
-
 .container
     min-height: 100vh
     max-width: 100vw
@@ -103,19 +101,23 @@ main
                 margin-bottom: $spacer-1
                 padding-right: $spacer-3
                 align-self: flex-start
-                color: $text-dark-gray
-                letter-spacing: 1px
-                @include text-title
             .page-title
                 width: 100%
                 border-bottom: 1.3px solid $text-dark-gray
             .main-title
-                font-size: $text-6
+                @include h2
             h2
-                padding-bottom: $spacer-1
-                color: $accent-blue
+                @include h2
             h3 
-                color: $text-dark-gray
+                @include h3
+            h4
+                @include h4
+            p
+                @include p
+                .link
+                    @include link
+            span, label, li
+                @include caption
            
         .full-section
             min-height: 50vh
@@ -126,16 +128,6 @@ main
         
 
 
-
-
-h1, h3, h2, h4
-    letter-spacing: 1.4px
-    font-family: $title-font
-h3
-    font-weight: 300
-section
-    h2, h3, h4
-        color: $accent-3
 
 footer
     color: white
@@ -148,7 +140,7 @@ footer
     @media all and (min-width: 550px)
         span
             padding-left: $spacer-3
-            font-size: $text-1
+    
 
 
 .social-icon
@@ -170,15 +162,9 @@ footer
     &:hover svg, &:focus svg, &:active svg
         fill: $accent-blue
         transition: $default-fast-transition
-    
-
-span
-    letter-spacing: 0.2px
 
 p
     margin-bottom: $spacer-3
-    @include p-text
-    color: $colors-text-gray
     @media all and (min-width: 1100px)
         margin-bottom: $spacer-4
 
