@@ -23,7 +23,7 @@ export default function About() {
           <p>
             To learn more, send me a message{" "}
             <Link href="/contact">
-              <span className="hover-link">here</span>
+              <span className="link">here</span>
             </Link>
             , and I will get back to you as soon as I can.
           </p>
