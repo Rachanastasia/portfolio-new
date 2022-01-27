@@ -16,7 +16,7 @@ export default function BlogPage() {
     <Head>
       <title>Rachel Reilly's Coding Blog</title>
       <meta name="description" content="Rachel Reilly's coding blog, originally posted on rachelrly.medium.com" />
-      <link rel="icon" href="assets/favicon.ico" />
+      <link rel="icon" href="favicon.ico" />
     </Head>
     <Blog blogPosts={blogPosts} />    
     </Fragment>

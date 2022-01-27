@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Rachel Reilly | Software Engineer</title>
         <meta name="description" content="Rachel Reilly, Chicago based Software Engineer specializing in React" />
-        <link rel="icon" href="assets/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <Banner /> 
       </Fragment>
