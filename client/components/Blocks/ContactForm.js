@@ -1,8 +1,11 @@
 import {useEffect, useState} from 'react'
 import DOMPurify from 'dompurify'
 import {BaseButtonLink} from './BaseButton'
-import { postContactForm } from '../services/postContactForm'
+import { postContactForm } from '../../services/postContactForm'
 
+// MAKE THIS SUPER SIMPLE AND ACTUALLY WORK
+// SWITCH BACKEND TO NODE MAILER??
+// CAN THIS BE IN PAGES/API??
 export default function ContactForm(){
     const [error, setError] = useState('The contact form is temporarily down')
     const [complete, setComplete] = useState(false)

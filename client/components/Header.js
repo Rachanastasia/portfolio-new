@@ -1,26 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
-import {PAGES} from '../utils/constants'
-import { BaseButtonLink } from './BaseButton'
+import { BaseButtonLink } from './Blocks/BaseButton'
 
-export default function Header({path}){
-    //TODO: switch to use Object.entries syntax 
-    const validateAgainstPath = (pagePath) => pagePath === path ? 'active' : null
-    const projectsClass = validateAgainstPath(PAGES.PROJECTS.PATH)
-    const aboutClass = validateAgainstPath(PAGES.ABOUT.PATH)
-    const blogClass = validateAgainstPath(PAGES.BLOG.PATH)
-    const contactClass = validateAgainstPath(PAGES.CONTACT.PATH)
-    const mainPageClass = path === PAGES.DEFAULT.PATH ? 'main-page' : ''
+// HAVE SHAPE BETWEEN BLOG AND ABOUT
+export default function Header(){
     return (
         <header >
             <Link href='/'>
                 <h1 className=' main-title'>RACHEL REILLY</h1>
             </Link>
             <div className='header-title-link-wrapper'>
-                <BaseButtonLink url='/projects' className={projectsClass} content='PROJECTS'/>
-                <BaseButtonLink url='/about' className={aboutClass} content='ABOUT'/>
-                <BaseButtonLink url='/contact' className={contactClass} content='CONTACT'/>
-                <BaseButtonLink url='/blog' className={blogClass} content='BLOG'/>
+                <BaseButtonLink url='#about'  content='ABOUT'/>
+            </div>
+            <div className='header-title-link-wrapper'>
+                <BaseButtonLink url='/blog'  content='BLOG'/>
             </div>
         </header>
     )
