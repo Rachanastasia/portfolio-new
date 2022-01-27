@@ -1,4 +1,5 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, Fragment } from "react";
+import Head from 'next/head'
 import { BlogContext } from "../context/blogContext";
 import Blog from "../components/Blog/index";
 
