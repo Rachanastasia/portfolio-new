@@ -11,6 +11,7 @@ export default function BlogPage() {
       fetchMediumArticles();
     }
   });
+  // DO THIS STUFF IN THE PAGES/API/BLOG FOLDER/FILE
 
   return (
     <Fragment>

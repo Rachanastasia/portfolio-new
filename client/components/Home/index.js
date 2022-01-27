@@ -1,7 +1,11 @@
-import {BaseButtonLink }from "../Blocks/BaseButton"
-export default function Banner(){
+import Header from '../Header'
+import About from '../About'
 
+export default function Home(){
     return (
-        <div className='temp-wrapper'/>
+        <main>
+            <Header />
+            <About />
+        </main>
     )
 }

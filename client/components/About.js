@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="full-section">
+    <section className="full-section" id="about">
       <h2 className="page-title">ABOUT</h2>
       <div className="about-content-wrapper">
         <div className="image-wrapper">
