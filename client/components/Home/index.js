@@ -1,4 +1,4 @@
-import {BaseButtonLink }from "../BaseButton"
+import {BaseButtonLink }from "../Blocks/BaseButton"
 export default function Banner(){
 
     return (

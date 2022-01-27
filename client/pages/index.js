@@ -1,4 +1,4 @@
-import Banner from '../components/Banner/index'
+import Main from '../components/Home/index'
 import {Fragment} from 'react'
 import Head from 'next/head'
 
@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="description" content="Rachel Reilly, Chicago based Software Engineer specializing in React" />
         <link rel="icon" href="favicon.ico" />
       </Head>
-      <Banner /> 
+      <Main /> 
       </Fragment>
   )
 }

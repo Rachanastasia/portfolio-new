@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import {PAGES} from '../utils/constants'
-import { BaseButtonLink } from './BaseButton'
+import { BaseButtonLink } from './Blocks/BaseButton'
 
 // LINK TO ABOUT PLACE IN MAIN PAGE
 export default function Header({path}){
