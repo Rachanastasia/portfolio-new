@@ -16,7 +16,7 @@ a
     margin: 0
     height: inherit
     padding: 0
-    background-color: #fff
+    background-color: red
 
 @keyframes content-animate-in
     0%
@@ -48,7 +48,7 @@ main
     justify-content: space-between
     align-items: center
     font-family: $font
-    animation: content-no-scroll 0.35s ease-out
+    background-color: $white
     .large-screen-wrapper
         display: flex
         flex-direction: row
@@ -123,7 +123,7 @@ main
             min-height: 50vh
 
 #loader
-    background-color: inherit
+    background-color: red
     transition: $default-transition
         
 
@@ -131,7 +131,7 @@ main
 
 footer
     color: white
-    background-color: $accent-blue
+    background-color:red
     width: 100vw
     height: 50px
     display: flex
@@ -168,40 +168,6 @@ p
     @media all and (min-width: 1100px)
         margin-bottom: $spacer-4
 
-.hire-me-wrapper
-    @media all and (max-width: 1500px)
-        display: none
-    height: 100vh
-    width: 120%
-    display: flex
-    align-items: flex-start
-    align-self: flex-start
-    margin-right: $spacer-6
-    margin-top: $spacer-6
-    .hire-me-banner
-        width: 100%
-        right: $spacer-4
-        top: 0
-        min-height: 20vh
-        margin-top: $spacer-4
-        background-color: $background-mid-gray
-        width: inherit
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        align-items: center
-        padding: $spacer-4
-        span
-            flex: 1
-            display: block
-            padding: $spacer-3
-        .hire-me-links
-            flex-direction: row
-            justify-content: space-between
-            height: 60px
-
-.test-image-wrapper
-    height: 300px
 
 .hover-link
     color: $accent-blue

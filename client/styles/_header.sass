@@ -1,5 +1,10 @@
 $row-to-column: 605px
 
+@mixin header-text
+        text-size: $text-0-5
+        font-weight: 300
+        letter-spacing: 0.6px
+
 header
     display: flex
     align-items: center
@@ -9,32 +14,16 @@ header
     width: 100%
     transition: 5s ease height
     max-height: 90px
-    &::after
-        background-color: $accent-blue
-        content: ""
-        width: 100%
-        position: absolute
-        height: 1.5px
-        top: 100px
-        left: -30px
-        transition: $default-transition
-        
-        
+    background-color: $darkGrayAlpha       
     h1
         color: $text-dark-gray
-        flex: 1
-        font-weight: 600
-        letter-spacing: 2.4px
-        font-size: $text-5
+        @include header-text
         @media all and (min-width: 770px)
-            font-size: $text-6
             padding-top: $spacer-1
         @media all and (min-width: $row-to-column)
             width: 100%
     div div span
-        text-size: $text-0-5
-        font-weight: 300
-        letter-spacing: 0.6px
+        @include header-text
     @media all and (min-width: 605px)
         @include row-between
         min-height: 10vh
