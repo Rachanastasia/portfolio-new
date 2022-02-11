@@ -3,9 +3,9 @@
   export let alt: string
 </script>
 
-<div>
-  <picture>
+<div class="w-full py-2">
+  <picture class=" w-full">
     <source srcset={src} type="image/jpg" />
-    <img {src} {alt} />
+    <img {src} {alt} class="w-full" />
   </picture>
 </div>

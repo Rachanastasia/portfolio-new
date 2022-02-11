@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<main class="flex items-center h-screen w-screen">
+<main class="flex flex-col items-center min-h-screen w-screen ">
   <slot />
 </main>
 
