@@ -1,0 +1,12 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="#00007f"/>
+      <stop offset="85%" stop-color="#000042"/>
+    </linearGradient>
+    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
+      <rect x="0" y="0" width="50" height="50" fill="url(#Gradient2)"/>
+    </pattern>
+  </defs>
+  <rect fill="url(#Pattern)" stroke="none" width="200" height="200" fill-opacity="1"/>
+</svg>
