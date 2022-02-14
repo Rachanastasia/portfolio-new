@@ -11,6 +11,14 @@ module.exports = {
         'dark-blue': '#000042',
         'bright-blue': '#00007f',
         'light-blue': '#E0F7FA'
+      },
+      colors: {
+        'dark-blue': '#000042',
+        'bright-blue': '#00007f'
+      },
+      fontFamily: {
+        body: "'Roboto Serif', sans-serif",
+        title: '"Roboto", sans-serif'
       }
     }
   }

@@ -1,23 +1,30 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
   export let bg: string
-  export let element: any
-  // if content is on page
-  onMount(() => {
-    if (element) console.log('THESE ARE MY SECTION ELEMENTS', element)
-  })
+  let y: number
+  let yh: number
+
+  // if y is in a certain place
+  // scroll to next
+  // with vertical slide??
+  // $: if (y > yh * (index - 1)) {
+  //   scrollToNext()
+  // }
+  // function scrollToNext() {
+  //   y = 300
+  // }
 </script>
 
+<svelte:window bind:scrollY={y} bind:innerHeight={yh} />
+
 <section
-  class="flex-none flex items-center justify-center h-screen w-full md:p-3 lg:p-6 {bg}"
+  class="flex-none p-2  flex items-center justify-center w-full min-h-max md: lg:p-6 {bg}"
 >
-  {#if true}
-    <div
-      transition:fade={{ delay: 140, duration: 300 }}
-      class="max-w-5xl flex flex-col items-center justify-center  p-3"
-    >
-      <slot />
-    </div>
-  {/if}
+  <div
+    transition:fade={{ delay: 140, duration: 300 }}
+    class="max-w-5xl flex flex-col items-center justify-center w-full"
+  >
+    <slot />
+    <h2>Y IS {y} YH is {yh}</h2>
+  </div>
 </section>

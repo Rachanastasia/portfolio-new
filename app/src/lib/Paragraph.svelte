@@ -2,6 +2,6 @@
   export let text: string
 </script>
 
-<div class="flex-1 p-2">
-  <p class="text-2xl leading-relaxed">{text}</p>
+<div class="flex-1 p-2 w-full">
+  <p class="text-base leading-relaxed font-body font-light">{text}</p>
 </div>

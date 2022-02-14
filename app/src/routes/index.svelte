@@ -5,62 +5,61 @@
   import Paragraph from '../lib/Paragraph.svelte'
   import Footer from '../lib/Footer.svelte'
   import Title from '../lib/Title.svelte'
+  import { SLICED, ABOUT, INTRO } from '../utils/copy'
   import src from '../../static/rachel_reilly.jpg'
   import sliced from '../../static/sliced.jpg'
   export const prerender = true
-
-  let section1: any
-  let section2: any
 </script>
 
 <svelte:head>
   <title>Rachel Reilly | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin="crossorigin"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;500&family=Roboto:wght@700&display=swap"
+    rel="stylesheet"
+  />
 </svelte:head>
 
-<Section bg="bg-calico" bind:element={section1}>
-  <Title text="Rachel Reilly" />
-  <div class="w-full flex flex-row flex-wrap justify-between items-center">
+<Section bg="bg-calico">
+  <Title type="h1" text="Rachel Reilly" />
+  <div class="w-full flex flex-col items-center md:flex-row justify-between">
     <Image alt="a photo of Rachel Reilly, Software Engineer" {src} round />
-    <Paragraph
-      text="I’m a fullstack Software Engineer who loves helping early stage start-ups build their products. I have experience planning and developing features with React, React Native, Node.js, GraphQL, SQL, and AWS at Moss, a design app, and Sunroom, a creator economy app."
-    />
+    <Paragraph text={INTRO} />
   </div>
 </Section>
-<Section bg="bg-dark-blue text-white" bind:element={section2}>
-  <Paragraph
-    text="In the mid-2010s, I attended the University of Illinois at Chicago’s conceptual art school where students were taught to make multi-media work that transverses the physical and digital world. This was the first time I was asked to analyze my relationship with technology and reflect on the immense progress I had witnessed in my lifetime. I realized that I wanted to participate in the technological revolution and started learning to code."
-  />
-  <Paragraph
-    text="While I enjoy coding at all levels of the stack, I specialize in building pixel perfect user interfaces with React. The trained eye and understanding of visual language that I honed as an artist helps me work effectively and quickly with designers. Both at Moss and at Sunroom, I worked with the companies’ founders, designers by trade, to turn their Figma wireframes into pixel perfect user interfaces."
-  />
+<Section bg="bg-dark-blue text-white">
+  {#each ABOUT as paragraph}
+    <Paragraph text={paragraph} />
+  {/each}
 </Section>
-<Section bg="bg-stitch" bind:element={section2}>
+<Section bg="bg-stitch">
   <Title text="Sliced" />
-  <div class="w-full flex flex-row flex-wrap justify-between items-center">
-    <Paragraph
-      text="I first conceptualized Sliced at the beginning of the pandemic when I was cooking for 2 and making do with what I had in the kitchen most days. To convert recipes to the lowest common denominator of what I had on-hand, I kept asking Siri whats half of 1/3 cups in tablespoons . Since these calculations are more quickly done by a computer, I created Sliced to scale down amounts and units, and provide a visual reference of the new ingredients."
-    />
+  <div class="flex flex-col items-center md:flex-row justify-between">
+    <Paragraph text={SLICED[0]} />
     <Image alt="a screenshot of Sliced, a recipe scaling app" src={sliced} />
   </div>
-  <div>
-    <span
-      >View
-      <Link
-        alt="GitHub repository for the slicer algorithm"
-        href="https://github.com/rachelrly/slicer"
-        text="the code"
-      />
-      or
-      <Link
-        alt="Sliced, a recipe scaling app"
-        href="https://sliced.vercel.app"
-        text="the live app"
-      />.
-    </span>
-  </div>
+  <span class="text-base leading-relaxed font-body font-light"
+    >View the code on
+    <Link
+      alt="GitHub repository for the slicer algorithm"
+      href="https://github.com/rachelrly/slicer"
+      text="GitHub"
+    />
+    or try out the
+    <Link
+      alt="Sliced, a recipe scaling app"
+      href="https://sliced.vercel.app"
+      text="Sliced"
+    /> app.
+  </span>
 </Section>
-<Section bg="bg-light-blue" bind:element={section2}>
-  <Title text="Recent Blog Posts" />
+<Section bg="bg-light-blue">
+  <Title text="Blog" />
   <Link
     alt="Rachels Medium Posts"
     href="https://rachelrly.medium.com"
