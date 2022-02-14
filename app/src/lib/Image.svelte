@@ -5,7 +5,7 @@
 </script>
 
 <div class="p-2">
-  <picture>
+  <picture class="bg-black">
     <source srcset={src} type="image/jpg" />
     <img {src} {alt} class="w-72 h-72 object-cover {round && 'rounded-full'}" />
   </picture>
