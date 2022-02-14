@@ -1,11 +1,12 @@
 <script lang="ts">
   export let src: any
   export let alt: string
+  export let round: boolean = false
 </script>
 
-<div class="w-full py-2">
-  <picture class=" w-full">
+<div class="p-2">
+  <picture>
     <source srcset={src} type="image/jpg" />
-    <img {src} {alt} class="w-72 h-72  rounded-full object-cover" />
+    <img {src} {alt} class="w-72 h-72 object-cover {round && 'rounded-full'}" />
   </picture>
 </div>

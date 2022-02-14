@@ -2,7 +2,7 @@
   "name": "rachel-reilly_portfolio",
   "version": "1.0.0",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "svelte-kit dev --port 5599",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
