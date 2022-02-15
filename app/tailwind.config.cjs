@@ -19,6 +19,9 @@ module.exports = {
       fontFamily: {
         body: "'Roboto Serif', sans-serif",
         title: '"Roboto", sans-serif'
+      },
+      minHeight: {
+        'almost-screen': '84vh'
       }
     }
   }

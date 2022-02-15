@@ -18,11 +18,11 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={yh} />
 
 <section
-  class="flex-none p-2  flex items-center justify-center w-full min-h-max md: lg:p-6 {bg}"
+  class="flex-none px-2 py-3 flex items-center justify-center w-screen overflowX-hidden h-full min-h-screen md: lg:p-6 {bg}"
 >
   <div
     transition:fade={{ delay: 140, duration: 300 }}
-    class="max-w-5xl flex flex-col items-center justify-center w-full"
+    class="flex h-screen max-w-5xl flex flex-col items-center justify-between w-full"
   >
     <slot />
     <h2>Y IS {y} YH is {yh}</h2>

@@ -7,6 +7,11 @@
 <div class="p-2">
   <picture class="bg-black">
     <source srcset={src} type="image/jpg" />
-    <img {src} {alt} class="w-72 h-72 object-cover {round && 'rounded-full'}" />
+    <img
+      {src}
+      {alt}
+      class="h-72 {round ? 'w-72' : 'w-auto'} object-cover {round &&
+        'rounded-full'}"
+    />
   </picture>
 </div>

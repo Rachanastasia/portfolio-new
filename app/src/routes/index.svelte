@@ -5,6 +5,7 @@
   import Paragraph from '../lib/Paragraph.svelte'
   import Footer from '../lib/Footer.svelte'
   import Title from '../lib/Title.svelte'
+  import Icon from '../lib/Icon.svelte'
   import { SLICED, ABOUT, INTRO } from '../utils/copy'
   import src from '../../static/rachel_reilly.jpg'
   import sliced from '../../static/sliced.jpg'
