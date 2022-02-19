@@ -1,4 +1,4 @@
-export function formatDate(dateString) {
+function formatDate(dateString) {
   const date = new Date(dateString)
   const options = {
     year: 'numeric',
@@ -7,3 +7,5 @@ export function formatDate(dateString) {
   }
   return new Intl.DateTimeFormat('en-US', options).format(date)
 }
+
+module.exports = { formatDate }

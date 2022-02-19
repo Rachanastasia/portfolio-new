@@ -1,16 +1,18 @@
-import { createClient } from 'redis'
-import { REDIS_CONFIG, ERRORS, REDIS_KEYS, getBlogPosts } from './utils'
+const { createClient } = require('redis')
+const { REDIS_CONFIG, REDIS_KEYS } = require('./utils/config')
+const { ERRORS } = require('./utils/errors')
+const { getBlogPosts } = require('./utils/getBlogPosts')
 
 const errorCallback = (error) => {
   console.error(`${ERRORS.REDIS} :${error?.message ?? error}`)
 }
 
-export async function handleBlogService() {
+async function handleBlogService() {
   const client = createClient(REDIS_CONFIG)
   client.on('error', errorCallback)
   try {
     client.connected()
-    client.get(REDIS_KEYS.BLOG, (error, reply) => {
+    client.get(REDIS_KEYS.BLOG, async (error, reply) => {
       if (error) {
         const blog = await getBlogPosts()
         client.set(REDIS_KEYS.BLOG, JSON.stringify(blog))
@@ -23,3 +25,5 @@ export async function handleBlogService() {
     await client.disconnect()
   }
 }
+
+module.exports = { handleBlogService }

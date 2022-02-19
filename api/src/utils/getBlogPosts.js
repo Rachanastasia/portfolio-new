@@ -1,8 +1,10 @@
-import Parser from 'rss-parser'
-import { formatBlogPost, MEDIUM_FEED_URL } from './utils'
+const Parser = require('rss-parser')
+const { formatBlogPost, MEDIUM_FEED_URL } = require('./config')
 
-export async function getBlogPosts() {
+async function getBlogPosts() {
   let parser = new Parser()
   const blog = await parser.parseURL(MEDIUM_FEED_URL)
   return blog.map(formatBlogPost)
 }
+
+module.exports = { getBlogPosts }

@@ -1,6 +1,6 @@
-import { formatDate } from './formatDate'
+const { formatDate } = require('./formatDate')
 
-export function formatBlogPost(post) {
+function formatBlogPost(post) {
   const content = post['content:encoded']
   const datePosted = formatDate(post.isoDate)
   return {
@@ -10,3 +10,5 @@ export function formatBlogPost(post) {
     datePosted
   }
 }
+
+module.exports = { formatBlogPost }

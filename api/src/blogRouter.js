@@ -1,6 +1,6 @@
-import express from 'express'
-import { ERRORS } from './utils'
-import { handleBlogService } from './blogService'
+const express = require('express')
+const { ERRORS } = require('./utils/errors')
+const { handleBlogService } = require('./blogService')
 
 const blogRouter = express.Router()
 blogRouter.get('/', async (_req, res) => {
@@ -17,4 +17,4 @@ blogRouter.get('/', async (_req, res) => {
   }
 })
 
-export default blogRouter
+module.exports = blogRouter

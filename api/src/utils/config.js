@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   PORT: process.env.PORT,
   // CLIENT_URL:
   //   process.env.NODE_ENV === 'production'
