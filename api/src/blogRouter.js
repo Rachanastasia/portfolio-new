@@ -1,49 +1,20 @@
-const express = require('express')
-const Promise = require('bluebird')
-const { getMediumArticles } = require('./utils/formatBlogPost.js')
+import express from 'express'
+import { ERRORS } from './utils'
+import { handleBlogService } from './blogService'
 
-const redis = Promise.promisifyAll(require('redis'))
-
-const { REDIS_CONFIG, CLIENT_URL } = require('./utils/config')
-
-const feedRouter = express.Router()
-feedRouter.get('/', async (_req, res) => {
+const blogRouter = express.Router()
+blogRouter.get('/', async (_req, res) => {
   try {
-    const articles = await handleBlogCache()
-    return res
-      .set('Access-Control-Allow-Origin', CLIENT_URL)
-      .status(200)
-      .json(articles)
+    const blog = await handleBlogService()
+    return res.set('Access-Control-Allow-Origin', '*').status(200).json(blog)
   } catch (error) {
-    const errorMessage =
-      'Error fetching Medium articles: ' + (error?.message || error)
-    if (process.env.NODE_ENV === 'development') console.error(errorMessage)
+    const message = `${ERRORS.MEDIUM}: ${error?.message ?? error}`
+    if (process.env.NODE_ENV === 'development') console.error(message)
     return res
       .status(400)
-      .set('Access-Control-Allow-Origin', CLIENT_URL)
-      .json({ message: errorMessage })
+      .set('Access-Control-Allow-Origin', '*')
+      .json({ message })
   }
 })
 
-async function handleBlogCache() {
-  const client = redis.createClient(REDIS_CONFIG)
-
-  client.on('error', (error) => {
-    console.error('Error ' + error)
-  })
-
-  if (!client.get(FEED, redis.print)) {
-    return getMediumArticles().then((articles) => {
-      const articleString = JSON.stringify(articles)
-      client.set(FEED, articleString, redis.print)
-      return articles
-    })
-  } else {
-    return client.get(FEED, (err, reply) => {
-      if (err) throw new Error('Could not get posts from Redis cache: ' + err)
-      return JSON.parse(reply)
-    })
-  }
-}
-
-module.exports = feedRouter
+export default blogRouter

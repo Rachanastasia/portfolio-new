@@ -4,7 +4,8 @@
   "description": "rachel reillys developer portfolio",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js --port 9176"
+    "dev": "nodemon src/index.js --port 19872",
+    "start": "node src/index.js"
   },
   "author": "rachel reilly",
   "license": "ISC",
