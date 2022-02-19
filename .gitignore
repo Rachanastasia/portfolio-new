@@ -1,4 +1,6 @@
 .DS_Store
 .env
 
-/client/package-lock.json
+/app/node_modules
+/app/.svelte-kit
+/old
