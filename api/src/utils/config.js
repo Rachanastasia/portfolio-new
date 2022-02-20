@@ -8,11 +8,14 @@ module.exports = {
     process.env.NODE_ENV === 'production'
       ? process.env.REDIS_URL
       : {
-          port: process.env.REDIS_PORT,
-          host: process.env.REDIS_HOST
+          socket: {
+            port: 9998,
+            host: '0.0.0.0',
+            name: 'my-redis'
+          }
         },
   REDIS_KEYS: {
     BLOG: 'blog'
   },
-  MEDIUM_FEED_URL: 'rachelrly.medium.com/feed'
+  MEDIUM_FEED_URL: 'https://www.medium.com/feed/@rachelrly'
 }

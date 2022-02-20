@@ -6,7 +6,13 @@ const blogRouter = express.Router()
 blogRouter.get('/', async (_req, res) => {
   try {
     const blog = await handleBlogService()
-    return res.set('Access-Control-Allow-Origin', '*').status(200).json(blog)
+    if (blog?.length) {
+      return res.set('Access-Control-Allow-Origin', '*').status(200).json(blog)
+    }
+    return res
+      .status(400)
+      .set('Access-Control-Allow-Origin', '*')
+      .json({ message: ERRORS.REDIS })
   } catch (error) {
     const message = `${ERRORS.MEDIUM}: ${error?.message ?? error}`
     if (process.env.NODE_ENV === 'development') console.error(message)
