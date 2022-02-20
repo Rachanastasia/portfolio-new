@@ -8,15 +8,17 @@ const errorCallback = (error) => {
 }
 
 async function handleBlogService() {
-  const client = createClient()
+  const client = createClient(REDIS_CONFIG)
   client.on('error', errorCallback)
   try {
     await client.connect()
-
     const cache = await client.get(REDIS_KEYS.BLOG)
+    if (cache.length) {
+      return JSON.parse(cache)
+    }
     const blog = await getBlogPosts()
     await client.set(REDIS_KEYS.BLOG, JSON.stringify(blog))
-    return blog
+    return JSON.parse(await client.get(REDIS_KEYS.BLOG))
   } catch (error) {
     errorCallback(error)
     client.quit()

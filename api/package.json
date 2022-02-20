@@ -4,20 +4,19 @@
   "description": "rachel reillys developer portfolio",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js --port 19872",
+    "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "author": "rachel reilly",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.7.2",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "node-fetch": "^3.1.1",
-    "redis": "^3.1.2",
-    "rss-parser": "^3.12.0"
+    "redis": "latest",
+    "rss-parser": "latest"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
