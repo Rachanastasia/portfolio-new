@@ -1,4 +1,4 @@
-// const { formatDate } = require('./formatDate')
+const { formatDate } = require('./formatDate')
 
 function formatBlogPost(post) {
   const content = post['content:encoded']
@@ -9,16 +9,6 @@ function formatBlogPost(post) {
     content,
     datePosted
   }
-}
-
-function formatDate(dateString) {
-  const date = new Date(dateString)
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  }
-  return new Intl.DateTimeFormat('en-US', options).format(date)
 }
 
 module.exports = { formatBlogPost }
