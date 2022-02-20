@@ -4,15 +4,7 @@ module.exports = {
     process.env.NODE_ENV === 'production'
       ? [process.env.CLIENT_URL]
       : [process.env.DEV_CLIENT_URL],
-  REDIS_CONFIG:
-    process.env.NODE_ENV === 'production'
-      ? process.env.REDIS_URL
-      : {
-          socket: {
-            port: 6379,
-            host: 'localhost'
-          }
-        },
+  REDIS_CONFIG: process.env.REDIS_URL,
   REDIS_KEYS: {
     BLOG: 'blog'
   },

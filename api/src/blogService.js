@@ -8,7 +8,7 @@ const errorCallback = (error) => {
 }
 
 async function handleBlogService() {
-  const client = createClient(REDIS_CONFIG)
+  const client = createClient({ url: REDIS_CONFIG })
   client.on('error', errorCallback)
   try {
     await client.connect()
