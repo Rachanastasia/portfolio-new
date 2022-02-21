@@ -3,4 +3,5 @@
 
 /app/node_modules
 /app/.svelte-kit
+/client/package-lock.json
 /old
