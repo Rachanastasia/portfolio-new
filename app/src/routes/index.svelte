@@ -1,15 +1,32 @@
-<script context="module" lang="ts">
+<script lang="ts" context="module">
+  // export const prerender = true
+  export async function load({ fetch }) {
+    const response = await fetch(
+      'https://test-relenteless-ocean-232317.herokuapp.com/api/blog'
+    )
+    return {
+      status: response.status,
+      props: {
+        blog: response.ok && (await response.json())
+      }
+    }
+  }
+</script>
+
+<script lang="ts">
+  import type { BlogPost } from '../types'
+  import BlogPreview from '../lib/BlogPreview.svelte'
   import Link from '../lib/Link.svelte'
   import Image from '../lib/Image.svelte'
   import Section from '../lib/Section.svelte'
   import Paragraph from '../lib/Paragraph.svelte'
   import Footer from '../lib/Footer.svelte'
   import Title from '../lib/Title.svelte'
-  import Icon from '../lib/Icon.svelte'
   import { SLICED, ABOUT, INTRO } from '../utils/copy'
   import src from '../../static/rachel_reilly.jpg'
   import sliced from '../../static/sliced.jpg'
-  export const prerender = true
+
+  export let blog: BlogPost[]
 </script>
 
 <svelte:head>
@@ -66,5 +83,6 @@
     href="https://rachelrly.medium.com"
     text="View on Medium for now"
   />
+  <BlogPreview {blog} />
 </Section>
 <Footer />
