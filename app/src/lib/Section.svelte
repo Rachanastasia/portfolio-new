@@ -3,16 +3,6 @@
   export let bg: string
   let y: number
   let yh: number
-
-  // if y is in a certain place
-  // scroll to next
-  // with vertical slide??
-  // $: if (y > yh * (index - 1)) {
-  //   scrollToNext()
-  // }
-  // function scrollToNext() {
-  //   y = 300
-  // }
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={yh} />

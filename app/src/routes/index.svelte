@@ -1,6 +1,5 @@
 <script lang="ts" context="module">
   import type { BlogPost } from '../types'
-  import { sanitizeContent } from '../utils'
   export async function load({ fetch }) {
     const response = await fetch(
       'https://test-relenteless-ocean-232317.herokuapp.com/api/blog'
@@ -8,7 +7,7 @@
     return {
       status: response.status,
       props: {
-        blog: response.ok && sanitizeContent(await response.json())
+        blog: response.ok && (await response.json())
       }
     }
   }
